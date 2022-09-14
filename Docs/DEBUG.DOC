@@ -1,0 +1,120 @@
+
+==============================================================================
+                            OKI 900 - DEBUG MODE
+==============================================================================
+
+
+Here's some info on using the debug mode from the keypad.
+
+Power the phone up.  Wait for PowerOn msg.  Hit 7 and 9 together.
+Then hit Menu, Snd, End, Rcl, Sto, Clr.  Phone says good timing!
+Debugger is now enabled, but phone works normally.  Hit 1 and 3
+together to halt phone and enter debugger.  Everything on display
+lights up.  Hit Clr, Clr till you get status display.
+
+Now you can execute commands listed below.  For example to reboot phone
+enter #, 0, 2, Snd.  Commands all start with # and end with Snd.  Some
+take arguments.
+
+You can use #25, to display memory in EEPROM, and I think once in
+that command you can hit # and * to go up and down in memory, Clr to
+exit.  Hex chars are entered as "*n", like *1=A, *2=B, etc.
+
+
+SUSPEND     #01         Performs Initialization
+RESTART     #02         Terminates the test mode
+STATUS      #03         Shows current status of TRU
+RESET       #04         Resets the autonomous timer
+TURNAROUND  #05    ?    Returns Data Bytes following command to the Test Set.
+INIT        #06         Initialize the TRU to following states:
+                         Carrier Off, Attenuation - 0db, Receive Audio Muted
+                         Transmit Audio Muted, Signalling tone off,
+                         Autonomous timer reset, SAT off, and DTMF off
+CARRIER ON  #07         Turns the carrier on
+CARRIER OFF #08         Turns the carrier off
+LOAD SYNTH  #09XXXX     Sets the synthesizer to channel XXXX
+SET ATTN    #10X        Set the RF power attenuation to X
+                         0=0db, 7=-28 db (in steps of -4db thru 7)
+RXMUTE      #11         Mutes the receive audio
+RXUNMUTE    #12         Unmutes the receive audio
+TXMUTE      #13         Mutes the transmit audio
+TXUNMUTE    #14         Unmutes the transmit audio
+RESETOFF    #15         Discontinues resetting of autonomous timer
+STON        #16         Transmits a continuous signalling tone
+STOFF       #17         Stops transmission of signalling tone
+SETUP       #18         Transmits a 5 word RCC message (fixed text pattern)
+VOICE       #19         Transmits a 2 word (RCC) RVC message (fixed test pattern)
+RCVSU       #20         Receives a 2 word FCC message (cancel with 0x38)
+RCVVC       #21         Receives a 1 word (FCC) FVC message (cancel with 0x38)
+SEND-NAM    #22         Returns the information contained in the NAM
+VERSION     #23
+SEND-SN     #24
+MEM         #25XXXX     Displays the resident memory data at XX
+                          00XX=in micro, XXXX=EEPROM
+WSTS        #28         Count 1 word messages on CC, until TERMINATE
+WSTV        #29         Count 1 word messages on VC, until TERMINATE
+SATON       #32X        Enable the transmission of SAT X
+                         0= 5970 Hz, 1=6000 Hz, 2=6030 Hz
+SATOFF      #33         Disables the transmission of SAT
+CDATA       #34<60>     Transmits 5 word RCC message (30 bytes)
+HITNON      #35         Activates the 1150Hz tone to receive audio line
+HITNOFF     #36         Deactivates the 1150Hz tone
+LOTNON      #37         Activates the 770Hz tone to receive audio line
+LOTNOFF     #38         Deactivates the 770Hz tone
+DTMFON      #42XX       Enable the transmission of DTMF frequency XX[2]
+DTMFOFF     #43         Disable the transmission of DTMF
+?           #44
+?           #45
+?           #46
+?           #47
+?           #48
+?           #51
+-           #52<xx>
+
+
+
+
+?           #53
+-           #54XXXXZZ   Write HEX (ZZ) into ADDRESS $XXXX
+                        if 00XXZZ then store #$YY in MicoRAM $XX
+-           #56         Return Value stored in $BEBB
+?           #60
+?           #62
+?           #63
+RCVSU       #64         Receives a 2 word FCC message (duplicate of cmd #20)
+COMP-ON     #65         Enable the compressor and expandor
+COMP-OFF    #66         Disable the compressor and expandor
+setvol      #67         X-Set volume (0-7) 0=max
+SERIAL I/O  #683XX?     Mutes/Unmute Tx/Rx Audio Signal Enable
+                        Disable the Compressor/Expandor, XX=commanded states.
+                            CMD Compress Tx Mute Rx Mute
+                            --- -------- ------- -------
+                            40  on       unmuted unmuted
+                            41  off      unmuted unmuted
+                            42  on       muted   unmuted
+                            43  off      muted   ummuted
+                            44  on       unmuted muted
+                            45  off      unmuted muted
+                            46  on       muted   muted
+                            47  off      muted   muted
+?           #72          [pulls something, outputs 1 word!?!]
+?           #73<arg>
+
+                      Scans channels,...
+
+                       #73 XXXX xxxx YY
+
+                        XXXX = Start channels scan
+                        xxxx = End   channels
+                         yy  = Time
+
+?           #74
+-           #75         Enable Handsfree (disable spkr)
+-           #76         Disable Handsfree (enable spkr)
+-           #77         Turns on Loudspeaker near mic
+-           #79
+?           #80
+?           #81
+?           #84
+?           #85
+

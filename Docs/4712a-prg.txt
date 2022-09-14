@@ -1,0 +1,15 @@
+Author's README file:
+
+
+Here are my changes to 4712-prg.c.   The program will now loop, allowing 
+you to enter all 5 ESN's & NAM's before exiting.  Upon exiting the loop
+you will be asked which pair to use.   This program expects your security
+code to be 123456, if it is not, either change the security code or change
+the program code and re-compile.
+
+The program sometimes doesn't enter the test mode, so if you watch the
+display and the NAM doesn't get programmed, just enter that pair again.
+If anyone knows of a fix for this bug, please let me know.
+
+In the near future look for my changes to SCAN which will allow you to
+talk back.

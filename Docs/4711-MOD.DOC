@@ -1,0 +1,116 @@
+
+
+ ************************************************************************
+
+                        Oki 900 4711 Mod Docs
+
+ ************************************************************************
+
+
+
+
+    Change ESN
+    ~~~~~~~~~~
+
+    Press MENU 8 times, until you see ADM menu.  Press RCL and enter 123456
+
+    Use RCL to move from one ESN to another, and STO to save your options.
+    
+    REBOOT Phone!!!!!
+
+
+    Program ESN: 
+    ~~~~~~~~~~~
+
+
+     Enter Debug Mode:
+
+ 		        7  9
+		         MENU
+		         SEND
+		         END
+		         RCL
+		         STO
+		         CLR
+		         1  3
+
+
+
+             --------------------------------
+                 ESN Number     Address
+             --------------------------------
+               ESN Location #1  $BE8E-$BE91
+               ESN Location #2  $BE93-$BE96
+               ESN Location #3  $BE98-$BE9B
+               ESN Location #4  $BE9D-$BEA0
+               ESN location #5  $BEA2-$BEA5
+              --------------------------------
+
+
+   +--------------------+----------------------+----------------------+
+   |                    |                      |                      |
+   | To program ESN #1: |   To program ESN #2: |  To program ESN #3:  |
+   |                    |                      |                      |
+   |   #54 BE8E  01     |     #54 BE93  01     |    #54 BE98  01      |
+   |   #54 BE8F  02     |     #54 BE94  02     |    #54 BE99  02      |
+   |   #54 BE90  03     |     #54 BE95  03     |    #54 BE9A  03      |
+   |   #54 BE91  04     |     #54 BE96  04     |    #54 BE9B  04      |
+   |                    |                      |                      |
+   +--------------------+----------------------+----------------------+
+       |                         |                         |
+       |   To program ESN #4:    |    To program ESN #5:   |
+       |                         |                         |
+       |     #54 BE9D  01        |       #54 BEA2  01      |
+       |     #54 BE9E  02        |       #54 BEA3  02      |
+       |     #54 BE9F  03        |       #54 BEA4  03      |
+       |     #54 BEA0  04        |       #54 BEA5  04      |
+       |-------------------------|-------------------------|
+
+         Key:
+
+             #54 XXXX xx
+               |   |   |
+               |   |  In order, one thru four bytes of ESN
+               |   |
+               |  Address (Location)
+               |
+             The write byte debug command 
+
+       
+        To use the 0-9 keys, just use 0-9, to access A-F, hit STAR ("*")
+      before 1-6 for A-F.  The "*" key can be thought of as a shift key.       
+      If you hit the "*" twice, it will at as if you did not hit the "*"
+      at all. 
+
+                      *1 = A
+                      *2 = B
+                      *3 = C
+                      *4 = D
+                      *5 = E
+                      *6 = F
+
+
+
+  Program NAM:
+  ~~~~~~~~~~~~
+
+  			RCL MENU
+  			  STAR
+  			   6
+  		           2
+  		           7
+  		           2
+  		           9
+  		           8
+  		           5
+  		           4
+  		           #
+
+  (At this point use the up and down arrow keys on the side of the phone)
+
+
+
+
+
+
+

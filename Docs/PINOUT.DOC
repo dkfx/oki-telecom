@@ -1,0 +1,28 @@
+   o
+  5 10
+  4 9
+  3 8
+  2 7
+  1 6
+
+
+1  Raw data                       power +
+2  PRTSENS  ???                   portable sensitivy
+3  CU - 2 - L                     CU to L Data
+4  POW - ON (power on)
+5  TX Voice
+6  TX Voice                       Power -
+7  CLK                            clock
+8  L2CU                           L to CU data
+9  RX Voice                       Ground
+10 RX Voice                       R Voice
+
+
+
+
+
+
+
+
+
+

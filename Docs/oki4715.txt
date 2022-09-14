@@ -1,0 +1,1543 @@
+
+
+		      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+		     &                                &
+		     &     Oki 900:  The Real Deal    &
+		     &                                &
+		     &        by: Oki Dokie           &
+		     &                                &
+		      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+     Well this is the first real file on cellular worth keeping.  There
+have been several LAME attemps made in 2600.  All the files in 2600 were by
+people who DID not know enough about the topic to carry on a technical 
+paper.  The only file that was worth reading was writen by Brian O. The 
+file was in Phrack. 
+      Most of the people out there think they are cool because they can 
+link up SIMPLE cables and use software they did not write to clone cell 
+phones.  All this kids who think they know cell, you do not know anything!
+You are all lame!
+      This file is not for the people on the private cell lists on the
+internet.  Not for the people who are looking for handouts not wanting to
+understand the technology.  One such person is a little kid named Alpha BITS.
+Alpha Bits is in jail now, and we all wish him to die there!
+This file was writen for information warfare!  We can all thank the FBI,
+This is just the start!
+
+	Here is the outline of this file:
+
+	- Hardware one will Need
+	- Memory Break Down
+	- Debug command
+	- The Oki Mod
+	- The Network Wizards Interface cable
+	- Character set in the Oki 900
+
+
+Hardware one will Need
+~~~~~~~~~~~~~~~~~~~~~~
+
+      In this section, this will cover the hardware one will need
+to buy, along with the terms, and prices of the hardware.
+
+
+Package Terms
+
+  In electronics there are many terms that are used for the same thing.
+One area that electronics manufacturers, distributors and product
+representatives have different names for the samethinig is in the
+packages of the IC (intergrated Circuit). The package is the shape,
+size of the chip, the number of pins, and the way the pins connect to
+the circuit board.  Here are some of the common packages:
+
+DIP          Dual In-Line Package
+PDSO         Plastic Dual Small Outline (Same as SOIC)
+PLCC         Plastic Leaded Chip Carrier
+PSIP         Plastic Single In-Line Package
+SOP          Small Outline Package (Same as SOIC)
+SOL          Small OutLine package (Same as SOIC)
+SOI          Small Outline In-Line Package (Same as SOIC)
+SOIC         Small Outline In-Line Package
+
+As one can see, the SOP, SOI, SOP, PDSO and SOIC are all the same package.
+The best way to find out about the package types is to look in the
+back of manufacture's data books.
+   The package type of the Oki PROM is a SOIC, this is why it was nessary to
+cover this.
+
+
+
+EPROM Programmer
+
+The best deal around is the Intronics EPROM Programmer.
+
+The Pocket Programmer   -  $130.00
+
+Intronics, Inc.
+Box 13723
+Edwardsville, KS 66113
+(913) 422-2094
+
+A good programmer is The Pocket Programmer that uses the printer port. The
+software has 24 functions and programs (E)EPROM, Flash & RAM 27/28(C)XXXX from
+16K - 8Meg with a 32 pin socket.
+
+SOIC to DIP Socket
+
+With most EPROM programmers have a ZIF DIP socket.  This means that you
+will need to have a SOIC to DIP converter.  There are several way that
+one can go about this, one can buy a converter or one can make one.
+
+
+You can order a SOIC Test Clip that can be wired into a 28 pin  PC board
+socket.  This will take about an hour of your time to soldering 28 wires
+from the clip to 28 pin PCB socket.  The cost would be the big plus for
+going with the SOIC Test Clip.  You can order the clip from:
+
+Contact East
+335 Willow Street
+North Andover, MA 01845-5995
+800-225-5334
+
+Part Number:  923665-28      $12.55
+
+
+If making a converter seems like it would be too much work, a low price
+converter can be found (after looking for weeks).  The best price
+around for a SOIC to DIP converter is from:
+
+ M^2L Electronics
+ 3526 Jasmine, Suite #4
+ Los Angeles, CA 90034
+ (310) 837-7818
+
+Part Number:   EP-SOIC28     $50.00
+
+
+
+Oki Phones Domestic Distributors - Where to get an Oki 900
+
+	The last shipment of Oki 900 telephones was in December of 94.  There
+were 10,000 phones shipped.  There should not be too many  problems in
+finding the phones (maybe not after this is printed).
+
+
+Allied Communications
+1705 Winchester Road
+Bensalem, PA 19020
+(215) 244-1262
+
+Connecticut, Delaware, Maine, Maryland, Massachusetts, Vermit, New Hampshire,
+New Jersey, New York, Oennsyvanla, Virginia, West Virgina, Virgina, Washington,
+D.C., Kentucky, North Carolina, South Carolina, Tennessee, Louisiana,
+Mississippi, Alabama, Georgla, Florda
+
+Cellular Wholesalers, Inc.
+5151 Church Street
+Skokie, IL 60077
+(708) 965-2300
+
+Illnois, Wisconsin, Ohio, Arizona, North Dakota, South Dakota, Minnesota, Iowa,
+Michigan, Indiana
+
+Pacific Unplugged Communications, Inc.
+20526 Gramercy Place
+Torrance, CA 90501
+(310) 787-9400
+
+California, Nevada, Arizona, Washington, Wyoming, Alaska, Hawaii, New Mexico,
+Colorado, Utah, Idaho, Oregon, Montana,
+
+Southern Electronic Distributors, Inc.
+4916 North Royal Atanta Drive
+Tucker, GA 30084
+(800) 444-8962
+
+North  Carolina, South Carolina, Kentucky, Tennessee, Louisiana, Mississippi,
+Alabama, Georgia, Flordia
+
+
+Wholesale Cellular USA, Inc.
+5720 West 71st Street
+Indianapolls, IN, 46278
+(800) 243-1227
+
+Kentucky, Indiana, Michigan, Kansas, Ohio, Arizona, Missouri, North Dakota,
+Wyoming, South hDakota, Nebraska, Oklahoma, Colorado, Arkansas, Montana, Iowa,
+Minnesota, Utah, Wisconsin
+
+
+The PROM you will Need
+
+  The PROM the Oki 900 uses is the TC54512AF-20, this is really a 27C512 SOIC 
+PROM.  This can be ordered from  
+
+
+
+
+Memory Break Down
+~~~~~~~~~~~~~~~~~
+  Here is the break down of the Oki 900 phone.  
+
+	$0000-$FFFF (64K) - Software PROM 
+	$0000-$00FF (256) - Micro Internal Memory
+	$7000-$70FF (256) - Glue Logic 
+	$A000-$BFFF (8K)  - EEPROM
+	$C000-$C0FF (256) - Extended RAM
+	$D000-$D0FF (256) - Screen Memory
+
+
+$0000-$FFFF (64K)  - Software PROM 
+
+     This is the software of the phone.  The software controls the
+phone.  This is where one will need to change the code to allow for
+the ESN to be changed.  The ROM version covered here is the 4701.
+The 4003 is not covered.                        
+
+Common LCALLS in the Oki 900
+
+   Here is a small list of some of the more common lcalls that are 
+used in the Oki 900.  This may or may not help, but here they are:
+
+lcall $04c2   - Sets $D0-$D1 and $A0-$A1 to $78 (there is a good reason)
+lcall $0542   - Fixes NAMs if needed, check summ
+lcall $055a   - Sets up security code via ESN, hex to dec conversion
+lcall $0723   - Clr A Set Of Locations to X00, X=R2, DPTR point to first
+lcall $072d   - Clears custom power on message BEAF to BEB6
+lcall $073d   - ESN chksumm   
+lcall $07e6   - Will reset the NAM if something happens to it
+lcall $13d4   - ACC.6 to C and lcall $2fe1   Write to screen direct....
+lcall $152c   - Display on screen (calls $2fe1 along the way)
+lcall $1549   - $7A to A and ACC.6 to C
+lcall $1638   - Gets key from keyboard and wonders if it is clear
+lcall $2722   - Mov DPTR, #$bec2 ESN working storage location mov R7, #04h
+lcall $274f   - Reads from BED1 BED2
+lcall $2e59   - Puts DPTR to R5 and R6 (DPH to R5,  DPL to R6)
+lcall $2e5e   - Puts R5 and R6 to DPTR (R5 to DPH, R6 to DPL)
+lcall $2f17   - 22->A, 8->R7, JMP to write to screen ($2fe1)
+lcall $2f4e   - lcall 3016, A->R7, 10->A, Screen Write, etc...
+lcall $2fb3   - A->R0, 39->A, Alcall N2fb3F0, CJNE A on F0 to B2fbc 
+		(R0->A, F0->A, scr write) $2fe1
+lcall $2fc3   - A->R7, 10->A, jmp to Screen Write ($2fe1)
+lcall $2fd2   - A->R7, A->@C087, CLR A, JMP to Screen write ($2fe1)
+lcall $2fe3   - The REAL screen write!!
+lcall $2ffb   - Write A to @DPTR, for EEPROM (ATMEL 28C64)
+lcall $3042   - Adjusts on over load!
+lcall $305e   - Change channel
+lcall $3110   - adds 40h (64d) to name address used for NAM pulls
+lcall $31f5   - Point to the correct location of the NAM selected
+lcall $3265   - Goto currect NAM location and Read it out
+lcall $347a   - Clr #$7f, Lets just save one byte
+lcall $347d   - Resets the autonomous timer
+lcall $34a7   - Enable Handsfree
+lcall $34b0   - Disable Handsfree (enable Skkr)
+lcall $3546   - Mutes the receive audio
+lcall $354a   - Unmutes the receive audio
+lcall $3552   - Unmutes the transmit audio
+lcall $3797   - Setup for call
+lcall $3834   - Checks if key is pressed
+lcall $3887   - Gets and Decodes a Control Channel Message
+lcall $38e6   - Get FCC message
+lcall $3939   - Decode FCC Message
+lcall $5b5e   - Inc DPTR, with DPL inc to only thru $00-$29 and $2b-$3e
+lcall $5b5e   - Inc DPTR, with DPL inc to only thru $00-$29 and $2b-$3e
+lcall $5d84   - NAM Checksum byte correction
+lcall $34b6   - Turns on Loudspeaker near mic (Used in Debug #77)
+lcall $37cf   - Enable the compressor and expandor (Used in Debug #65)
+lcall $37d6   - Disable the compressor and expandor (Used in Debug #66)
+lcall $34c6   - Turns the carrier off (Used in Debug #08)
+lcall $3741   - Transmits a continuous signalling tone (Used in Debug #16)
+lcall $354e   - Mutes the transmit audio (Used in Debug #13)
+
+Misc. Locations in the Oki 900 Software.
+
+
+$0000    Starting entrie
+$00b1    Read in all data, if not zero, die error number 2
+$00c8    RAM Check Summ, if not zero after being deced, error number 3
+$00cb    RAM Check Summ loop label  
+$00dd    Makes the call to the ESN check summ ($073d) better return a zero
+	 Error number 4
+$00e7    Call setup  
+$0102    Reset phone
+$012e    Reads out what NAM that the phone is set on
+$0136    Check Summ for External RAM, fail error number 3
+$0144    Read NAM out abd write into memory
+$0501    Setup for Security code (hex to dec conversion)
+$055a    HEX to Decminal converter
+$055b    HEX to Dec convertion looper var ent point
+$0573    Turn off write protect (lcall)
+$057a    Turn on write protect (lcall)
+$0581    Default NAM info, done on reset of phone  ($0102) Data
+$05c4    Write default NAMs Start from data at $0581
+$0723    Clr A Set Of Locations to X00, X=R2, DPTR point to first location
+$072d    Clears  customized power on message 
+$0732    Clear power on message loop var (Places spaces in the phone)
+$073d    Loads Encrupted ESN Locations  (ESN Check Summ)
+$0766    Decodes Encrypted ESN          (ESN Check Summ)
+$077a    ESN Check Summ                 (ESN Check Summ)
+$07dc    The Check Summ part of the NAM check summ
+$07e6    Will Reset the NAM if something happens to it *** START
+$07ed    Write loop for NAM write (called from $0581)
+$09b1    This is the START of debug!!!!
+$0b51    Debug indirect jump
+$140e    Data for key test  (DATA)
+$1638    This function is used to read a key from the keypad
+	 more over the CLR key
+$16d5    Address table for debug  (DATA)
+$2722    Loads ESN working storage location with ESN
+$2f55    Call from debug command #74
+$34a7    Enable Hands free 
+$34b0    Disable Handsfree (enable Speaker)
+$354a    Unmutes the receive audio     
+$3741    Transmits a continuous signalling tone 
+$385f    From C3834: this is the debug command number #20
+$4a74    Setup for customized power on message
+$5bb8    200 memory location control
+$5bd6    200 memory location address for indirect moves (DATA)
+
+
+ 
+$0000-$00FF (256) - Micro Internal Memory
+
+     The internal memory contains the function registers.  When one wants 
+to use the use a register, TASM does not have the lables for one to use. 
+One can access the register direct.  Here is the addresses one will need 
+to use. 
+
+	IOCON           $FF-$F8
+	B               $F7-$F0
+	ACC             $E7-$E0
+	PSW             $D7-$D0
+	TH2             $CD
+	TL2             $CC
+	RCAP2H          $CB
+	RCAP2L          $CA
+	T2CON           $CF-$C8
+	IP              $BF-$B8
+	P3              $B7-$B0
+	IE              $AF-$A8
+	P2              $A7-$A0
+	SBUF            $99
+	SCON            $9F-$98
+	P1              $97-$90
+	TH1             $8D
+	TH0             $8C
+	TL1             $8B
+	TL0             $8A
+	TMOD            $89
+	TCON            $8F-$88
+	PCON            $87
+	DP              $83
+	DPL             $82
+	SP              $81
+	P0              $87-$80
+
+
+  The Stack is specified by stack poiter ($81). 
+
+			Stack Srorage Layout
+
+  Stack Processing    Stack Pointer     7    6    5    4    3    2    1    0
+
+   Before Execution         $7F         D7   D6   D5   D4   D3   D2   D1   D0
+   Interrupt Process        $80         PC7  PC6  PC5  PC4  PC3  PC2  PC1  PC0
+			    $81         PC15 PC14 PC13 PC12 PC11 PC10 PC9  PC8
+   PUSH process (ACC)       $82         A7   A6   A5   A4   A3   A2   A1   A0
+   POP process (ACC)        $82         A7   A6   A5   A4   A3   A2   A1   A0
+   RETI process (pop PC)    $81         PC15 PC14 PC13 PC12 PC11 PC10 PC9  PC8
+			    $80         PC7  PC6  PC5  PC4  PC3  PC2  PC1  PC0
+   After Execution          $7F         D7   D6   D5   D4   D3   D2   D1   D0
+  
+
+
+
+$7000-$70FF (256) - Glue Logic 
+
+   Glue Logic is the decoder which controls various functions of the 
+Oki 900.  The NAM locations are under a write protect.  The write protect is
+controled via the $7005 location.  Here is some sample code  showing how
+one uses theh $7005 write protect.
+
+Turn Off EEPROM Write Protect  -  $01 into $7005
+
+	mov a, #$01               ; Load a $01 into A
+	mov dptr, #$7005          ; Load the value $7005 into DPTR
+	movx @dptr, a             ; Move A ($01) into the location at DPTR
+				  ; which is $7001
+
+Turn On EEPROM Write Protect   -  $00 into $7005
+
+	mov a, #$00               ; Load a $00 into A
+	mov dptr, #$7005          ; Load the value $7005 into DPTR
+	movx @dptr, a             ; Move A ($01) into the location at DPTR
+				  ; which is $7001
+
+
+$C000-$C0FF (256) - Extended RAM
+
+	C0F4-C0FE   Current NAM Information (Sid, MIN1/2, ICMP, OCL, GIM)
+	C0FF        Current NAM Selected (0=AutoNAM)
+
+$D000-$D0FF (256) - Screen Memory
+	
+	 This is the LCD memory locations.
+
+
+$A000-$BFFF (8K)  - EEPROM Memory locations
+
+    The EEPROM contains the ESN, NAM, passwords and other data that
+may need to be changed.                             
+    The ESN contains two locations.  The main location is the encrypted
+and CAN NO BE CHANGED unless one jumpers the 28C64 EEPROM write protect.
+(Order the databook by calling Atmel at 408-441-0311) To jumper the 
+EEPROM one can place a low on NOT WE (Write enable, Pin 27), NOT CE
+(Chip Enable, 20) and a high on OE (Output Enable, pin 22).  While 
+writing each byte, the NOT WE and CE should cycle, the OE NEEDS to be
+high.
+    The other ESN location is the working storage location, the is writen
+over each time the phone is turned on.   One can make a two byte crack 
+on the binary to change the ESN on the phone. Looking at $0788 in the 
+Oki PROM, you will see #$90 #$BE #$C2 (#$78 #$60 #$79, extra opcodes are
+added to help find the location in question). #$90 #$BE #$CE could be 
+changed to #$90 #$FF #$F0, and you be able to change the ESN by 
+useing debug command #54 to poke the ESN to $BEC2 thru $BEC5
+
+200 Memory location Table Starts at $9F4E in the PROM.  The addresses 
+are of the names, NOT the numbers please note that the the numbers 
+come before the names in the locations this starting at B000.  
+
+  ---------------------------------------------------------------
+  | Addr  Memory Location Number  | Addr  Memory Location Number|
+  |-------------------------------+-----------------------------|
+  | B010  Memory location #1      | B029  Memory location #2    |
+  | B044  Memory location #3      | B05D  Memory location #4    |
+  | B078  Memory location #5      | B091  Memory location #6    |
+  | B0AC  Memory location #7      | B0C5  Memory location #8    |
+  | B0DE  Memory location #9      | B0F9  Memory location #10   |
+  | B112  Memory location #11     | B12D  Memory location #12   |
+  | B146  Memory location #13     | B15F  Memory location #14   |
+  | B17A  Memory location #15     | B193  Memory location #16   |
+  | B1AE  Memory location #17     | B1C7  Memory location #18   |
+  | B1E0  Memory location #19     | B1FB  Memory location #20   |
+  | B214  Memory location #21     | B22F  Memory location #22   |
+  | B248  Memory location #23     | B261  Memory location #24   |
+  | B27C  Memory location #25     | B295  Memory location #26   |
+  | B2B0  Memory location #27     | B2C9  Memory location #28   |
+  | B2E2  Memory location #29     | B2FD  Memory location #30   |
+  | B316  Memory location #31     | B331  Memory location #32   |
+  | B34A  Memory location #33     | B363  Memory location #34   |
+  | B37E  Memory location #35     | B397  Memory location #36   |
+  | B3B2  Memory location #37     | B3CB  Memory location #38   |
+  | B3E4  Memory location #39     | B3FF  Memory location #40   |
+  | B418  Memory location #41     | B433  Memory location #42   |
+  | B44C  Memory location #43     | B465  Memory location #44   |
+  | B480  Memory location #45     | B499  Memory location #46   |
+  | B4B4  Memory location #47     | B4CD  Memory location #48   |
+  | B4E6  Memory location #49     | B501  Memory location #50   |
+  | B51A  Memory location #51     | B535  Memory location #52   |
+  | B54E  Memory location #53     | B567  Memory location #54   |
+  | B582  Memory location #55     | B59B  Memory location #56   |
+  | B5B6  Memory location #57     | B5CF  Memory location #58   |
+  | B5E8  Memory location #59     | B603  Memory location #60   |
+  | B61C  Memory location #61     | B637  Memory location #62   |
+  | B650  Memory location #63     | B669  Memory location #64   |
+  | B684  Memory location #65     | B69D  Memory location #66   |
+  | B6B8  Memory location #67     | B6D1  Memory location #68   |
+  | B6EC  Memory location #69     | B705  Memory location #70   |
+  | B71E  Memory location #71     | B739  Memory location #72   |
+  | B752  Memory location #73     | B76D  Memory location #74   |
+  | B786  Memory location #75     | B79F  Memory location #76   |
+  | B7BA  Memory location #77     | B7D3  Memory location #78   |
+  | B7EE  Memory location #79     | B807  Memory location #80   |
+  | B820  Memory location #81     | B83B  Memory location #82   |
+  | B854  Memory location #83     | B86F  Memory location #84   |
+  | B888  Memory location #85     | B8A1  Memory location #86   |
+  | B8BC  Memory location #87     | B8D5  Memory location #88   |
+  | B8F0  Memory location #89     | B909  Memory location #90   |
+  | B922  Memory location #91     | B93D  Memory location #92   |
+  | B956  Memory location #93     | B971  Memory location #94   |
+  | B98A  Memory location #95     | B9A3  Memory location #96   |
+  | B9BE  Memory location #97     | B9D7  Memory location #98   |
+  | B9F2  Memory location #99     | BA0B  Memory location #100  |
+  | A010  Memory location #101    | A029  Memory location #102  |
+  | A044  Memory location #103    | A05D  Memory location #104  |
+  | A078  Memory location #105    | A091  Memory location #106  |
+  | A0AC  Memory location #107    | A0C5  Memory location #108  |
+  | A0DE  Memory location #109    | A0F9  Memory location #110  |
+  | A112  Memory location #111    | A12D  Memory location #112  |
+  | A146  Memory location #113    | A15F  Memory location #114  |
+  | A17A  Memory location #115    | A193  Memory location #116  |
+  | A1AE  Memory location #117    | A1C7  Memory location #118  |
+  | A1E0  Memory location #119    | A1FB  Memory location #120  |
+  | A214  Memory location #121    | A22F  Memory location #122  |
+  | A248  Memory location #123    | A261  Memory location #124  |
+  | A27C  Memory location #125    | A295  Memory location #126  |
+  | A2B0  Memory location #127    | A2C9  Memory location #128  |
+  | A2E2  Memory location #129    | A2FD  Memory location #130  |
+  | A316  Memory location #131    | A331  Memory location #132  |
+  | A34A  Memory location #133    | A363  Memory location #134  |
+  | A37E  Memory location #135    | A397  Memory location #136  |
+  | A3B2  Memory location #137    | A3CB  Memory location #138  |
+  | A3E4  Memory location #139    | A3FF  Memory location #140  |
+  | A418  Memory location #141    | A433  Memory location #142  |
+  | A44C  Memory location #143    | A465  Memory location #144  |
+  | A480  Memory location #145    | A499  Memory location #146  |
+  | A4B4  Memory location #147    | A4CD  Memory location #148  |
+  | A4E6  Memory location #149    | A501  Memory location #150  |
+  | A51A  Memory location #151    | A535  Memory location #152  |
+  | A54E  Memory location #153    | A567  Memory location #154  |
+  | A582  Memory location #155    | A59B  Memory location #156  |
+  | A5B6  Memory location #157    | A5CF  Memory location #158  |
+  | A5E8  Memory location #159    | A603  Memory location #160  |
+  | A61C  Memory location #161    | A637  Memory location #162  |
+  | A650  Memory location #163    | A669  Memory location #164  |
+  | A684  Memory location #165    | A69D  Memory location #166  |
+  | A6B8  Memory location #167    | A6D1  Memory location #168  |
+  | A6EC  Memory location #169    | A705  Memory location #170  |
+  | A71E  Memory location #171    | A739  Memory location #172  |
+  | A752  Memory location #173    | A76D  Memory location #174  |
+  | A786  Memory location #175    | A79F  Memory location #176  |
+  | A7BA  Memory location #177    | A7D3  Memory location #178  |
+  | A7EE  Memory location #179    | A807  Memory location #180  |
+  | A820  Memory location #181    | A83B  Memory location #182  |
+  | A854  Memory location #183    | A86F  Memory location #184  |
+  | A888  Memory location #185    | A8A1  Memory location #186  |
+  | A8BC  Memory location #187    | A8D5  Memory location #188  |
+  | A8F0  Memory location #189    | A909  Memory location #190  |
+  | A922  Memory location #191    | A93D  Memory location #192  |
+  | A956  Memory location #193    | A971  Memory location #194  |
+  | A98A  Memory location #195    | A9A3  Memory location #196  |
+  | A9BE  Memory location #197    | A9D7  Memory location #198  |
+  | A9F2  Memory location #199    | AA0B  Memory location #200  |
+  ---------------------------------------------------------------
+
+NAM Stroage in the EEPROM:
+       SID-------  min1/min2-------------------  IPCH------  OLC-  GIM-
+NAM1 - A02B  A06B  A0AB  A0EB  A12B  A16B  A1AB  A1EB  A22B  A26B  A2AB
+NAM2 - A2EB  A32B  A36B  A3AB  A3EB  A42B  A46B  A4AB  A4EB  A52B  A56B 
+NAM3 - A5AB  A5EB  A62B  A66B  A6AB  A6EB  A72B  A76B  A7AB  A7EB  A82B
+NAM4 - A86B  A8AB  A8EB  A92B  A96B  A9AB  A9EB  AA2B  AA6B  AAAB  AAEB
+NAM5 - AB2B  AB6B  ABAB  ABEB  AC2B  AC6B  ACAB  ACEB  AD2B  AD6B  ADAB
+
+
+A6AA        Used with Encrypted ESN 
+A72A        Used with Encrypted ESN 
+A3EA        Used with Encrypted ESN
+A16A        Used with Encrypted ESN
+A2AA        Used with Encrypted ESN
+A22A        Used with Encrypted ESN 
+BBAC-BE73   30 roamer access memories 
+BE03        Index of NAM in use
+BEAF-BEB6   Customized power on message (8 bytes)
+BEBE-BEC1   "AEIO" signature sent to cell 
+BEC2-BEC5   ESN  working storage location 
+BF2C        Index of NAM in use
+BF2D        Even/odd SID (0 or 1)   
+BF60-BF63   Keyboard unlock code digits 
+BF71        Version number of display cpu rom
+BF74        Lighting mode control byte (0=7sec, 1=off, 2=on)
+
+
+
+
+Debug command
+~~~~~~~~~~~~~ 
+
+   Here is a list of some of the debug commands for the Oki 900.  Along with
+the list of debug commands are the address in the 4701 binary.
+The table for the indirect jump starts at $16D5.  The indirect jump for
+the debug mode is at $0b51.
+   Note, if the address is $14e3, the debug command does not exist.
+
+
+ Addr   Number       Use 
+ ----   ------       ---
+   
+ $14e3   #00
+ $0b81   #01         Performs Initialization
+ $0000   #02         Terminates the test mode
+ $0b97   #03         Shows current status of TRU
+ $0bd0   #04         Resets the autonomous timer
+ $0b70   #05         Returns Data Bytes following command
+		     to the Test Set.
+ $0b81   #06         Initialize the TRU to following states:
+		     Carrier Off, Attenuation - 0db,
+		     Receive Audio Muted Transmit Audio Muted,
+		     Signalling tone off,
+		     Autonomous timer reset,
+		     SAT off, and DTMF off
+ $0bdf   #07         Turns the carrier on
+ $0bf8   #08         Turns the carrier off
+ $0bfe   #09XXXX     Sets the synthesizer to channel XXXX
+ $0c34   #10X        Set the RF power attenuation to X
+		     0=0db, 7=-28 db
+		     (in steps of -4db thru 7)
+ $0c46   #11         Mutes the receive audio
+ $0c4c   #12         Unmutes the receive audio
+ $0c52   #13         Mutes the transmit audio
+ $0c58   #14         Unmutes the transmit audio
+ $0bda   #15         Discontinues resetting of autonomous timer
+ $0c5e   #16         Transmits a continuous signalling tone
+ $0c64   #17         Stops transmission of signalling tone
+ $0fbb   #18         Transmits a 5 word RCC message
+		     (fixed text pattern)
+ $0fe8   #19         Transmits a 2 word (RCC) RVC message
+		     (fixed test pattern)
+ $1009   #20         Receives a 2 word FCC message (cancel with 0x38)
+ $1086   #21         Receives a 1 word (FCC) FVC message
+		     (cancel with 0x38)
+ $0e3d   #22         Returns the information contained in the NAM
+ $0f03   #23
+ $0edd   #24
+ $0dad   #25XXXX     Displays the resident memory data at XX
+		     00XX=in micro, XXXX=EEPROM
+ $14e3   #26
+ $14e3   #27
+ $0f2c   #28         Count 1 word messages on CC, until TERMINATE
+ $0f61   #29         Count 1 word messages on VC, until TERMINATE
+ $14e3   #30
+ $14e3   #31
+ $0c73   #32X        Enable the transmission of SAT X
+		     0 = 5970 Hz,
+		     1 = 6000 Hz,
+		     2 = 6030 Hz
+ $0c9d   #33         Disables the transmission of SAT
+ $10a8   #34<60>     Transmits 5 word RCC message (30 bytes)
+ $0cdc   #35         Activates the 1150Hz tone to receive audio line
+ $0cd4   #36         Deactivates the 1150Hz tone
+ $0ce0   #37         Activates the 770Hz tone to receive audio line
+ $0cd4   #38         Deactivates the 770Hz tone
+ $14e3   #39
+ $14e3   #40
+ $14e3   $41
+ $0ca7   #42XX       Enable the transmission of DTMF
+		     frequency XX[2]
+ $0cd4   #43         Disable the transmission of DTMF
+ $1286   #44
+ $0cf0   #45
+ $0d00   #46
+ $0d06   #47
+ $0eac   #48
+ $14e3   #49
+ $14e3   #50
+ $0d7c   #51
+ $0d55   #52<xx>
+ $0da2   #53
+ $0e27   #54XXXXZZ   Write HEX (ZZ) into ADDRESS $XXXX
+ $14e3   #55
+ $0e22   #56         Return Value stored in $BEBB
+ $14e3   #57
+ $14e3   #58
+ $14e3   #59
+ $10c2   #60
+ $14e3   #61
+ $0f91   #62
+ $0fdc   #63
+ $1009   #64         Receives a 2 word FCC message
+		     (Please see debug command #20)
+ $0ce4   #65         Enable the compressor and expandor
+		     Compandor is a SA 5750
+		     This is a Philips Chip (800) 234-7381
+
+ $0cea   #66         Disable the compressor and expandor
+ $0d31   #67         X-Set volume (0-7) 0=max
+ $0d4a   #683XX      Mutes/Unmute Tx/Rx Audio Signal
+		     Enable Disable the Compressor/Expandor,
+		     XX=commanded states.
+		     CMD Compress Tx Mute Rx Mute
+		     --- -------- ------- -------
+		     40  on       unmuted unmuted
+		     41  off      unmuted unmuted
+		     42  on       muted   unmuted
+		     43  off      muted   ummuted
+		     44  on       unmuted muted
+		     45  off      unmuted muted
+		     46  on       muted   muted
+		     47  off      muted   muted
+ $14e3   #69
+ $14e3   #70
+ $14e3   #71
+ $1142   #72         Pulls, outputs 1 word
+ $11ff   #73XXXXYYYYZZ  Scans Channels
+		     XXXX = Starting 
+		     YYYY = Ending
+		     zz   = Delay
+ $1305   #74         keypad test
+ $0ef1   #75         Enable Handsfree (disable spkr)
+ $0ef7   #76         Disable Handsfree (enable spkr)
+ $0efd   #77         Turns on Loudspeaker near mic
+ $14e3   #78
+ $14dd   #79
+ $1a42   #80
+ $1962   #81
+ $19c8   #82
+ $182c   #83
+ $1789   #84
+ $18fe   #85
+ $14e3   #86
+ $14e3   #87
+ $14e3   #88
+ $14e3   #89
+
+
+The Oki Mod
+~~~~~~~~~~~
+
+  Here is the Oki 900 mod, some changes will need to be made to the 
+4701 binary before this will work.  THIS DOES WORK, and IS THE REAL
+THING, this is the same one that lame people are selling for cash!
+
+----------------------4715e.asm - Cut Here - Start ----------------------
+
+; **********************************************************************
+; *                                                                    * 
+; *                This is 4715 mod for the Oki 900 Phone              *
+; *                                                                    *
+; *                      by:  Oki Dokie                                *
+; *                                                                    *
+; *      There are a few changes you will have to make to your binary  *
+; *  in order for this code to work for you.  A you need to get        *
+; *  around the check summs, if you can not do that, you should not    *
+; *  have this.                                                        * 
+; *                                                                    *
+; *     Look at $00dd in theh 4701 binary, you will see 12073D, Change *
+; *     this to 12A290, do this to get the code to run.                * 
+; *                                                                    *
+; **********************************************************************
+;
+; **********************************************************************
+; *
+; * BFE1 = 1 Selector  ( With a #$20 there, we have a clone), Normal 
+; * BFE2 = 2 Selector  ( with a #$20 there, we have a clone), other Tumble 
+; * BFE3 = 5 Selector  #$20 = clone, $40 = Rotate, other = auto
+; * BFE4 = Number of times can be ESN used
+; * BEF5 = Number of times it has been
+; * ESN Location #1  $be8e-$be91
+; * ESN Location #2  $be93-$be96
+; * ESN Location #3  $be98-$be9b
+; * ESN Location #4  $be9d-$bea0
+; * ESN location #5  $bea2-$bea5
+; * 
+; **********************************************************************
+;
+;     Patch this in at $a0de (in the 4701 binary).  This shoule be 
+;   patched in as is!   This is the address for the indirect jump for 
+;   the auto mode.  Auto mode is the 230 ESN mode where the 230 ESN are
+;   used and deleted after they are used x number of time.  x is from 
+;   0 to 255, this value is poked in $BFE4.  Three strikes and ur out! 
+;
+;   The NAM has to be entered in as it is stored in the phone, you 
+;   will have to look that one up yourself, and write your own 
+;   program. :)
+;
+;   You will also need to rework the checksumms on the ROM.
+;      Fast turn on:
+;                 ROM Address $00AB contains  $90 $FF $00
+;                                 change  to  $02 $00 $C8
+;                          After the $00 starting at address
+;                          $00AE you can have the words
+;                          "Think There was code Here?"
+;                          and that will being you up to $00C8
+;                          (that is with out the double quote)
+;
+;      Slow turn on:
+;                ROM Address $00C5 contains  $02 $03 $C5
+;                                change  to  $00 $00 $00
+;
+;
+; **********************************************************************
+; Org A016
+;
+; b010b029b044b05db078b091b0acb0c5b0deb0f9b112b12db146
+; b15fb17ab193b1aeb1c7b1e0b1fbb214b22fb248b261b27cb295
+; b2b0b2c9b2e2b2fdb316b331b34ab363b37eb397b3b2b3cbb3e4
+; b3ffb418b433b44cb465b480b499b4b4b4cdb4e6b501b51ab535
+; b54eb567b582b59bb5b6b5cfb5e8b603b61cb637b650b669b684
+; b69db6b8b6d1b6ecb705b71eb739b752b76db786b79fb7bab7d3
+; b7eeb807b820b83bb854b86fb888b8a1b8bcb8d5b8f0b909b922
+; b93db956b971b98ab9a3b9beb9d7b9f2ba0ba000a019a034a04d
+; a06da081a09aa0b5a0cfa0eda102a11ba136a14fa16ca183a19c
+; a1b7a1d0a1eca204a21da238a251a26ca285a29ea2b9a2d2a2ed
+; a306a31fa33aa353a36ea387a3aca3bda3d5a3efa408a42da43c
+; a455a470a489a4bea4d6a4f1a50aa52da53fa557a572a58ba5ac
+; a5bfa5d8a5f3a60ca62ca640a659a674a68da6aca6c1a6daa6f5
+; a70ea72ca743a75ca776a78fa7aca7c3a7dca7f7a810a82ca844
+; a85da878a891a8aca8c5a8f9a912a92da946a97aa993a9aea9c7
+; a9fbaa14aa2caa3baa4aaa5aaa6caa7caa8daa9caaadaabcaacd
+; aaecaafcab0cab2cab3cab4cab5cab6cab7cab8cabacabccabec
+; abfcac0cac2cac3cac4cac5cac6cac7cac8cac9cacacacbcaccc
+; acecacfcad0cad2cad3cad5cad6cad7cad8cadacadccadecae0c
+; ae1cae2cae3cae4cae5cae6cae8cae9caeacaebcaeccaedcaeec
+; aefcaf0caf1caf2caf3caf4caf5caf6caf7caf8caf9cafacafbc
+; afccafdcaffcba15ba20ba2cba38ba43ba4fba5bba66ba71ba7d
+; ba9ababdbac9bad5bae1baedbaf9bb05bb11bb1dbb29bb35bb41
+; bb4dbb59bb65bb71bb7dbb89bb95bba1bbadbbb9bbc5bbd1bbdd
+; bbe9bbf5bc01bc0dbc19bc25bc31bc3dbc49bc55bc61bc6dbc79
+; bc85bc91bc9dbca9bcb5
+;
+;  org.  $a290
+;
+;
+;***********************
+
+begin:  .org $a290
+eleetesn:mov dptr, #$bf2c         ; NAM Select  
+	movx a, @dptr             ; Load that data up
+	cjne a, #$01, try2 
+	mov dptr, #$bfe1          ; Load Selector, for Autodial/Clone Mod
+	movx a, @dptr             ; Load that data up
+	cjne a, #$20, wehnp       ; Do We Have Normal Phone? 
+	mov dptr, #$be8e          ; ESN Location #1  $be8e-$be91
+	ljmp letsgo               
+wehnp:  ljmp nothing
+try2:   cjne a, #$02, try3        ;  
+	mov dptr, #$bfe2          ; Load Selector, for Autodial/Clone Mod
+	movx a, @dptr             ; Load that data up
+	cjne a, #$20, wehtum      ; Do We Have Tumble? 
+	mov dptr, #$be93          ; ESN Location #2  $be93-$be96
+	ljmp letsgo               ;
+wehtum: mov dptr, #$bfe3          ; Load Selector, for Tumble/Clone Mod
+	movx a, @dptr             ; Load that data up
+	ljmp tumbl
+try3:   cjne a, #$03, try4        ;
+	mov dptr, #$be98          ; ESN Location #3  $be98-$be9b
+	ljmp letsgo               ;
+try4:   cjne a, #$04, its5        ;
+	mov dptr, #$be9d          ; ESN Location #4  $be9d-$bea0
+	ljmp letsgo               ;
+its5:   cjne a, #$05, nothing     ; Better be 5, or you get NOTHING!!
+	mov dptr, #$bfe3          ; Load Selector, for Autodial/Clone Mod
+	movx a, @dptr             ; Load that data up
+	cjne a, #$20, wehad       ; Do We Have Auto Dial?
+	mov dptr, #$bea2          ; ESN Location #5  $bea2-$bea5
+	ljmp letsgo               ;
+wehad:  cjne a, #$40, ihad2       ; Do We Have Auto Dial?
+	ljmp rotate               ; Maybe We have Rotate
+ihad2:  ljmp autodia              ; 
+tumbl:  mov a, #$01               ;\
+	mov dptr, #$7005          ; |Turn off EEPROM write protect.
+	movx @dptr, a             ;/
+	mov dptr, #$bec2          ; ==========
+	mov r0, #$60              ;
+	mov r1, #$04              ;
+loop:   movx a, @dptr             ;   Put current Serial # into $60-$63
+	mov @r0, a                ;
+	inc dptr                  ;
+	inc r0                    ;
+	djnz r1,loop              ; ==========
+	mov a, $63                ;     Store last byte of ESN
+	mov $66, a                ;     for random MIN routine.
+	mov a, $62                ;     and third byte for random
+	anl a, #$9f               ;     first byte.
+	orl a, #$80               ;
+	mov $60, a                ;
+	inc $60                   ; ==========
+	xrl $61, a                ;
+	dec $61                   ;   Randomize the second
+	mov a, $61                ;   byte by using the
+	anl a, #$0f               ;   first byte as a seed.
+	mov $61, a                ;
+	mov dptr, #$be00          ; ==========
+	movx a, @dptr             ;
+	mov @r0, a                ;  Put position pointer for
+	inc dptr                  ;        XOR code.
+	inc r0                    ;  Put DPTR in $64-$65
+	movx a, @dptr             ;
+	mov @r0, a                ; ==========
+	mov a, $64                ;
+	xch a, $83                ; $83 = DPH 
+				  ; Take pointer for XOR, put
+				  
+	mov a, $65                ;  it in DPTR. Then pull
+	xch a, $82                ; $82 = DPL
+				  ;  the information in those
+	clr a                     ;
+	movc a, @a+dptr           ;  two bytes in the *ROM*
+	xrl $66, a                ; (store for later use)
+	xrl $62, a                ;  and XOR it with the
+	inc dptr                  ;  last two ESN bytes.
+	clr a                     ;
+	movc a, @a+dptr           ;
+	xrl $63, a                ; ==========
+	inc $65                   ;
+	mov a, $65                ; Increase the position
+	jnz nocarry               ; of the pointer
+	mov a, $64                ; for doing an XOR.
+	inc a                     ; with the carry
+	cjne a, #$97, noflip      ; function.
+	clr a                     ;
+noflip: mov $64, a                ; ==========
+nocarry:mov dptr, #$be00          ;
+	mov a, $64                ; Store the new pointer
+	lcall $2ffb               ; into the EEROM
+	inc dptr                  ; at $BE00
+	mov a, $65                ;
+	lcall $2ffb               ; ==========
+	mov dptr, #$bf3b          ;
+	movx a, @dptr             ; Take the time
+	add a, $62                ; used in minutes
+	mov $62, a                ; on the phone
+	inc dptr                  ; and add it to
+	movx a, @dptr             ; the ESN.
+	add a, $63                ;
+	mov $63, a                ; ==========
+	mov dptr, #$bec2          ;
+	mov r0, #$60              ; Store the
+	mov r1, #$04              ;
+esnloop:mov a, @r0                ; new ESN into
+	lcall $2ffb               ;
+	inc dptr                  ; the EEPROM.
+	inc r0                    ;
+	djnz r1,esnloop           ; ==========
+
+	mov dptr, #$bea1          ; If $BEA1 is set to
+	movx a, @dptr             ; #$01, then don't
+	cjne a, #$01, fixmin      ; randomize the
+	ljmp done                 ; phone number.
+
+fixmin: mov a, $63                ; ==========  [Begin MIN Randomizer]
+	anl a, #$03               ;
+	cjne a, #$03, notbad      ;  Randomize The Two high bits
+	anl a, #$01               ;  of x where last four = xYYY
+
+;       SID-------  min1/min2-------------------  IPCH------  OLC-  GIM-
+; NAM1  A02B  A06B  A0AB  A0EB  A12B  A16B  A1AB  A1EB  A22B  A26B  A2AB
+; NAM2  A2EB  A32B  A36B  A3AB  A3EB  A42B  A46B  A4AB  A4EB  A52B  A56B
+; NAM3  A5AB  A5EB  A62B  A66B  A6AB  A6EB  A72B  A76B  A7AB  A7EB  A82B
+; NAM4  A86B  A8AB  A8EB  A92B  A96B  A9AB  A9EB  AA2B  AA6B  AAAB  AAEB
+; NAM5  AB2B  AB6B  ABAB  ABEB  AC2B  AC6B  ACAB  ACEB  AD2B  AD6B  ADAB
+;        A     B     C     D     E     F     G     H     I     J     K 
+notbad: mov $67, a                ;
+	mov dptr, #$a3eb          ; Row = E 
+	movx a, @dptr             ;  =======
+	anl a, #$fc               ;  Randomize The Two low bits
+	orl a, $67                ;  of x where last four = xYYY
+	lcall $2ffb               ;  =======
+	mov dptr, #$a42b          ; Row = F
+	movx a, @dptr             ;
+	xrl $66, a                ;
+	mov a, $67                ;
+	cjne a, #$02, alltwo      ;
+	mov a, $66                ;  Randomize the upper
+	anl a, #$7f               ;  6 bits of the 10bit last 3
+	mov $66, a                ;  digits of the MIN.
+alltwo: mov a, $66                ;
+	anl a, #$3f               ;[   MIN setup:                            ]
+	cjne a, #$3f, notbig      ;[areacode--- 10 binary spaces (0=9&HEXCOV)]
+	mov a, $66                ;[exchange--- 10 binary spaces (0=9&HEXCOV)]
+	anl a, #$fe               ;[7th digit-- 4 binary space (DIRECT DEC)  ]
+	mov $66, a                ;[8-10 dig--- 10 binary spaces (0=9&HEXCOV)]
+notbig: mov a, $66                ;
+	lcall $2ffb               ;  Randomize the lower
+	mov dptr, #$a46b          ; Row = G 
+				  ;  4 bits of the 10bit last 3
+	cjne a, #$3e, keepem      ;  digits of the MIN.
+	mov a, $62                ;
+	anl a, #$70               ;
+	mov $62, a                ;
+keepem: mov a, $62                ;
+	anl a, #$f0               ;
+	lcall $2ffb               ; ========================================
+	lcall $5d84               ; NAM Checksum byte correction
+	mov dptr, #$7005          ;\
+	mov a, #$00               ;| Write protect EEPROM again!
+	movx @dptr, a             ;/
+done:   mov r0, #$64              ;
+	mov r1, #$04              ;  \
+	clr a                     ;   |     Clear
+clwork: mov @r0, a                ;   |     ESN/MIN
+	inc r0                    ;   |     workspace
+	djnz r1, clwork           ;  /
+	clr a                     ;
+	ret                       ;  Bye, bye NAM.
+; ============= Subroutine for copying in a fake ESN ========================
+
+letsgo: mov r0, #$60              ;
+	mov r1, #$04              ;
+cploop: movx a, @dptr             ;
+	mov @r0, a                ;      THIS WILL COPY A OBTAINED
+	inc dptr                  ;
+	inc r0                    ;      ESN TO THE LOCATION FOR
+	djnz r1, cploop           ;
+	mov dptr, #$bec2          ;      REAL ESN USE. FOR USE
+	mov r0, #$60              ;
+	mov r1, #$04              ;      WITH ESN/MIN PAIRS.
+wrloop: mov a, @r0                ;
+	lcall $2ffb               ;
+	inc dptr                  ;
+	inc r0                    ;
+	djnz r1, wrloop           ;
+	ljmp done
+autodia:mov a, #$01               ;\
+	mov dptr, #$7005          ; |Turn off EEPROM write protect.
+	movx @dptr, a             ;/
+	clr $60                   ; Make sure $60 is clean
+				  ; ******* Loop for 1 to 256
+				  ; \
+	mov $62, #$a0             ;  | #$a0de Load First Address 
+	mov $63, #$de             ;  | in Data Table
+				  ; /
+				  ; DPH   DPL
+				  ; $83   $82
+pulldat:mov $83, $62              ; \
+	mov $82, $63              ;  |  82 = DPL 
+	clr a                     ;  |  83 = DPH
+	movc a, @a+dptr           ;  |  83 82
+	mov $60, a                ;  |
+	inc $63                   ;  | Read from Data Table starting
+	mov $82, $63              ;  | at ROM address #$9f4e, we pull 
+	clr a                     ;  |
+	movc a, @a+dptr           ;  |
+	mov $61, a                ;  | the data (the data being a address)
+	mov $83, $60              ;  | and test to see if there is
+	mov $82, $61              ;  | data (an ESN) at that location.
+	movx a, @dptr             ;  |
+	jnz found1                ; / 
+	inc $63                   ; \
+	mov a, $63                ;  |
+	cjne a, #$00, overtst     ;  |  If we get nothing, we will add
+	inc $62                   ;  | one more (MUST be an even number 
+overtst:mov a, $62                ;  | for this to work), while making 
+	cjne a, #$a2, pulldat     ;  | sure we donot pass address 
+	mov a, $63                ;  | #$a140, which is the end of the ESN,
+	cjne a, #$90, pulldat     ;  |
+	ljmp nothing              ; /
+				  ; ESN 
+				  ;  $62 - 1st byte ESN
+				  ;  $63 - 2nd byte ESN
+				  ;  $64 - 3rd byte ESN
+				  ;  $65 - 4th byte ESN
+				  ;  $66 - 1st byte NAM for SID
+				  ;  $67 - 2st byte NAM for SID
+				  ;  $68 - NAM
+				  ;  $69 - NAM
+				  ;  $6A - NAM
+				  ;  $6B - NAM
+				  ;  $6C - NAM
+found1: mov r0, #$62              ;  | Setup for copy loop
+	mov r1, #$0B              ; /
+ncplop: movx a, @dptr             ; \
+	mov @r0, a                ;  |
+	inc dptr                  ;  |  Copy Data to RAM
+	inc r0                    ;  | 
+	djnz r1, ncplop           ; /  
+
+; **************************************************
+
+				  ; ******* Use Number
+				  ; * BFE4 = Number of times can be ESN used
+				  ; * BEF5 = number of times it has been 
+				  ; *******
+usenum: mov dptr, #$bfe4          ; Times address
+	movx a, @dptr             ; Lets see whats there
+	mov $56, a                ; store for a sec 
+	inc dptr                  ; bfe5
+	movx a, @dptr             ; Lets see whats there
+	inc a                     ; We used it again, need to add that so
+	cjne a, $56, morlif       ; Three Strikes and your out! 
+	mov $83, $60              ; \
+	mov $82, $61              ;  | Load DPTR
+				  ; / 
+	clr a                     ;    A = 00
+	mov r0, #$0b              ;    Loop X number
+delesn: lcall $2ffb               ; \
+	inc dptr                  ;  | Wipe out ESN
+	djnz r0, delesn           ; /
+morlif: mov dptr, #$bfe5          ;    Load address
+	lcall $2ffb               ;
+;**************************************************
+comonp: mov dptr, #$bec2          ; \
+	mov r0, #$62              ;  | Set up for ESN Write
+	mov r1, #$04              ; /
+nwrlop: mov a, @r0                ; \ 
+	lcall $2ffb               ;  | 
+	inc dptr                  ;  |  **Write ESN loop 
+	inc r0                    ;  | 
+	djnz r1, nwrlop           ; /
+	mov dptr, #$ab2b          ; <----  SID address
+	mov r0, #$66              ; <----  Start RAM at SID
+	mov r1, #$07              ; <----  #7 Times
+				  ;
+				  ; SID-------  MIN1/MIN2-------------------  
+				  ; AB2B  AB6B  ABAB  ABEB  AC2B  AC6B  ACAB 
+				  ;
+donam:  mov a, @r0                ; \
+	lcall $2ffb               ;  | 
+	lcall $3110               ;  |  Write SID, MIN1 and MIN2
+	inc r0                    ;  | 
+	djnz r1, donam            ; /  
+	mov r0, #$60              ; \  
+	mov r1, #$0D              ;  |
+	clr a                     ;  |      Clear
+clwrk2: mov @r0, a                ;  | ESN/SID/MIN1/MIN2
+	inc r0                    ;  |     workspace
+	djnz r1, clwrk2           ; /
+	clr a                     ; Clear A
+	lcall $5d84               ; NAM Checksum byte correction
+	mov dptr, #$7005          ; \
+	mov a, #$00               ;  | Write protect EEPROM again!
+	movx @dptr, a             ; /
+	ljmp done                 ; New ESN/MIN 
+rotate: mov a, #$01               ; \
+	mov dptr, #$7005          ;  | Turn off EEPROM write protect.
+	movx @dptr, a             ; /
+	clr $60                   ; Make sure $60 is clean
+	clr $61                   ; Make sure $61 is clean
+; 01
+	mov dptr, #$bef6          ;
+	movx a, @dptr             ; load up offset
+	mov $61, a                ; load up offset
+;************************************************
+	mov dptr, #$bfe4          ; Times address
+	movx a, @dptr             ; Lets see whats there
+	mov $56, a                ; store for a sec 
+	inc dptr                  ; bfe5
+	movx a, @dptr             ; Lets see whats there
+	inc a                     ; We used it again, need to add that so
+	cjne a, $56, morlif       ; Three Strikes and your out! 
+
+;************************************************
+allovr: inc $61                   ; $61 is needed because A is used
+				  ; for other things
+	mov a, $61                ; And if $61 is different
+	cjne a, #$e8, donew       ; We only have 230 ESNs to spin thru
+	mov $61, #$01             ; back to z old FF
+donew:  mov a, $61                ; We have to copy it again if it is different
+	movx @dptr, a             ; write the new value back
+				  ;
+				  ;   The reason I copy A to $61 and back
+				  ;   is because A is used else where
+				  ;
+	mov $60, #$e7             ; the total value
+	mov dptr, #$a28e          ; Load the END of the data
+rrssee: mov a, $60
+	cjne a, $61, decrota      ; do we have a match? 
+	sjmp gtaaddr              ; gotta address 
+decrota:dec $82                   ;              \
+	dec $82                   ; DPH    DPL    |  dec on DPTR
+	mov a, $82                ;               |
+	cjne a, #$fe, nofdech     ; $83    $82    |  With carry
+	dec $83                   ;              /
+nofdech:djnz $60, rrssee          ; loopit!
+	ljmp nothing              ; there is nothing there,..
+gtaaddr:movx a, @dptr             ; Load of the ESN for a test 
+	jz allovr                 ; Is there data there?
+	mov r0, #$62              ;  | Setup for copy loop
+	mov r1, #$0B              ; /
+rcpllop:movx a, @dptr             ; \
+	mov @r0, a                ;  |
+	inc dptr                  ;  |  Copy Data to RAM
+	inc r0                    ;  | 
+	djnz r1, rcpllop          ; /  
+	ljmp comonp
+.END
+
+--------------------- 4715e.asm End - Cut Here - End  --------------------
+
+
+The Network Wizards Interface cable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    With the interface cable, one can program the NAM and ESN on the phone 
+with this mod.  Clone a phone fast, easy and fun!
+
+
+---------------------- prog.c - Start - Cut Here  ------------------------
+
+
+/*
+ESN Location #1  $be8e-$be91
+ESN Location #2  $be93-$be96
+ESN Location #3  $be98-$be9b
+ESN Location #4  $be9d-$bea0
+ESN location #5  $BEA2-$BEA5
+*/
+
+#include <stdio.h>
+#include <dos.h>
+#include <conio.h>
+#include <bios.h>
+#include <ctype.h>
+#include <math.h>
+#include <string.h>
+
+#define FALSE           0
+#define TRUE            1
+#define SWAP(a,b) (a^=b,b^=a,a^=b)   
+typedef unsigned char bool;
+typedef unsigned char byte;
+typedef unsigned int  word;
+#include "ctlib.h"
+
+/*    Defines that CTLIB does not have   */
+#define CT_KEY_1AND3      0x30
+#define CT_KEY_4AND6      0x31
+#define CT_KEY_7AND9      0x32
+#define CT_KEY_STAR_POUND 0x33
+#define CT_KEY_RCL_MENU   0x28          
+#define CT_KEY_SND_END    0x35
+/*   You may want to use these too!#@ */
+
+#define BUFLEN          128
+#define ESC             0x1B
+
+char buf[BUFLEN];
+
+char ps_system;
+byte nambyte = 0x00;
+byte namonebyte =0x01;
+int  ps_cc;                             /* control channel */
+int  ps_cc_rss;                         /* control channel last rss */
+
+char ournum[32];                        /* our telephone number */
+unsigned long ouresn;                   /* our esn */
+
+
+main(argc,argv)
+  int argc;
+  char *argv[];
+{
+  int i;
+
+  
+  /* initialize ct library using the specified COM port */
+  if (argc > 1)
+  {
+    if (*argv[1] == '1')
+      ct_lib_init(900,0x3f8,4);
+    else if (*argv[1] == '2')
+      ct_lib_init(900,0x2f8,3);
+    else if (*argv[1] == '3')
+      ct_lib_init(900,0x3e8,5);
+    else
+    {
+      puts("Type 'TMPRO 2' to use COM2");
+      exit(0);
+    }
+  }
+  else
+    ct_lib_init(900,0x3f8,4);           /* com1 by default */
+
+  /* power up oki and tell it what mode to use */
+  if (!ct_on(MODE_TEST))
+  {
+    fprintf(stderr,"?No response from OKI\n");
+    cleanup();
+    exit(1);
+  }
+
+
+   if (!ct_on(MODE_TEST))  
+   {
+    fprintf(stderr,"?No response from OKI\n");
+    cleanup();
+    exit(1);
+   }
+
+  strcpy(ournum,nam_info[ct_state.namindex].number);    /* use current nam */
+  printf("Current NAM index #: %d\n",ct_state.namindex);
+  printf("Current NAM number : %d\n",nam_info[ct_state.namindex].number);
+  printf("Tel# is %s, ",ournum);
+
+  if (!ct_get_esn(&ouresn))
+  {
+    fprintf(stderr,"?Can't get ESN\n");
+    cleanup();
+    exit(1);
+  }
+  printf("ESN is %08lx\n\n",ouresn);
+
+  cmd_elite_stuff();
+
+  cleanup();
+  exit(0);
+}
+
+cleanup()
+{
+  ct_off();                             /* turn off phone */
+  ct_lib_done();                        /* cleanup library stuff */
+}
+
+cmd_power_messages()
+{
+   byte c,x,pointer;
+   char powerstring[8];
+   char ch;
+
+   for (c=1;c<32;c++)
+    {
+    for (x=0;x<8;x++)
+     {
+      powerstring[x] = (c*8) + x;
+      printf("%x ",powerstring[x]);
+      pointer = 0xBEAF + x;
+      ct_set_block(&powerstring[x],pointer,1);
+     }
+    printf("\n");
+    ct_off();                
+    ct_on(MODE_NORMAL);     
+    ch = getche();         
+    ct_off();
+    if (ch == 'x')
+     {
+      cleanup();
+      exit(1);
+     }
+    delay(1000);
+    ct_on(MODE_TEST);
+    ct_get_nams();
+    }
+}
+
+
+cmd_elite_stuff()
+{
+ char ch;
+ unsigned long esn;
+ byte counter;
+ char sysid[6];
+
+   fetch_esn(&esn,1);
+   printf("our NAM#1 ESN : %08lx\n",esn);
+   fetch_esn(&esn,2);
+   printf("our NAM#2 ESN : %08lx\n",esn);
+   fetch_esn(&esn,3);
+   printf("our NAM#3 ESN : %08lx\n",esn);
+   fetch_esn(&esn,4);
+   printf("our NAM#4 ESN : %08lx\n",esn);
+   fetch_esn(&esn,5);
+   printf("our NAM#5 ESN : %08lx\n",esn);
+
+   printf("Enter number of NAM to configure (1-5) : ");
+   ch = getche();
+   printf("\nEnter new ESN : ");
+   scanf("%8lx", &esn);
+   printf("Enter new MIN : ");
+   scanf("%10s", &ournum);
+   printf("Enter system ID : ");
+   scanf("%5s", &sysid);
+
+   store_esn(esn, ch-48);
+
+   nambyte = ch-48;
+   ct_set_block(&nambyte,0xBF2C,1);    
+   ct_set_block(&nambyte,0xC0FF,1);
+
+   store_min((ch-48),ournum,sysid);
+
+}
+
+int fetch_esn(esn,nam)  
+unsigned long *esn;
+int nam;
+{
+ word addr;            
+ union esn_un {
+    unsigned long l;
+    byte b[4];
+   } myesn;
+
+switch (nam) {
+  case 1:  addr = 0xBE8E; break;
+  case 2:  addr = 0xBE93; break;
+  case 3:  addr = 0xBE98; break;
+  case 4:  addr = 0xBE9D; break;
+  case 5:  addr = 0xBEA2; break;
+  default: return(1); break;    
+ }
+
+ ct_read_block(esn,addr,4);
+ myesn.l = *esn;
+ SWAP(myesn.b[0],myesn.b[3]);  
+ SWAP(myesn.b[1],myesn.b[2]);
+ *esn = myesn.l;
+ return(0);
+}
+
+
+int store_esn(unsigned long stored_esn, int nam)  
+{
+  word addr;                  
+  union esn_un {
+    unsigned long l;
+    byte b[4];
+   } myesn;
+
+switch (nam) {
+  case 1:  addr = 0xBE8E; break;
+  case 2:  addr = 0xBE93; break;
+  case 3:  addr = 0xBE98; break;
+  case 4:  addr = 0xBE9D; break;
+  case 5:  addr = 0xBEA2; break;
+  default: return(1);     break;  
+ }
+
+  myesn.l = stored_esn;
+  SWAP(myesn.b[0],myesn.b[3]);   
+  SWAP(myesn.b[1],myesn.b[2]);
+  stored_esn = myesn.l;
+  ct_set_block(&stored_esn,addr,4);  
+  return(0);
+}
+
+
+store_min(int nam, char *num, char *sysid)
+ {
+   int x;
+
+   ct_off();
+   ct_on(MODE_NORMAL);
+   delay(1000);
+   send(CT_KEY_RCL_MENU);
+   send(CT_KEY_STAR);
+   send(CT_KEY_6);
+   send(CT_KEY_2);
+   send(CT_KEY_7);
+   send(CT_KEY_2);
+   send(CT_KEY_9);
+   send(CT_KEY_8);
+   send(CT_KEY_5);
+   send(CT_KEY_4);
+   send(CT_KEY_POUND);
+   printf("Waiting for messages to settle\n");
+   delay(4000);
+   for (x=0;x<4+nam;x++)
+     send(CT_KEY_DOWN);     
+   printf("Waiting for NAM %d to fall through\n",nam);
+   delay(3000);         
+   sendnum(num);
+   send(CT_KEY_STO);   
+   send(CT_KEY_DOWN); 
+   sendnum(sysid);
+   send(CT_KEY_STO);   
+   send(CT_KEY_CLR);
+   send(CT_KEY_CLR);
+   ct_off();
+}
+
+
+sendnum(char *number)
+{
+  int x;
+
+   for (x=0;x<strlen(number);x++)
+     {
+       switch (number[x])
+       {
+	 case '0' :     send(CT_KEY_0); break;
+	 case '1' :     send(CT_KEY_1); break;
+	 case '2' :     send(CT_KEY_2); break;
+	 case '3' :     send(CT_KEY_3); break;
+	 case '4' :     send(CT_KEY_4); break;
+	 case '5' :     send(CT_KEY_5); break;
+	 case '6' :     send(CT_KEY_6); break;
+	 case '7' :     send(CT_KEY_7); break;
+	 case '8' :     send(CT_KEY_8); break;
+	 case '9' :     send(CT_KEY_9); break;
+	 default  :     printf("Fuckup in sendnum string!"); exit(1); break;
+       }       // switch
+     }       // for
+}
+/* "push" key for 100 milliseconds */
+send(key)
+  int key;
+{
+  ct_keypress(key);
+  delay(100);
+  ct_keypress(CT_KEY_RELEASE);
+}
+
+----------------------- prog.c End - Cut Here  ------------------------
+
+
+
+Charter set in the Oki 900
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   The Oki 900 has a full charter set built in.  The charter set can
+be used in the power on message.  The power on message can be programed
+by the debug command #54.  The addresses of the power on message are $BEAF
+thru $BEB8.  Here is a list of the charter set, please note that all these
+were guessed at, and some may be wrong.  ALL NUMBERS ARE IN HEX!
+
+Small Katakana
+
+A6 = a     A7 = i     A8 = u     A9 = e     AA = o     AB = ka    AC = ki
+AD = ku    AE = ke    AF = ko
+
+
+B0 = -
+
+Katakana
+
+B1 = a     B2 = i     B3 = u     B4 = e     B5 = o     B6 = ka    B7 = ki
+B8 = ku    B9 = ke    BA = ko    BB = sa    BC = shi   BD = su    BE = se
+BF = so    C0 = fa    C1 = chi   C2 = tsu   C3 = te    C4 = to    C5 = na
+C6 = ni    C7 = nu    C8 = ne    C9 = no    CA = ha    CB = hi    CC = fa
+CD = he    CE = ho    CF = ma    D0 = mi    D1 = mu    D2 = me    D3 = mo
+D4 = ya    D5 = yu    D6 = yo    D7 = ra    D8 = ri    D9 = ru    DA = re
+DB = ro    DC = wa    A6 = o     DD = n'
+
+DE = dakutan
+DF = Small circle the no one knows the name to
+FC = Yen
+FA = Thousand (Japanies)
+FB = Adds zero
+
+English
+
+21 = "     22 = !     23 = #     24 = $     25 = %     26 = &     27 = '
+28 = (     29 = )     2A = *     2B = +     2C = ,     2D = -     2E = .
+2F = /     30 = 0     31 = 1     32 = 2     33 = 3     34 = 4     35 = 5
+36 = 6     37 = 7     38 = 8     39 = 9     3A = :     3B = ;     3C = <
+3D = =     3E = >     3F = ?     40 = @     41 = A     42 = B     43 = C
+44 = D     45 = E     46 = F     47 = G     48 = H     49 = I     4A = J
+4B = K     4C = L     4D = M     4E = N     4F = O     50 = P     51 = Q
+52 = R     53 = S     54 = T     55 = U     56 = V     57 = W     58 = X
+59 = Y     5A = Z     5B = [     5D = ]     5E = ^     61 = a     62 = b
+63 = c     64 = d     65 = e     66 = f     67 = g     68 = h     69 = i
+6A = j     6B = k     6C = l     6D = m     6E = n     6F = o     70 = p
+71 = q     72 = r     73 = s     74 = t     75 = u     76 = v     77 = w
+78 = x     79 = y     7A = z     7B = {     7D = }     5F = _     60 = `
+7C = |
+
+SPACE = 0C, 0D, 10-20, 7E-A0
+
+
+Misc. chars
+
+01 - Right Triangle (Up)
+02 - Right Triangle (Down)
+05 thru 0F are random
+E0 - Alpha
+E1 - lower case a with two dots over it
+E2 - Beta
+E3 - Epsilon
+E4 - Mu
+E5 - Sigma
+E6 - Circle with two flat sides on top
+E7 - Cricle with two flat sides on right hand side
+E8 - Square root
+E9 - To the power of -1 (1/x)
+EA - i (Complex Number)
+EB - To the power of x
+EC - Cent
+ED - Pound
+EE - Lower case n with line over it
+EF - o with two dot over it
+F0 - L with circle
+F1 - inverted image of F0
+F2 - Theta
+F3 - Infinity
+F4 - Upper Omega
+F5 - U with two dots over it
+F6 - Upper Signa
+F7 - Pie
+F8 - X with a line over it
+F9 - Upper Mu
+FE - Division
+
+********************************** EoF *********************************

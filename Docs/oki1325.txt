@@ -1,0 +1,52 @@
+The OKI 1325 Info Sheet V. 2:
+-----------------------------
+
+by Blundar and IceBerg.
+
+I have acquired the following information thanks to blundar, and also an 
+OKI 1325 thanks again to blundar.
+
+OKI 1325 NAM Programming:
+
+ After power up press recall + menu followed by * 6 2 6 #
+
+
+OKI 1325 Test Mode:
+
+ Same as the 900
+ Press 7+9, menu, send, end, recall, store, clear, 1+3
+ The unit will respond with good timing ! !
+
+
+OKI 1325 Service Monitor:
+
+ *+#, *, 8, 3, 7, 8, 6, 6, 3, 3, #
+ The unit will respond with Service Facility, then with Service Monitor
+ After that you will see something that resembles the following:
+
+ 
+
+        ------These 2 digits appear to be signal strength?
+        ||
+        ||---unknown
+        |||
+        570
+ 1101300338
+ ||||||||||
+ |||||||------Initial paging chan? mine is 338 on B and 322 on A and
+ |||||||      could be fovc or rovc? or focc or rocc? Anyone?
+ |||||||
+ ||||--------More channel stuff, I think this one is FOVC?
+ ||||
+ -------unknown, may have something to do with the option bit
+
+also before entering status monitor you can scroll through these options:
+
+display of Software Version Number
+display of ESN
+display Option Bits
+display Unlock Code <--USEFUL!!!
+
+Can anyone else give me anymore info?
+
+IceBerg

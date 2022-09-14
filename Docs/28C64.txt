@@ -1,0 +1,114 @@
+MAPING OF THE OKI 900 CELLULAR PHONE.
+             Includes all code in the ATMEL EEPROM (AT28C64).
+                    Map by Mark Lottor <mkl@nw.com>
+           Updates by Jason Miller <dynastar@hal.gnu.ai.mit.edu>
+
+
+Overview: (1) Connected  $0000-$FFFF - 64K - Software PROM
+          (2) Internal   $0000-$00FF - 256 - Micro Internal Memory
+          (3) External   $7000-$70FF - 256 - Glue Logic RAM
+          (4) External   $A000-$BFFF -  8K - NAM EEPROM
+          (5) External   $C000-$C0FF - 256 - External Extended RAM
+          (6) External   $D000-$D0FF - 256 - Screen Memory(?)
+
+==============================================================================
+7000-70FF?  [Storage Identification] - Glue Logic Processor
+==============================================================================
+7000    7000 = 40
+7001
+7002
+7003
+7004
+7005     0eac set it to 01         0ebd set it to 00
+7006
+
+==============================================================================
+A000-BFFF   [Storage Identification] - External NAM EEPROM
+==============================================================================
+A000-BA10   200 memories scattered about
+A02B        NAM 1 (byte 1 of 11)
+
+ Example of a NAM Storage (This is Correct for NAM #1)
+       SID-------  min1/min2-------------------  IPCH------  OLC-  GIM-
+NAM1 - A02B  A06B  A0AB  A0EB  A12B  A16B  A1AB  A1EB  A22B  A26B  A2AB
+NAM2 - A2EB  A32B  A36B  A3AB  A3EB  A42B  A46B  A4AB  A4EB  A52B  A56B 
+NAM3 - A5AB  A5EB  A62B  A66B  A6AB  A6EB  A72B  A76B  A7AB  A7EB  A82B
+NAM4 - A86B  A8AB  A8EB  A92B  A96B  A9AB  A9EB  AA2B  AA6B  AAAB  AAEB
+NAM5 - AB2B  AB6B  ABAB  ABEB  AC2B  AC6B  ACAB  ACEB  AD2B  AD6B  ADAB
+
+
+A16A   61h 97d
+A22A   CAh 202d
+A2EB
+A2AA   A8
+A3EA   D8 
+A5AB
+A6AA   41h = 65d
+A72A   95h = 148d
+A86B
+AB2B
+ADEB
+AE2B
+AE6B
+AEAB     0E
+AEEB
+AF2B     AA
+AF6B
+AFAB
+AFEB
+B02B
+B06B
+B0AB
+BBAC-BE73   30 roamer access memories (24 bytes each??)
+BEAF-BEB6   customized power on message (8 bytes)
+BEBB            00
+BEBE-BEC1   "AEIO" signature sent to cell 
+BEC2-BEC5    ESN  working storage location 
+BEC7-BED0
+BED1         (i add) 00
+BED2-BED9    ; 00 00 00 00 00 00 00 00
+BEDA-BEDE
+BEDF-BEE3
+BEEC-BF04
+BF05-BF1D
+BF1E-BF12   All 00
+BF24-BF26
+BF2C        Index of NAM in use
+BF2D        even/odd SID (0 or 1)   ; 0 in mine
+BF2E??
+BF3A-BF3C
+BF3D-BF4B
+BF4C-BF5A
+ BF5E       00 there...
+ BF5F       04 there...
+BF59
+BF60-BF63   kbd unlock code digits (4-bits of 123456789a)
+BF6C-BF70
+BF71        50 or 51 (ours is 50: returned from init of display/keyboard)
+            probably version number of display cpu rom
+BF71        version number of accessory rom!  ff=not there, 40=ok ???
+bf72          == FF
+BF74        lighting mode control byte (0=7sec, 1=off, 2=on)
+
+===========================================================================
+C000-CFFF   [Storage Identification] - External RAM
+        C06A = 00 
+        C0F4 =  NAM location 
+===========================================================================
+C0F4-C0FE   Current NAM Information (Sid, Min1/2, OCL, GIM)
+C0FF        Current NAM Selected (0=AutoNAM)
+
+===========================================================================
+D000-DFFF?  [Storage Identification] - Screen Memory Locations
+===========================================================================
+D000        C1h
+D001        20h
+D002        AFh
+D003        CAh
+D004        16h
+D005        40h
+
+===========================================================================
+0000-FFFF   [Storage Identification] - Software Calls
+===========================================================================
+hahah... look up those yourself! :)

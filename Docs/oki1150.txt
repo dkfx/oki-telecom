@@ -1,0 +1,61 @@
+PROGRAMACION DEL TELEFONO MOVIL OKI 900 (1150)
+
+SPANISH VERSION
+
+
+Turn on the telephone with the PWR key more than 1 second
+Pulsing RCL+ MENU to the same time
+
+Introducing with the keyboard* 12345678# and press two time consecutive
+STO key
+
+Now you in the screen will be seen the revision of the software and the
+numbers of series in HEX
+
+Now introduce the number of paying beginning with 2148 XX XX XX
+ (being X the numbers of the paid without the 908)
+
+Next pulsing the STO key
+
+Pulsing the key LOWER VOLUME until appear in the screen--> Num AID
+
+Introducing 23552 with the keyboard, next pulse the STO key
+
+Pulsing the key LOWER VOLUME until appear in the screen--> IPCno.0323
+
+Pulsing the key LOWER VOLUME until appear in the screen--> ACCOLC No.XX
+
+Introducing the numbers 05 and press STO with the keyboard
+
+Pulsing the key LOWER VOLUME  until appear in the screen--> PSDDC 0323
+
+Pulsing the key LOWER VOLUME  until appear in the screen--> NPS DCC
+0023
+
+Pulsing the key LOWER VOLUME  until appear in the screen --> Optionbit.
+
+The number 0001001 will appear (for defect). Changing if not  correct
+and press STO.
+
+Pulsing the key LOWER VOLUME until appear in the screen --> Dispaly
+OWN.
+
+Press 0908, and next press the STO key.
+
+Turning off the telephone with the PWR key.
+ For [ comprobrar ] if the code has been correct pulsar, after lighting
+,
+the RCL secuence##
+
+ If you have information on telecards, satellite, etc. [hacking]. on 
+
+ code of other inducements and you desire to collaborate in this
+nobleman cause 
+
+ send it to:
+
+  E-mail: t800@ [redestb.es]
+
+  ;) see ya
+
+Sorry for my bad english :o

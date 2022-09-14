@@ -1,0 +1,1451 @@
+>From - Sun Jun 16 22:24:08 1996
+Path: news.scott.net!news.sprintlink.net!news-stk-200.sprintlink.net!tank.news.pipex.net!pipex!arclight.uoregon.edu!news.uoregon.edu!hunter.premier.net!uunet!in3.uu.net!in2.uu.net!news.indy.net!indy3!iceberg
+From: iceberg@indy.net (IceBerg)
+Newsgroups: alt.cellular
+Subject: OKI 900 Faq
+Date: 14 Jun 1996 03:40:11 GMT
+Organization: IndyNet - Indys Internet Gateway (info@indy.net)
+Lines: 1439
+Message-ID: <4pqmur$sbk@news.indy.net>
+NNTP-Posting-Host: indy3.indy.net
+X-Newsreader: TIN [version 1.2 PL2]
+
+
+   _____     ___   ____   ____      _____       _____       _____
+ _|     |_  |_  | |_  _| |_  _|   _|     |_   _|     |_   _|     |_
+|   ___   |   | |  / /     ||    |   ___   | |   ___   | |   ___   |
+|  |   |  |   | | / /      ||    |  |   |  | |  |   |  | |  |   |  |
+|  |   |  |   | |/ /       ||    |  |___|  | |  |   |  | |  |   |  |
+|  |   |  |   |   /        ||    |_        | |  |   |  | |  |   |  |
+|  |   |  |   |   \        ||      |____   | |  |   |  | |  |   |  |
+|  |   |  |   | |\ \       ||     __    |  | |  |   |  | |  |   |  |
+|  |___|  |   | | \ \      ||    |  |_ _|  | |  |___|  | |  |___|  | 
+|_       _|  _| |  \ \_   _||_   |_  |_|  _| |_       _| |_       _|
+  |_____|   |___| |____| |____|    |_____|     |_____|     |_____|
+
+                 The Complete Oki 900 guide
+                        by IceBerg
+                Special thanks to  OKIE DOKIE
+
+
+  Ver.1.0 
+  This File is not to be sold or distributed w/o my permission
+  iceberg@indy.net   
+
+
+   THIS file will be available at http://www.l0pht.com/radiophone/oki
+   it is Dr. Who's page, and I will make sure he has ALL updates to this
+   file.  
+
+
+WARNING:  some or all of the information given within this file
+may not be legal to implement.  This means that if you use any of
+this information, you also accept the consequences of your
+actions.  The author accept no responsibility for your actions
+nor for the accuracy in this file.  From this point you are on
+your own, and if you do something illegal be prepared to pay the
+penalty.
+
+
+NOTICE:  I am not the originator of all of this information. Some of the
+information has been taken from various text files.  This guide is just a
+means of placing all of the information in one place.  Since there are too
+many sources to list, I am just saying thank you to all of the people who
+have put out useful information on the oki 900.
+ 
+
+Contents:
+     1. General Information
+     2. Memory Functions
+     3. Conversation Menu
+     4. Main Menu
+     5. 2nd Menu
+     6. Admin Menu
+     7. TestMode/ Good Timing Mode
+     8. Program Dealer Password
+     9. Service Monitor Mode
+    10. Scanning
+    11. Memory Break Down
+    12. OKI Character Set
+    13. OKI 900 modifications
+    14. C-TEK
+    15. Software
+    16. Hardware
+    17. Pin outs
+    18. 8051 Programming
+    19. Notes
+
+
+
+1.General Information
+
+     The oki 900 cellular phone is one of the if not the most
+modifiable cellular telephone in the world.  It is based around
+an 8051 microprocessor, and the main program is stored on a 27C512
+eprom.  Oki reproduced it's popular model 900 cellular phone for
+AT&T under the model AT&T 3730.  Both are identical in appearance
+and in circetry.  The 900 operates off of 6 volts, either from a
+ni-cad battery or one of two types of battery eliminators (see
+accessories for more information).  The 900's antenna is an sma
+connector.
+
+     Sending/Receiving Calls
+
+          To place a call directly power up the unit enter the
+phone number on the keypad then press the send(snd).  You will
+soon be connected to the called party.
+
+          To place a call from a memory location, press the
+recall(rcl) button then enter the memory location and press the
+send(snd) button.
+
+          To place a speed dial call, enter memory location, and
+press SND
+
+          To receive an incoming call the unit must be powered
+up.  When the phone rings press the send(snd) button.
+
+          To end the call press end.
+
+     Adjusting the Volume
+
+          Ring Volume: Press the up and down buttons on the side
+of the phone while the phone is ringing.  The ring volume can
+also be adjusted in the menu options(see second menu).
+
+          Ear Volume: Press the up and down buttons on the side
+of the phone during conversation.
+
+          Key Volume: Press the up and down buttons on the side
+of the phone any time the phone is not ringing or connected to
+another party.
+
+          Muting Ring and Key volume: Set the volume to it's
+absolute lowest level (no lines).  When ring volume is muted the
+display will flash letting you know you have an incoming call.
+
+          Viewing Last Dialed Number: press RCL, *, *
+
+          Viewing your own number:  press RCL, #
+
+          Viewing your system ID:  press RCL, #, #
+
+          Hook Flash:  Used for those who have call waiting
+service.  When you receive a call and you are non the phone you
+can press SND to switch lines and SND to switch back.
+
+          Review Long Numbers: To display the second 16 digits of
+a number that is over 16 digits RCL, RCL.
+
+          Review Call Timer: Press RCL, #, #, #.  This timer is
+only reset when the phone is powered down.
+
+          Review Cumulative Timer: Press RCL, #, #, #, #.  This
+timer can not be reset in any normal node.  
+
+          Review Lifetime timer: Press RCL, #, #, #, #, #.  To my
+current knowledge this timer can not be reset through the phone.
+
+
+2. Memory Functions
+
+     The 900 has the capability to store 200 names and numbers in
+memory locations 000-199.  This is a maximum capacity of 8000
+characters (8 letters and 32 digits per entry).  Memory locations
+190-199 are considered secret locations, as they will not display
+the name or number in that location.
+
+     Storing Phone Numbers: Enter number, Sto, three digit memory
+location (or * for net free location). NOTE: The 900 will not
+automatically save to locations 190-199 by using *.
+
+     Storing Names: Press ALPH, enter name (see below for alpha
+entry), Sto, enter phone number, STO, enter 3 digit memory
+location (or *).  Pressing ALPH will disengage the alpha entry
+mode.
+
+     Alpha Entry: Pressing ALPH places you in alpha entry mode. 
+This allows you to enter alpha numeric digits, and a few
+punctuation digits.  Pressing a key will allow you to scroll
+through the alpha numeric characters for that key. So a single
+press on the 1 key would display Q, a second press would display
+Z, a third press would display &, and a fourth press would
+display 1.  If you continue Pressing a key it will continue to
+loop.  All the characters are displayed in upper cases, to change
+to lower case you must press the MENU key, which will act like a
+shift key.  Pressing a key other than the one first pressed will
+enter the displayed digit, and move to the next cursor position
+displaying the first character for the newly pressed key.  The
+arrow keys on the side of the phone control the cursor
+position, allowing editing and the use of multiple characters
+from the same key.
+
+     Dialing During Conversation:  To send a memory location
+During a conversation, press RCL, memory location, Menu, SND.
+
+     Storing Pauses: To store a pause in a Dialing sequence, you
+need to press the END key at the position in the dial sequence
+you wish the pause to occur.  The display will show a P were the
+pause is.  The first pause is manual and requires you to hit
+send before sending the rest of the dial string.  All pauses
+after the first only pause for three seconds before proceeding.
+
+     Substitute a location:  To replace a number currently stored
+in a memory location with a new number, simply follow the above
+directions for either storing numbers or storing names.  When you
+enter STO, and the memory location, the 900 will prompt you if
+that location is already in use.  To over write, just hit STO
+again.
+
+     Erasing a Location:  To erase a location, press STO (do not
+have a number entered before this), memory location, Sto.  The
+location will be erased.
+
+     Scrolling Memory:  To scroll through memory locations press
+RCL and then use the up and down arrows to scroll through the
+locations.  To start at a specific location press RCL, memory
+location, and then use the arrow keys to scroll.  You can
+initiate a call to the displayed location by pressing SND.
+
+     Scrolling Names:  To scroll through the names in
+alphabetical order, press ALPH, RCL (repeatedly to scroll).  Names
+are only alphabetized by the first digit, and then by location
+number.  To initiate a call to displayed name press SND.
+
+     Search for Name:  Press ALPH, enter letters of the name,
+RCL.  If a match is found, it will be displayed.
+
+     Scratch Pad:  During conversation, you can enter a number
+into temporary memory called the scratch pad.  To do this press
+MENU during a conversation.  While entering the number keys are
+muted.  Up to five numbers of 32 digits can be stored in the
+scratch pad
+
+          Remote Access:  The called party can enter numbers into
+you scratch pad for you by pressing *, phone number, #.  Pressing
+* again will allow a second, third fourth or fifth number to be
+entered.
+
+          NOTE: During remote entry, if the remote party
+presses 0 within two second after pressing #, the 900 will end
+the current call, and initiate a call to the number entered into
+the scratch pad.
+
+          Recall Scratch Pad:  To recall numbers in the scratch
+pad, press RCL, *, and use the arrow keys to scroll through the
+numbers in the scratch pad.  These numbers can be placed into a
+normal memory location by recalling the scratch pad number then
+pressing STO, and the memory location to store to (or *).
+
+     Roam Numbers:  Up to 30 roam numbers can be entered separate
+from standard memory locations.  To do this press ALPH, STO,
+number, STO, Name, STO.  To review press RCL, *, *, *, *, and use
+arrow keys to scroll.  To erase a roam number, recall the desired
+roam number, press STO, STO.
+
+
+3. Conversation Menu
+
+     The conversation menu can be accessed by pressing the menu
+button During conversation.
+You can then scroll through the menu options by pressing menu
+repeatedly, or by using the arrow keys
+
+     Silent Pad/ Scratch Pad: First option in the conversation
+menu.  Allows the silent entry of digits into the phone during
+conversation (see scratch pad above).
+
+     Mic Mute:  The second option in the conversation menu. 
+Mutes the microphone during conversation, allowing you to hear
+the called party, but they are unable to hear you.
+
+     Battery:  To view the power level of the battery during
+conversation.
+
+
+4. Main Menu
+
+     The main menu is accessed by pressing the menu button once while the phone 
+is not in use.  Then you can use the arrow keys
+to scroll through the menu options.
+
+     One Step Dialing:  allows instant Dialing of memory
+locations 0 through 9 by pressing Menu then the one digit memory
+location.  There is no need to hit send with this option.
+
+     Battery Meter:  Displays the remaining battery power.
+
+     Users Manual:  Press RCL to initiate, and rcl to scroll
+through the list of instructions.
+
+     Lock Phone:  Pressing 0 and your lock code will lock the
+phone.  When the phone is locked the only thing the phone will
+accept are the unlock code, or a 911 call.
+
+     Auto Answer Modes:
+
+          Voice Mode:  In this mode your phone will automatically
+answer it's self.  This allows you ease of use in places like a
+car were you need to concentrate on driving and not pressing
+buttons on your phone.  To deactivate return to Main Menu and 
+turn off auto answer mode.
+
+          Absence Mode: In this mode your phone will answer up to
+9 times allowing the calling party to enter their phone number. 
+After the ninth call the 900 will only log the number of missed
+calls.  You will be prompted for the number of rings to answer
+on (1-4).  Using this mode allows you to use the power button to
+start the 'Auto Power Off Timer'.  The timer will keep the phone
+in Absence mode for 5 hours before powering down.  When someone
+calls, the 900 will answer and the caller will hear 3 tones
+(similar to a pager).  After the tone the caller has the
+following options:
+          Enter Phone Number then #
+          Enter Memory Location (if exists) then #
+          Enter *, Phone Number then #
+          Enter *, Memory location then #
+If the caller pauses for 15 seconds, the 900 will erase all
+currently entered digits.  To deactivate follow the same
+directions as in Voice Mode above.
+
+          Reviewing Absence Calls:  Press RCL, *, *, *.  The
+display shows the total number of messages received followed by '
+To Scroll Press ' and the symbols for the up and down arrows. 
+You can then scroll through the messages.  You can initiate a
+call to any of the numbers displayed by hitting SND.
+
+     Remote Locking:  You can lock your phone remotely while the
+phone is in Voice or Absence modes.  To do this call your phone,
+when the call is answered press *, then # within 2 seconds, then
+enter the lock code, you will hear a tone, press 5 to lock the
+phone.
+
+     Remote Disable Auto Answer:  Call the 900, when it answers
+press *, # within 2 seconds after *, enter unlock code, 2.
+
+     Credit Card Calling:  Automatically uses your programmed card
+information (see Admin menu) to place calls to numbers 10 digits
+in length or more.  The 900 will automatically insert o in front
+of the number.  After you press send you will hear  tone you can
+then press send again to initiate the card calling routine.
+
+5. Second Menu
+
+     To access this menu press menu, and scroll through till you
+see 2nd Menu and press RCL
+
+     Back-light Mode:  Press RCL to scroll through the available
+options and leave it on the desired option.
+
+     Ring Adjust:  Press STO to cycle through the available
+tones, and use the arrows to adjust ring volume.  Press menu to
+advance.
+
+     Auto Redial:  Once you have reached this feature, press RCL
+to scroll through it's options.  When active you can dial a
+number and if it is busy you do not need to press end the phone
+will end the call it's self, and dial back in the selected amount
+of time.
+
+     Display:  This option allows you to select how names and
+numbers from memory will be displayed.  Press STO to save the
+option.
+
+     One Minuet Beep:  This option sets the 900 to beep after the
+first 50 seconds of conversation, and each additional minuet
+after.  The party on the other end does not hear the beeps.
+
+     Auto Lock:  Puts the phone into locked mode every time it is
+powered up.
+
+     Vacant Address:  Search for available vacant addresses.  STO
+can be used to store the number previously entered into the
+displayed location.
+
+     Alert Tones:  RCL will scroll through the options, press STO
+to select.  Service Area Tone On will emit one long tone when
+entering a service area.
+
+
+6. Admin Menu
+
+     To access the Admin Menu press Menu, and scroll to the Admin
+selection, press recall and the 6 digit security code (provided by
+the dealer).
+
+     NAM Select:  Your Oki 900 allows you to select between up to 5 individual 
+phone numbers.  This can be so you can have service
+through multiple providers.  You can manual select witch nam to
+use or place it on auto name.  I am not sure if auto will select
+the first available name, or if it will select the nam to which
+the signal is strongest or what.
+
+     Carrier Select:  Lets you select the carrier of your choice:
+          Sys Prefer B: phone uses B (wierline) carrier if
+available or A (non wierline) if B is not available
+          Sys Prefer A: phone uses A carrier if available or B if
+A is not available
+          Sys A only: Will only use A type carriers
+          Sys B only: Will only use B type carriers
+          Home Only: Phone will only use it's home system
+          Only SID: Phone will only use the system ID entered.
+
+     Card Calling: This option allows programming for the
+automatic card billing in the main menu.  When the 900 prompts
+you for the OCC, it is wanting the phone number to dial to use
+your credit card or calling card.  Press STo and it will want the
+card number, press store again and you are done.
+
+     Restrict Calls:  This is a 4 digit code that defines the
+types of calls allowed.
+
+          0000 is default with no restrictions.
+
+          First digit - incoming calls
+          0 No restriction
+          1 Restricted
+
+          Second Digit - Access to memory locations
+          0 No restriction
+          1 Storage restricted all locations readable
+          2 Storage restricted read only locations 0-9
+          3 Restricted
+
+          Third Digit - Manually dialed calls
+          0 No restriction
+          1 11 digits or less 
+          2 10 digits or less, toll free and credit/calling card
+calls only
+          3 7 digits or less, toll free credit/calling card calls
+only
+          4 911 only
+
+          Fourth Digit - Operator Access
+          0 No restriction
+          1 Restricted
+
+     Programming Lock Code:  This feature will show you the unlock
+code, and allow you to change it.  Lock codes can be 1-8
+alpha/numeric digits excluding symbols.
+
+
+7. TestMode/Good Timing Mode
+
+Power the phone up.  Wait for Power On msg.  Hit 7 and 9 together.
+Then hit Menu, Snd, End, Rcl, Sto, Clr.  Phone says good timing!
+TestMode is now enabled, but phone works normally.  Hit 1 and 3
+together to halt phone and enter debugger.  Everything on display
+lights up.  Hit Clr, till you get status display.
+
+Now you can execute commands listed below.  For example to reboot
+phone
+enter #, 0, 2, Snd.  Commands all start with # and end with Snd. 
+Some
+take arguments.
+
+You can use #25, to display memory in EEPROM, and I think once in
+that command you can hit # and * to go up and down in memory, Clr
+to
+exit.  Hex chars are entered as "*n", like *1=A, *2=B, etc.
+
+
+SUSPEND     #01         Performs Initialization
+RESTART     #02         Terminates the test mode
+STATUS      #03         Shows current status of TRU
+RESET       #04         Resets the autonomous timer
+TURNAROUND  #05    ?    Returns Data Bytes following command to
+the Test Set.
+INIT        #06         Initialize the TRU to following states:
+                         Carrier Off, Attenuation - 0db, Receive
+Audio Muted
+                         Transmit Audio Muted, Signaling tone
+off,
+                         Autonomous timer reset, SAT off, and
+DTMF off
+CARRIER ON  #07         Turns the carrier on
+CARRIER OFF #08         Turns the carrier off
+LOAD SYNTH  #09XXXX     Sets the synthesizer to channel XXXX
+SET ATTN    #10X        Set the RF power attenuation to X
+                         0=0db, 7=-28 db (in steps of -4db thru
+7)
+RXMUTE      #11         Mutes the receive audio
+RXUNMUTE    #12         Unmutes the receive audio
+TXMUTE      #13         Mutes the transmit audio
+TXUNMUTE    #14         Unmutes the transmit audio
+RESETOFF    #15         Discontinues resetting of autonomous
+timer
+STON        #16         Transmits a continuous signaling tone
+STOFF       #17         Stops transmission of signaling tone
+SETUP       #18         Transmits a 5 word RCC message (fixed
+text pattern)
+VOICE       #19         Transmits a 2 word (RCC) RVC message
+(fixed test pattern)
+RCVSU       #20         Receives a 2 word FCC message (cancel
+with 0x38)
+RCVVC       #21         Receives a 1 word (FCC) FVC message
+(cancel with 0x38)
+SEND-NAM    #22         Returns the information contained in the
+NAM
+VERSION     #23
+SEND-SN     #24
+MEM         #25XXXX     Displays the resident memory data at XX
+                                  00XX=in micro, XXXX=EEPROM
+WSTS        #28         Count 1 word messages on CC, until
+TERMINATE
+WSTV        #29         Count 1 word messages on VC, until
+TERMINATE
+SATON       #32X        Enable the transmission of SAT X
+                         0= 5970 Hz, 1=6000 Hz, 2=6030 Hz
+SATOFF      #33         Disables the transmission of SAT
+CDATA       #34<60>     Transmits 5 word RCC message (30 bytes)
+HITNON      #35         Activates the 1150Hz tone to receive
+audio line
+HITNOFF     #36         Deactivates the 1150Hz tone
+LOTNON      #37         Activates the 770Hz tone to receive audio
+line
+LOTNOFF     #38         Deactivates the 770Hz tone
+DTMFON      #42XX       Enable the transmission of DTMF frequency
+XX[2]
+DTMFOFF     #43         Disable the transmission of DTMF
+?           #44
+?           #45
+?           #46
+?           #47
+?           #48
+?           #51
+-           #52<xx>
+
+
+
+
+?           #53
+-           #54XXXXZZ   Write HEX (ZZ) into ADDRESS $XXXX
+                        if 00XXZZ then store #$YY in MicoRAM $XX
+-           #56         Return Value stored in $BEBB
+?           #60
+?           #62
+?           #63
+RCVSU       #64         Receives a 2 word FCC message (duplicate
+of cmd #20)
+COMP-ON     #65         Enable the compressor and expander
+COMP-OFF    #66         Disable the compressor and expander
+setvol      #67         X-Set volume (0-7) 0=max
+SERIAL I/O  #683XX?     Mutes/Unmute Tx/Rx Audio Signal Enable
+                        Disable the Compressor/Expander,
+XX=commanded states.
+                            CMD Compress Tx Mute Rx Mute
+                            --- -------- ------- -------
+                            40  on       unmuted unmuted
+                            41  off      unmuted unmuted
+                            42  on       muted   unmuted
+                            43  off      muted   unmuted
+                            44  on       unmuted muted
+                            45  off      unmuted muted
+                            46  on       muted   muted
+                            47  off      muted   muted
+?           #72          [pulls something, outputs 1 word!?!]
+?           #73<arg>  (DO NOT try this on a 4003 chip)
+
+                      Scans channels,...
+
+                       #73 XXXX xxxx YY
+
+                        XXXX = Start channels scan
+                        xxxx = End   channels
+                         yy  = Time
+              
+?           #74
+-           #75         Enable Handsfree (disable spkr)
+-           #76         Disable Handsfree (enable spkr)
+-           #77         Turns on Loudspeaker near mic
+-           #79
+?           #80
+?           #81
+?           #84
+?           #85
+
+
+8. Program Dealer Password
+
+
+     1. Press <Rcl> and <Menu> simultaneously immediately after
+powering on.
+
+     2. The back-door password for ALL OKI 900 telephones is
+*62729854#
+   Oki ALSO RECOMMENDS "4836622666" or "*12345678#" or
+"0000000000".
+
+     3. Press <Sto> to enter the password into memory again.
+
+
+9. Service Monitor Mode Programming Sequence:
+
+     This is an especially important thing to know... Usually
+when a Cellular Company wants to find you what they do is vector
+in on you by switching the cellular towers you are on three or
+four times in a row and then take the signal strength of all of
+the towers to locate you to within a 500 square foot radius...
+comprehend??? So in order to better save your ass the OKI has a
+built-in Service Monitor Mode... To access this mode do the
+following any time when the Phone in Powered ON...
+
+1. Any time during normal telephone operation you can put the
+phone into service monitor mode by pressing both the <Rcl> and
+<Menu> Keys at the same time and then typing in the sequence....
+* T E S T M O D E # then the screen will flash "Service
+Monitor"... The first two digits on top are the signal strength
+in Hex... the last four digits on the bottom are the channel you
+are on... the others are just diagnostic info crap... Whenever
+your channels change more than three or four times in 30 seconds 
+it is time to turn off the phone. 
+
+
+10. Cellular Scanning Programming Sequence:
+
+     1. Put the phone into DEBUG Mode.
+     2. Use command #12 followed by <Snd> to unmute the receive
+audio.
+     3. The Type in command #73AAAABBBBCC followed by <Snd>.
+	AAAA = 4 digit low channel number (Channel to begin scan on)
+	BBBB = 4 digit high channel (Cell Channel to end scan on)
+	  CC = 2 digit number for how many seconds to scan each
+channel.
+     4. Next the phones screen will display 4 digits... the
+current channel it is scanning.... the # button pauses and unpauses and the *
+button restarts the scan from the low channel during the scan.
+
+However, do not try this if you have a 4003 chip, it has a tendency to lock
+the phone up requiring you to remove the chip to reset the phone.
+
+
+11. Memory Break Down
+    
+  Here is the break down of the Oki 900 phone.  
+
+	$0000-$FFFF (64K) - Software PROM 
+	$0000-$00FF (256) - Micro Internal Memory
+	$7000-$70FF (256) - Glue Logic 
+	$A000-$BFFF (8K)  - EEPROM
+	$C000-$C0FF (256) - Extended RAM
+	$D000-$D0FF (256) - Screen Memory
+
+
+$0000-$FFFF (64K)  - Software PROM 
+
+     This is the software of the phone.  The software controls the
+phone.  This is where one will need to change the code to allow for
+the ESN to be changed.  The ROM version covered here is the 4701.
+The 4003 is not covered.                        
+
+Common LCALLS in the Oki 900
+
+   Here is a small list of some of the more common lcalls that are 
+used in the Oki 900.  This may or may not help, but here they are:
+
+lcall $04c2   - Sets $D0-$D1 and $A0-$A1 to $78 (there is a good reason)
+lcall $0542   - Fixes NAMs if needed, check summ
+lcall $055a   - Sets up security code via ESN, hex to dec conversion
+lcall $0723   - Clr A Set Of Locations to X00, X=R2, DPTR point to first
+lcall $072d   - Clears custom power on message BEAF to BEB6
+lcall $073d   - ESN chksumm   
+lcall $07e6   - Will reset the NAM if something happens to it
+lcall $13d4   - ACC.6 to C and lcall $2fe1   Write to screen direct....
+lcall $152c   - Display on screen (calls $2fe1 along the way)
+lcall $1549   - $7A to A and ACC.6 to C
+lcall $1638   - Gets key from keyboard and wonders if it is clear
+lcall $2722   - Mov DPTR, #$bec2 ESN working storage location mov R7, #04h
+lcall $274f   - Reads from BED1 BED2
+lcall $2e59   - Puts DPTR to R5 and R6 (DPH to R5,  DPL to R6)
+lcall $2e5e   - Puts R5 and R6 to DPTR (R5 to DPH, R6 to DPL)
+lcall $2f17   - 22->A, 8->R7, JMP to write to screen ($2fe1)
+lcall $2f4e   - lcall 3016, A->R7, 10->A, Screen Write, etc...
+lcall $2fb3   - A->R0, 39->A, Alcall N2fb3F0, CJNE A on F0 to B2fbc 
+		(R0->A, F0->A, scr write) $2fe1
+lcall $2fc3   - A->R7, 10->A, jmp to Screen Write ($2fe1)
+lcall $2fd2   - A->R7, A->@C087, CLR A, JMP to Screen write ($2fe1)
+lcall $2fe3   - The REAL screen write!!
+lcall $2ffb   - Write A to @DPTR, for EEPROM (ATMEL 28C64)
+lcall $3042   - Adjusts on over load!
+lcall $305e   - Change channel
+lcall $3110   - adds 40h (64d) to name address used for NAM pulls
+lcall $31f5   - Point to the correct location of the NAM selected
+lcall $3265   - Goto current NAM location and Read it out
+lcall $347a   - Clr #$7f, Lets just save one byte
+lcall $347d   - Resets the autonomous timer
+lcall $34a7   - Enable Handsfree
+lcall $34b0   - Disable Handsfree (enable Spkr)
+lcall $3546   - Mutes the receive audio
+lcall $354a   - Unmutes the receive audio
+lcall $3552   - Unmutes the transmit audio
+lcall $3797   - Setup for call
+lcall $3834   - Checks if key is pressed
+lcall $3887   - Gets and Decodes a Control Channel Message
+lcall $38e6   - Get FCC message
+lcall $3939   - Decode FCC Message
+lcall $5b5e   - Inc DPTR, with DPL inc to only thru $00-$29 and $2b-$3e
+lcall $5b5e   - Inc DPTR, with DPL inc to only thru $00-$29 and $2b-$3e
+lcall $5d84   - NAM Checksum byte correction
+lcall $34b6   - Turns on Loudspeaker near mic (Used in Debug #77)
+lcall $37cf   - Enable the compressor and expander (Used in Debug #65)
+lcall $37d6   - Disable the compressor and expander (Used in Debug #66)
+lcall $34c6   - Turns the carrier off (Used in Debug #08)
+lcall $3741   - Transmits a continuous signaling tone (Used in Debug #16)
+lcall $354e   - Mutes the transmit audio (Used in Debug #13)
+
+Misc. Locations in the Oki 900 Software.
+
+
+$0000    Starting entrie
+$00b1    Read in all data, if not zero, die error number 2
+$00c8    RAM Check Summ, if not zero after being deced, error number 3
+$00cb    RAM Check Summ loop label  
+$00dd    Makes the call to the ESN check summ ($073d) better return a zero
+	 Error number 4
+$00e7    Call setup  
+$0102    Reset phone
+$012e    Reads out what NAM that the phone is set on
+$0136    Check Summ for External RAM, fail error number 3
+$0144    Read NAM out abd write into memory
+$0501    Setup for Security code (hex to dec conversion)
+$055a    HEX to Decminal converter
+$055b    HEX to Dec conversion looper var ent point
+$0573    Turn off write protect (lcall)
+$057a    Turn on write protect (lcall)
+$0581    Default NAM info, done on reset of phone  ($0102) Data
+$05c4    Write default NAMs Start from data at $0581
+$0723    Clr A Set Of Locations to X00, X=R2, DPTR point to first location
+$072d    Clears  customized power on message 
+$0732    Clear power on message loop var (Places spaces in the phone)
+$073d    Loads Encrypted ESN Locations  (ESN Check Summ)
+$0766    Decodes Encrypted ESN          (ESN Check Summ)
+$077a    ESN Check Summ                 (ESN Check Summ)
+$07dc    The Check Summ part of the NAM check summ
+$07e6    Will Reset the NAM if something happens to it *** START
+$07ed    Write loop for NAM write (called from $0581)
+$09b1    This is the START of debug!!!!
+$0b51    Debug indirect jump
+$140e    Data for key test  (DATA)
+$1638    This function is used to read a key from the keypad
+	 more over the CLR key
+$16d5    Address table for debug  (DATA)
+$2722    Loads ESN working storage location with ESN
+$2f55    Call from debug command #74
+$34a7    Enable Hands free 
+$34b0    Disable Handsfree (enable Speaker)
+$354a    Unmutes the receive audio     
+$3741    Transmits a continuous signaling tone 
+$385f    From C3834: this is the debug command number #20
+$4a74    Setup for customized power on message
+$5bb8    200 memory location control
+$5bd6    200 memory location address for indirect moves (DATA)
+
+
+ 
+$0000-$00FF (256) - Micro Internal Memory
+
+     The internal memory contains the function registers.  When one wants 
+to use the use a register, TASM does not have the lables for one to use. 
+One can access the register direct.  Here is the addresses one will need 
+to use. 
+
+	IOCON           $FF-$F8
+	B               $F7-$F0
+	ACC             $E7-$E0
+	PSW             $D7-$D0
+	TH2             $CD
+	TL2             $CC
+	RCAP2H          $CB
+	RCAP2L          $CA
+	T2CON           $CF-$C8
+	IP              $BF-$B8
+	P3              $B7-$B0
+	IE              $AF-$A8
+	P2              $A7-$A0
+	SBUF            $99
+	SCON            $9F-$98
+	P1              $97-$90
+	TH1             $8D
+	TH0             $8C
+	TL1             $8B
+	TL0             $8A
+	TMOD            $89
+	TCON            $8F-$88
+	PCON            $87
+	DP              $83
+	DPL             $82
+	SP              $81
+	P0              $87-$80
+
+
+  The Stack is specified by stack pointer ($81). 
+
+			Stack Storage Layout
+
+  Stack Processing    Stack Pointer     7    6    5    4    3    2    1    0
+
+   Before Execution         $7F         D7   D6   D5   D4   D3   D2   D1   D0
+   Interrupt Process        $80         PC7  PC6  PC5  PC4  PC3  PC2  PC1  PC0
+		    	             $81         PC15 PC14 PC13 PC12 PC11 PC10 PC9  PC8
+   PUSH process (ACC)       $82         A7   A6   A5   A4   A3   A2   A1   A0
+   POP process (ACC)        $82         A7   A6   A5   A4   A3   A2   A1   A0
+   RETI process (pop PC)    $81         PC15 PC14 PC13 PC12 PC11 PC10 PC9  PC8
+			             $80         PC7  PC6  PC5  PC4  PC3  PC2  PC1  PC0
+   After Execution          $7F         D7   D6   D5   D4   D3   D2   D1   D0
+  
+
+
+
+$7000-$70FF (256) - Glue Logic 
+
+   Glue Logic is the decoder which controls various functions of the 
+Oki 900.  The NAM locations are under a write protect.  The write protect is
+controlled via the $7005 location.  Here is some sample code  showing how
+one uses the $7005 write protect.
+
+Turn Off EEPROM Write Protect  -  $01 into $7005
+
+	mov a, #$01               ; Load a $01 into A
+	mov dptr, #$7005          ; Load the value $7005 into DPTR
+	movx @dptr, a             ; Move A ($01) into the location at DPTR
+				           ; which is $7001
+
+Turn On EEPROM Write Protect   -  $00 into $7005
+
+	mov a, #$00               ; Load a $00 into A
+	mov dptr, #$7005          ; Load the value $7005 into DPTR
+	movx @dptr, a             ; Move A ($01) into the location at DPTR
+				           ; which is $7001
+
+
+$C000-$C0FF (256) - Extended RAM
+
+	C0F4-C0FE   Current NAM Information (Sid, MIN1/2, ICMP, OCL, GIM)
+	C0FF        Current NAM Selected (0=AutoNAM)
+
+$D000-$D0FF (256) - Screen Memory
+	
+	 This is the LCD memory locations.
+
+
+$A000-$BFFF (8K)  - EEPROM Memory locations
+
+    The EEPROM contains the ESN, NAM, passwords and other data that
+may need to be changed.                             
+    The ESN contains two locations.  The main location is the encrypted
+and CAN NO BE CHANGED unless one jumpers the 28C64 EEPROM write protect.
+(Order the databook by calling Atmel at 408-441-0311) To jumper the 
+EEPROM one can place a low on NOT WE (Write enable, Pin 27), NOT CE
+(Chip Enable, 20) and a high on OE (Output Enable, pin 22).  While 
+writing each byte, the NOT WE and CE should cycle, the OE NEEDS to be
+high.
+    The other ESN location is the working storage location, the is written
+over each time the phone is turned on.   One can make a two byte crack 
+on the binary to change the ESN on the phone. Looking at $0788 in the 
+Oki PROM, you will see #$90 #$BE #$C2 (#$78 #$60 #$79, extra opcodes are
+added to help find the location in question). #$90 #$BE #$CE could be 
+changed to #$90 #$FF #$F0, and you be able to change the ESN by 
+using debug command #54 to poke the ESN to $BEC2 thru $BEC5
+
+200 Memory location Table Starts at $9F4E in the PROM.  The addresses 
+are of the names, NOT the numbers please note that the numbers 
+come before the names in the locations this starting at B000.  
+
+  ---------------------------------------------------------------
+  | Addr  Memory Location Number  | Addr  Memory Location Number|
+  |-------------------------------+-----------------------------|
+  | B010  Memory location #1      | B029  Memory location #2    |
+  | B044  Memory location #3      | B05D  Memory location #4    |
+  | B078  Memory location #5      | B091  Memory location #6    |
+  | B0AC  Memory location #7      | B0C5  Memory location #8    |
+  | B0DE  Memory location #9      | B0F9  Memory location #10   |
+  | B112  Memory location #11     | B12D  Memory location #12   |
+  | B146  Memory location #13     | B15F  Memory location #14   |
+  | B17A  Memory location #15     | B193  Memory location #16   |
+  | B1AE  Memory location #17     | B1C7  Memory location #18   |
+  | B1E0  Memory location #19     | B1FB  Memory location #20   |
+  | B214  Memory location #21     | B22F  Memory location #22   |
+  | B248  Memory location #23     | B261  Memory location #24   |
+  | B27C  Memory location #25     | B295  Memory location #26   |
+  | B2B0  Memory location #27     | B2C9  Memory location #28   |
+  | B2E2  Memory location #29     | B2FD  Memory location #30   |
+  | B316  Memory location #31     | B331  Memory location #32   |
+  | B34A  Memory location #33     | B363  Memory location #34   |
+  | B37E  Memory location #35     | B397  Memory location #36   |
+  | B3B2  Memory location #37     | B3CB  Memory location #38   |
+  | B3E4  Memory location #39     | B3FF  Memory location #40   |
+  | B418  Memory location #41     | B433  Memory location #42   |
+  | B44C  Memory location #43     | B465  Memory location #44   |
+  | B480  Memory location #45     | B499  Memory location #46   |
+  | B4B4  Memory location #47     | B4CD  Memory location #48   |
+  | B4E6  Memory location #49     | B501  Memory location #50   |
+  | B51A  Memory location #51     | B535  Memory location #52   |
+  | B54E  Memory location #53     | B567  Memory location #54   |
+  | B582  Memory location #55     | B59B  Memory location #56   |
+  | B5B6  Memory location #57     | B5CF  Memory location #58   |
+  | B5E8  Memory location #59     | B603  Memory location #60   |
+  | B61C  Memory location #61     | B637  Memory location #62   |
+  | B650  Memory location #63     | B669  Memory location #64   |
+  | B684  Memory location #65     | B69D  Memory location #66   |
+  | B6B8  Memory location #67     | B6D1  Memory location #68   |
+  | B6EC  Memory location #69     | B705  Memory location #70   |
+  | B71E  Memory location #71     | B739  Memory location #72   |
+  | B752  Memory location #73     | B76D  Memory location #74   |
+  | B786  Memory location #75     | B79F  Memory location #76   |
+  | B7BA  Memory location #77     | B7D3  Memory location #78   |
+  | B7EE  Memory location #79     | B807  Memory location #80   |
+  | B820  Memory location #81     | B83B  Memory location #82   |
+  | B854  Memory location #83     | B86F  Memory location #84   |
+  | B888  Memory location #85     | B8A1  Memory location #86   |
+  | B8BC  Memory location #87     | B8D5  Memory location #88   |
+  | B8F0  Memory location #89     | B909  Memory location #90   |
+  | B922  Memory location #91     | B93D  Memory location #92   |
+  | B956  Memory location #93     | B971  Memory location #94   |
+  | B98A  Memory location #95     | B9A3  Memory location #96   |
+  | B9BE  Memory location #97     | B9D7  Memory location #98   |
+  | B9F2  Memory location #99     | BA0B  Memory location #100  |
+  | A010  Memory location #101    | A029  Memory location #102  |
+  | A044  Memory location #103    | A05D  Memory location #104  |
+  | A078  Memory location #105    | A091  Memory location #106  |
+  | A0AC  Memory location #107    | A0C5  Memory location #108  |
+  | A0DE  Memory location #109    | A0F9  Memory location #110  |
+  | A112  Memory location #111    | A12D  Memory location #112  |
+  | A146  Memory location #113    | A15F  Memory location #114  |
+  | A17A  Memory location #115    | A193  Memory location #116  |
+  | A1AE  Memory location #117    | A1C7  Memory location #118  |
+  | A1E0  Memory location #119    | A1FB  Memory location #120  |
+  | A214  Memory location #121    | A22F  Memory location #122  |
+  | A248  Memory location #123    | A261  Memory location #124  |
+  | A27C  Memory location #125    | A295  Memory location #126  |
+  | A2B0  Memory location #127    | A2C9  Memory location #128  |
+  | A2E2  Memory location #129    | A2FD  Memory location #130  |
+  | A316  Memory location #131    | A331  Memory location #132  |
+  | A34A  Memory location #133    | A363  Memory location #134  |
+  | A37E  Memory location #135    | A397  Memory location #136  |
+  | A3B2  Memory location #137    | A3CB  Memory location #138  |
+  | A3E4  Memory location #139    | A3FF  Memory location #140  |
+  | A418  Memory location #141    | A433  Memory location #142  |
+  | A44C  Memory location #143    | A465  Memory location #144  |
+  | A480  Memory location #145    | A499  Memory location #146  |
+  | A4B4  Memory location #147    | A4CD  Memory location #148  |
+  | A4E6  Memory location #149    | A501  Memory location #150  |
+  | A51A  Memory location #151    | A535  Memory location #152  |
+  | A54E  Memory location #153    | A567  Memory location #154  |
+  | A582  Memory location #155    | A59B  Memory location #156  |
+  | A5B6  Memory location #157    | A5CF  Memory location #158  |
+  | A5E8  Memory location #159    | A603  Memory location #160  |
+  | A61C  Memory location #161    | A637  Memory location #162  |
+  | A650  Memory location #163    | A669  Memory location #164  |
+  | A684  Memory location #165    | A69D  Memory location #166  |
+  | A6B8  Memory location #167    | A6D1  Memory location #168  |
+  | A6EC  Memory location #169    | A705  Memory location #170  |
+  | A71E  Memory location #171    | A739  Memory location #172  |
+  | A752  Memory location #173    | A76D  Memory location #174  |
+  | A786  Memory location #175    | A79F  Memory location #176  |
+  | A7BA  Memory location #177    | A7D3  Memory location #178  |
+  | A7EE  Memory location #179    | A807  Memory location #180  |
+  | A820  Memory location #181    | A83B  Memory location #182  |
+  | A854  Memory location #183    | A86F  Memory location #184  |
+  | A888  Memory location #185    | A8A1  Memory location #186  |
+  | A8BC  Memory location #187    | A8D5  Memory location #188  |
+  | A8F0  Memory location #189    | A909  Memory location #190  |
+  | A922  Memory location #191    | A93D  Memory location #192  |
+  | A956  Memory location #193    | A971  Memory location #194  |
+  | A98A  Memory location #195    | A9A3  Memory location #196  |
+  | A9BE  Memory location #197    | A9D7  Memory location #198  |
+  | A9F2  Memory location #199    | AA0B  Memory location #200  |
+  ---------------------------------------------------------------
+
+NAM Storage in the EEPROM:
+       SID-------  min1/min2-------------------  IPCH------  OLC-  GIM-
+NAM1 - A02B  A06B  A0AB  A0EB  A12B  A16B  A1AB  A1EB  A22B  A26B  A2AB
+NAM2 - A2EB  A32B  A36B  A3AB  A3EB  A42B  A46B  A4AB  A4EB  A52B  A56B 
+NAM3 - A5AB  A5EB  A62B  A66B  A6AB  A6EB  A72B  A76B  A7AB  A7EB  A82B
+NAM4 - A86B  A8AB  A8EB  A92B  A96B  A9AB  A9EB  AA2B  AA6B  AAAB  
+AAEB
+NAM5 - AB2B  AB6B  ABAB  ABEB  AC2B  AC6B  ACAB  ACEB  AD2B  AD6B  
+ADAB
+
+
+A6AA        Used with Encrypted ESN 
+A72A        Used with Encrypted ESN 
+A3EA        Used with Encrypted ESN
+A16A        Used with Encrypted ESN
+A2AA        Used with Encrypted ESN
+A22A        Used with Encrypted ESN 
+BBAC-BE73   30 roamer access memories 
+BE03        Index of NAM in use
+BEAF-BEB6   Customized power on message (8 bytes)
+BEBE-BEC1   "AEIO" signature sent to cell 
+BEC2-BEC5   ESN  working storage location 
+BF2C        Index of NAM in use
+BF2D        Even/odd SID (0 or 1)   
+BF60-BF63   Keyboard unlock code digits 
+BF71        Version number of display cpu rom
+BF74        Lighting mode control byte (0=7sec, 1=off, 2=on)
+
+
+
+
+   Debug command
+   
+   Here is a list of some of the debug commands for the Oki 900.  Along with
+the list of debug commands are the address in the 4701 binary.
+The table for the indirect jump starts at $16D5.  The indirect jump for
+the debug mode is at $0b51.
+   Note, if the address is $14e3, the debug command does not exist.
+
+
+ Addr   Number       Use 
+ ----   ------       ---
+   
+ $14e3   #00
+ $0b81   #01         Performs Initialization
+ $0000   #02         Terminates the test mode
+ $0b97   #03         Shows current status of TRU
+ $0bd0   #04         Resets the autonomous timer
+ $0b70   #05         Returns Data Bytes following command
+		     to the Test Set.
+ $0b81   #06         Initialize the TRU to following states:
+		     Carrier Off, Attenuation - 0db,
+		     Receive Audio Muted Transmit Audio Muted,
+		     Signaling tone off,
+		     Autonomous timer reset,
+		     SAT off, and DTMF off
+ $0bdf   #07         Turns the carrier on
+ $0bf8   #08         Turns the carrier off
+ $0bfe   #09XXXX     Sets the synthesizer to channel XXXX
+ $0c34   #10X        Set the RF power attenuation to X
+		     0=0db, 7=-28 db
+		     (in steps of -4db thru 7)
+ $0c46   #11         Mutes the receive audio
+ $0c4c   #12         Unmutes the receive audio
+ $0c52   #13         Mutes the transmit audio
+ $0c58   #14         Unmutes the transmit audio
+ $0bda   #15         Discontinues resetting of autonomous timer
+ $0c5e   #16         Transmits a continuous signaling tone
+ $0c64   #17         Stops transmission of signaling tone
+ $0fbb   #18         Transmits a 5 word RCC message
+		     (fixed text pattern)
+ $0fe8   #19         Transmits a 2 word (RCC) RVC message
+		     (fixed test pattern)
+ $1009   #20         Receives a 2 word FCC message (cancel with 0x38)
+ $1086   #21         Receives a 1 word (FCC) FVC message
+		     (cancel with 0x38)
+ $0e3d   #22         Returns the information contained in the NAM
+ $0f03   #23
+ $0edd   #24
+ $0dad   #25XXXX     Displays the resident memory data at XX
+		     00XX=in micro, XXXX=EEPROM
+ $14e3   #26
+ $14e3   #27
+ $0f2c   #28         Count 1 word messages on CC, until TERMINATE
+ $0f61   #29         Count 1 word messages on VC, until TERMINATE
+ $14e3   #30
+ $14e3   #31
+ $0c73   #32X        Enable the transmission of SAT X
+		     0 = 5970 Hz,
+		     1 = 6000 Hz,
+		     2 = 6030 Hz
+ $0c9d   #33         Disables the transmission of SAT
+ $10a8   #34<60>     Transmits 5 word RCC message (30 bytes)
+ $0cdc   #35         Activates the 1150Hz tone to receive audio line
+ $0cd4   #36         Deactivates the 1150Hz tone
+ $0ce0   #37         Activates the 770Hz tone to receive audio line
+ $0cd4   #38         Deactivates the 770Hz tone
+ $14e3   #39
+ $14e3   #40
+ $14e3   $41
+ $0ca7   #42XX       Enable the transmission of DTMF
+		           frequency XX[2]
+ $0cd4   #43         Disable the transmission of DTMF
+ $1286   #44
+ $0cf0   #45
+ $0d00   #46
+ $0d06   #47
+ $0eac   #48
+ $14e3   #49
+ $14e3   #50
+ $0d7c   #51
+ $0d55   #52<xx>
+ $0da2   #53
+ $0e27   #54XXXXZZ   Write HEX (ZZ) into ADDRESS $XXXX
+ $14e3   #55
+ $0e22   #56         Return Value stored in $BEBB
+ $14e3   #57
+ $14e3   #58
+ $14e3   #59
+ $10c2   #60
+ $14e3   #61
+ $0f91   #62
+ $0fdc   #63
+ $1009   #64         Receives a 2 word FCC message
+		           (Please see debug command #20)
+ $0ce4   #65         Enable the compressor and expander
+		           Compandor is a SA 5750
+		           This is a Philips Chip (800) 234-7381
+
+ $0cea   #66         Disable the compressor and expander
+ $0d31   #67         X-Set volume (0-7) 0=max
+ $0d4a   #683XX      Mutes/Unmute Tx/Rx Audio Signal
+		           Enable Disable the Compressor/Expander,
+		           XX=commanded states.
+		           CMD Compress Tx Mute Rx Mute
+		           --- -------- ------- -------
+          	      40  on       unmuted unmuted
+		           41  off      unmuted unmuted
+		           42  on       muted   unmuted
+		           43  off      muted   ummuted
+		           44  on       unmuted muted
+		           45  off      unmuted muted
+		           46  on       muted   muted
+		           47  off      muted   muted
+ $14e3   #69
+ $14e3   #70
+ $14e3   #71
+ $1142   #72         Pulls, outputs 1 word
+ $11ff   #73XXXXYYYYZZ  Scans Channels
+		           XXXX = Starting 
+		           YYYY = Ending
+		           zz   = Delay
+ $1305   #74         keypad test
+ $0ef1   #75         Enable Handsfree (disable spkr)
+ $0ef7   #76         Disable Handsfree (enable spkr)
+ $0efd   #77         Turns on Loudspeaker near mic
+ $14e3   #78
+ $14dd   #79
+ $1a42   #80
+ $1962   #81
+ $19c8   #82
+ $182c   #83
+ $1789   #84
+ $18fe   #85
+ $14e3   #86
+ $14e3   #87
+ $14e3   #88
+ $14e3   #89
+
+
+12. Charter set in the Oki 900
+
+   The Oki 900 has a full charter set built in.  The charter set can
+be used in the power on message.  The power on message can be programmed
+by the debug command #54.  The addresses of the power on message are $BEAF
+thru $BEB8.  Here is a list of the charter set, please note that all these
+were guessed at, and some may be wrong.  ALL NUMBERS ARE IN HEX!
+
+Small Katakana
+
+A6 = a     A7 = i     A8 = u     A9 = e     AA = o     AB = ka    AC = ki
+AD = ku    AE = ke    AF = ko
+
+
+B0 = -
+
+Katakana
+
+B1 = a     B2 = i     B3 = u     B4 = e     B5 = o     B6 = ka    B7 = ki
+B8 = ku    B9 = ke    BA = ko    BB = sa    BC = shi   BD = su    BE = se
+BF = so    C0 = fa    C1 = chi   C2 = tsu   C3 = te    C4 = to    C5 = na
+C6 = ni    C7 = nu    C8 = ne    C9 = no    CA = ha    CB = hi    CC = fa
+CD = he    CE = ho    CF = ma    D0 = mi    D1 = mu    D2 = me    D3 = mo
+D4 = ya    D5 = yu    D6 = yo    D7 = ra    D8 = ri    D9 = ru    DA = re
+DB = ro    DC = wa    A6 = o     DD = n'
+
+DE = dakutan
+DF = Small circle the no one knows the name to
+FC = Yen
+FA = Thousand (Japanies)
+FB = Adds zero
+
+English
+
+21 = "     22 = !     23 = #     24 = $     25 = %     26 = &     27 = '
+28 = (     29 = )     2A = *     2B = +     2C = ,     2D = -     2E = .
+2F = /     30 = 0     31 = 1     32 = 2     33 = 3     34 = 4     35 = 5
+36 = 6     37 = 7     38 = 8     39 = 9     3A = :     3B = ;     3C = <
+3D = =     3E = >     3F = ?     40 = @     41 = A     42 = B     43 = C
+44 = D     45 = E     46 = F     47 = G     48 = H     49 = I     4A = J
+4B = K     4C = L     4D = M     4E = N     4F = O     50 = P     51 = Q
+52 = R     53 = S     54 = T     55 = U     56 = V     57 = W     58 = X
+59 = Y     5A = Z     5B = [     5D = ]     5E = ^     61 = a     62 = b
+63 = c     64 = d     65 = e     66 = f     67 = g     68 = h     69 = i
+6A = j     6B = k     6C = l     6D = m     6E = n     6F = o     70 = p
+71 = q     72 = r     73 = s     74 = t     75 = u     76 = v     77 = w
+78 = x     79 = y     7A = z     7B = {     7D = }     5F = _     60 = `
+7C = |
+
+SPACE = 0C, 0D, 10-20, 7E-A0
+
+
+Misc. chars
+
+01 - Right Triangle (Up)
+02 - Right Triangle (Down)
+05 thru 0F are random
+E0 - Alpha
+E1 - lower case a with two dots over it
+E2 - Beta
+E3 - Epsilon
+E4 - Mu
+E5 - Sigma
+E6 - Circle with two flat sides on top
+E7 - Circle with two flat sides on right hand side
+E8 - Square root
+E9 - To the power of -1 (1/x)
+EA - i (Complex Number)
+EB - To the power of x
+EC - Cent
+ED - Pound
+EE - Lower case n with line over it
+EF - o with two dot over it
+F0 - L with circle
+F1 - inverted image of F0
+F2 - Theta
+F3 - Infinity
+F4 - Upper Omega
+F5 - U with two dots over it
+F6 - Upper Sigma
+F7 - Pie
+F8 - X with a line over it
+F9 - Upper Mu
+FE - Division
+
+
+13. OKI 900 Modifications
+
+     Several software modifications exist, below is a list and an
+explanation of each.  These mods are to be burned into the 27c512 SOIC chip
+inside the oki 900.  They are 150ns 28 pin soic chips.  An soic adapter
+will be required, and can probably be aquiered through the same place you
+got your burner, or you can contact IBP products(see below).  This chip is  
+located on the same side and same board as the lcd, in the lower left hand
+corner.
+
+4701 - The original mod, holds 5 esn programmed byte by byte
+4711 - Update to the 4701 (fixed bugs?)
+4712 - The most popular and least buggy mod. works well with C-TEK
+
+
+    Change ESN: (for all above mods)
+
+    Press MENU 8 times, until you see ADM menu.  Press RCL and enter 123456
+    Use RCL to move from one ESN to another, and STO to save your options.
+    REBOOT Phone!!!!!
+
+
+    Enter Debug Mode:
+
+                 ESN Number     Address
+             --------------------------------
+               ESN Location #1  $BE8E-$BE91
+               ESN Location #2  $BE93-$BE96
+               ESN Location #3  $BE98-$BE9B
+               ESN Location #4  $BE9D-$BEA0
+               ESN location #5  $BEA2-$BEA5
+
+         Key:
+             #54 XXXX xx
+               |   |   |
+               |   |  In order, one thru four bytes of ESN
+               |   |
+               |  Address (Location)
+               |
+             The write byte debug command 
+
+       
+        To use the 0-9 keys, just use 0-9, to access A-F, hit STAR ("*")
+      before 1-6 for A-F.  The "*" key can be thought of as a shift key.       
+      If you hit the "*" twice, it will act as if you did not hit the "*"
+      at all. 
+
+      Program NAM:
+
+         Enter RCL + MENU, *, 6, 2, 7, 2, 9, 8, 5, 4, #
+         you can then use the up and down keys to scroll through the
+         information and change the appropriate nam.
+
+4715 - Newest widely available mod. Bugs? Should work with C-TEK
+       This mod will allow you to use 230 ESNs and set a number of times
+       each esn can be used before auto deletion.
+       each nam must be programmed manually?
+
+     These mods are available by normal means, and may illegal.  They
+will void any warranty however.  I am still looking for more detailed
+information on these or other mods.
+
+     The actual microcontroler is an 8051 derivitave, and a lot of
+information on programming it can be found on the Internet. 
+
+
+14. C-TEK
+
+                 Cellular Telephone Experimenters Kit
+
+                        for the OKI-900/1150
+
+
+The Cellular Telephone Experimenters Kit allows control of a cellular
+telephone from a personal computer.  The Kit connects any DOS-based PC
+with a serial port to an OKI-900/1150 (AT&T 3730/3760) cellular telephone.
+The kit is designed for technicians, students, professionals, hobbyists,
+and others interested in using, learning, repairing, and experimenting
+with cellular telephone technology.
+
+The kit consists of an interface adapter, software and manual.  The
+interface adapter converts the cellular phone's proprietary interface to a
+standard RS-232 interface, and allows connection of external audio signals
+to the cellular phone.  The interface is not designed for data transmission
+over the cellular system.
+
+The kit includes the cellular telephone interface adapter;  a manual and a
+short cellular tutorial;  four programs;  a programming library and
+documentation;  and cellular related informational files.
+
+One program is designed for testing the phone and allows a technician to
+activate many of the OKIs built in test modes and functions, such as tuning
+to a particular channel, activating carrier, sat, signaling tones, etc.
+
+Another program can be used to access the phone's user features, such as
+programming NAMs, or uploading, downloading and editing the phone's 200
+alphanumeric telephone number memories on the PC.
+
+A programming library object module is supplied to allow you to write your
+own programs to access the phone in both normal operating mode and in test
+mode.  The library contains functions such as tuning to a channel, turning
+carrier/audio/sat-tones/signaling-tones on and off, reading received
+signal strength, sending and receiving digital control messages, and
+sending and decoding DTMF tones.
+
+Two programs are supplied in source form that give examples of writing
+applications in either of these modes.  One of these programs shows how the
+PC can completely control the cellular phone, making and receiving calls
+while the phone is only operating in its test mode, with the PC handling
+all of the cellular protocol and messaging functions.  The other program
+simply controls the phone by simulating presses on its keypad from the PC.
+
+All code and libraries were compiled using Borland Turbo C 2.0 running
+under DOS.  We are not supporting any other systems at this time.
+The software does not change or modify ESNs.
+
+SOMEONE! start cloning these at a DECENT price! under $150.00!
+If no one pays more, the price will have to drop!
+
+
+15. Software
+
+CIA-SCAN  fvoc and dtmf display via c-tek (does more)
+Various other c-tek applications exist, mail me your list, and the files
+and I will include them.
+
+Scan1c:  This appears to be an update to CIA SCAN.  I has a graph of
+signal strengths and most of the same features as CIA but with better
+controle, and can scan both forward, and backwards.
+
+Please let me know of any additional Software you find for the OKI
+
+
+16. HardWare
+
+     Other hardware available listed here:
+
+>From OKI:
+Executive kit- Hands free kit boosts power to 3 watts
+Data Kit- Connect oki to a computer
+Eliminators- use the phone with out a battery
+Batteries
+Chargers
+
+Other places:
+Eliminators
+PCMCIA to OKI cables
+OKI to RJ11 modem cables
+Batteries
+Conditioning chargers
+
+IBP Products can be reached at the following:
+
+IBP Products
+2106 Barth Ave.
+Indianapolis IN  46203
+
+
+17. Pin outs
+
+   o
+  5 10
+  4 9
+  3 8
+  2 7
+  1 6
+
+
+1  Raw data                       power +
+2  PRTSENS  ???                   portable sensitivy
+3  CU - 2 - L                     CU to L Data
+4  POW - ON (power on)
+5  TX Voice
+6  TX Voice                       Power -
+7  CLK                            clock
+8  L2CU                           L to CU data
+9  RX Voice                       Ground
+10 RX Voice                       R Voice
+
+
+18. 8051 Programming
+
+     Since there is to much information on programming the 8051 series of
+microprocessors to cover here I am going to give a list of places to get
+more information.
+
+ftp.pppl.gov/pub/8051         various 8051 pd software
+ftp.funet.fi/pub/microprocs   various 8051 pd software
+ftp.intel.com/pub/mcs51       various 8051 pd software
+www.keil.com                  keil 8051 software demo
+
+
+
+19. NOTES
+
+     I can be reached at bb970@freenet.uchsc.edu
+   
+     For all your OKI supplies contact IBP products
+     contact POTI or myself for a catalog.
+
+     Please be kind with your critiqs and make sure you have evidence to
+     back anything you send to me as a correction.
+
+Finally I would like to say thanks to #cellular!  Hay guys!
+Special Greets:
+
+Torch
+POTI
+Vidiot
+Hi-Fi
+DigInt
+Dr Who
+IP
+
+
+
+
+--
+Type Bits/KeyID    Date       User ID
+pub  1024/204163E1 1991/07/16 IceBerg<iceberg@indy.net>
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.3i
+
+mQCNAyiDZVQAAAEEAMRq7tLg5thhuUlJVBKprtpbnNq5wsFaa2gSbEJuo0IaLhVW
+GxyCKJmar2g3dT45CuuuQxyhaTQ1A2P7fvQNHD3ucEPSRC/N8IEi0BcqcSvyIuJv
+dQXs3onJdpUGA2gSfwuIYvlQd647ejR+Dn0C5RsXRJxjgLiUDNJqQ84gQWPhAAUR
+tBlJY2VCZXJnPGljZWJlcmdAaW5keS5uZXQ+iQCVAwUQKINlVtJqQ84gQWPhAQEY
+QAP9EHr3wT6eRAG/45U5jZ9f7EgUaNzmPY0adDPUN4UkgMQ6t4M7mckTzkMfckUL
+dXNcdS8I+lD1JT0UcKFYz9psZFFco8I7cZfH6OT8fHi4bJKZ0zUrXCkPpEuoFrE2
+yFKGgEF8Kfp+s/vFWocXa9IgB5zFvFqIRAOhv22r8eQK1+8=
+=2nYU
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+
+

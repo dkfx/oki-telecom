@@ -1,0 +1,538 @@
+;PIC/OKI-to-RS232 controller code for production OKI frob
+;Copyright (C) 1994 by Network Wizards
+;
+;Uses 4mhz PIC
+; device operates at 2400 baud, 8 data bits, no parity, 1 stop bit
+; however, data can be sent to PIC using 7 bits for faster operation.
+; same probably goes for portable bit.
+;
+;command formats:
+; data from OKI:
+;   11dd dddd     11dd dddd     101c dddd
+;    d=data  (msb on left),  c=data from (0=pic,1=oki)
+;
+; data to OKI:
+;   11xx xxxd     11dd dddd     101c dddd
+;    d=data  (msb on left),  c=command to (0=pic,1=oki)
+;
+;handles I/O with OKI after rising edge of clock pulse
+;
+;
+	device	pic16c56,xt_osc,wdt_off,protect_on
+;	device	pic16c54,xt_osc,wdt_off,protect_on
+
+;power saving hint:
+;  oki900 drains 12ma from pic data output line when it is off,
+;   so make okidout line an input and only output when powered off
+;
+;Register Definitions
+;
+; OKI 900 connector pinout
+; pin   desc		conn	dir from pic
+; 0	power/baterry
+; 1	power/battery
+; 2	portable 		out
+; 3	oki data out 		out
+; 4	power on		out
+; 5	tx voice	in rng	out
+; 6	ground
+; 7	oki clock		in
+; 8	oki data in		in
+; 9	audio ground	rng
+; 10	rx voice	tip	in
+;
+; rs-232 ports
+; 	tx data			out
+;	rx data			in
+
+Clock	equ	RA.0
+OkiDin	equ	RA.1			; oki data in
+Power	equ	RA.2			; sense/control line
+OkiDout	equ	RA.3			; oki data out
+
+Portable equ	RB.0
+Spare	equ	RB.1			; spare output bit
+Relay1	equ	RB.2
+Relay2	equ	RB.3
+RsRxd	equ	RB.4			; rs-232 in
+RsTxd	equ	RB.5			; rs-232 out
+NU1	equ	RB.6			; not used (grounded)
+NU2	equ	RB.7			; not used (grounded)
+
+;initial port direction masks  (0 = output, 1 = input)
+PAmsk	equ	0fh			; when phone off
+PAmskP	equ	03h			; when on
+PBmsk	equ	0d1h			; when off
+PBmskP	equ	0d0h			; when on
+
+; at 4mhz, instruction cycle is 1mhz (1us)
+; at prescaler div 4,  rtcc counts every .25mhz (4usec)
+; 1 bit at 2400 baud is 416.6usec
+PreDiv	equ	00000001b		; div 4
+BaudCnt	equ	104			; 416/4
+StartCt	equ	32			; start bit time offset
+
+;phone side buffers
+IBit	equ	07h
+IDataH	equ	08h
+IDataL	equ	09h
+
+OBit	equ	0ah
+ODataH	equ	0bh
+ODataL	equ	0ch
+
+oldrtcc	equ	0dh
+newrtcc	equ	0eh
+
+Flags		equ	0fh		; rs232 flags
+rs232Ostart	equ	0
+rs232Ostop	equ	1
+ClockLow	equ	2
+rs232Ibit	equ	3
+rs232Obit	equ	4
+rs232Istop	equ	5
+PowerBit	equ	6
+;ExtPowerOn	equ	6
+;SendDev	equ	7
+
+;rs-232 side buffers
+Ors232B	equ	10h			; bit counter
+Ors2321	equ	11h			; byte 1
+Ors2322	equ	12h			; byte 2
+Ors2323	equ	13h			; byte 3
+Ors232T	equ	14h			; timer counter
+
+Irs232B	equ	15h			; bit counter
+Irs2321	equ	16h
+Irs2322	equ	17h
+Irs2323	equ	18h
+Irs232T	equ	19h
+
+;code section
+	RESET	Start			; reset vector
+	org	0
+
+Start
+
+;initialize various things
+	clrwdt				; clear watchdog timer
+	movlw	PreDiv			; set prescaler for rtcc and div N
+	option				; set options
+
+	;setup i/o ports
+	movlw	PAmsk
+	tris	RA
+	movlw	PBmsk
+	tris	RB
+	setb	OkiDout
+	clrb	Portable
+	setb	RsTxd
+	clrb	Relay1
+	clrb	Relay2
+	clrb	Spare
+	
+	clrf	IBit
+	clrf	OBit
+	clrf	Ors232B
+	clrf	Irs232B
+	clrf	Flags
+	clrf	Ors232t
+	clrf	Irs232t
+	
+;main program loop
+Loop
+	sb	Clock			; is clock low?
+	 bsf	Flags,ClockLow		; yes, flag it
+
+	btfss	Flags,ClockLow		; has clock gone low recently?
+	 goto	NoClock			; no, then no sync i/o to handle
+	sb	Clock			; is it high now?
+	 goto	NoClock			; no, then no sync i/o to handle
+
+	bcf	Flags,ClockLow
+	call	DataIO			; handle sync i/o
+	xorlw	0
+	sz
+	 call	DataCmd			; process command if got one
+	sb	Clock			; is clock low?
+	 bsf	Flags,ClockLow		; yes, flag it
+NoClock
+;	call	UpdateTimers
+	call	RsIn
+	sb	Clock			; is clock low?
+	 bsf	Flags,ClockLow		; yes, flag it
+;	call	UpdateTimers
+	call	RsOut
+	sb	Clock			; is clock low?
+	 bsf	Flags,ClockLow		; yes, flag it
+	call	UpdateTimers
+	goto	Loop
+
+;debugging routine
+;echo character in W back out
+;outchar
+;	mov	Ors2321,W
+;	bsf	Flags,rs232Ostart	; need a start bit to start
+;	bcf	Flags,rs232Ostop	; no stop bit yet
+;	movlw	8			; number of bits to send
+;	mov	Ors232B,W		; say data is waiting
+;	movlw	BaudCnt
+;	mov	Ors232T,W		; set timer
+;	bcf	Flags,rs232Obit
+;	ret
+
+;update any timers 
+UpdateTimers
+	movf	RTCC,W			; get count
+	mov	newrtcc,W		; save new count
+	mov	W,oldrtcc		; get old count
+	subwf	newrtcc,W		; get difference from old count
+
+	subwf	Ors232T,1		; update timer
+	sc
+	 bsf	Flags,rs232obit		; time to output a bit
+
+	subwf	Irs232T,1		; update timer
+	sc
+	 bsf	Flags,rs232ibit		; time to input a bit
+
+	mov	W,newrtcc
+	mov	oldrtcc,W
+	ret
+
+
+;clock just went hi, now ok to read and write data bits
+;returns 0 if normal, 1 if need to call DataCmd
+DataIO
+
+;write outgoing data bits
+DataOut	test	OBit			; any output to do?
+	 jz	DataIn			; no, try input
+	rlf	ODataL,1		; into carry
+	rlf	ODataH,1		; rotate next bit...
+	jc	DOutS			; jump if carry set
+;note: data is inverted on output!
+	setb	OkiDout			; clear output data
+	skip
+DOutS	 clrb	OkiDout			; set output data
+	decfsz	OBit,1			; count off bits to go
+	 goto	DataIn			; jump if not done
+;	btfss	Flags,SendDev		; need to send device ident?
+	 goto	DataIn
+;standalone okipic code...send device identifier (40h)
+;	bcf	Flags,SendDev		; not again
+;	movlw	94h
+;	mov	ODataH,W
+;	movlw	00h
+;	mov	ODataL,W
+;	movlw	13
+;	mov	OBit,W			; say 13 bits waiting to go out
+
+;read incoming data bits
+DataIn	test	IBit			; input in progress?
+	 jz	StartI			; no, see if start bit
+	clc				; read data bit into C
+	snb	OkiDin
+	 stc
+	rlf	IDataL,1		; rotate new bit...
+	rlf	IDataH,1		; into data buffer
+	decfsz	IBit,1			; decrement bit count
+	 retlw	0			; return if not done
+
+;	btfsc	Flags,ExtPowerOn	; skip if oki was manually powered up
+	 retlw	1			; return flag to process command
+
+;standalone okipic code
+;	movlw	6fh			; not 90h
+;	xorwf	IDataH,W		; see if command is 90h
+;	sz				; skip if 90h
+;	 retlw	1
+;  movlw 0bah
+;  mov   IDataH,W
+;	movlw	0ffh			; cmd 9000h?
+;	xorwf	IDataL,W
+;         jz	RcvWakeUp		; jump if phone is ready
+;	movlw	0feh			; see if command is 9001h
+;	xorwf	IDataL,W
+;	sz
+;	 retlw	1
+;command rcvd was 9001h, so send reply of 404h
+;	movlw	0c0h
+;	mov	ODataH,W
+;	movlw	40h
+;	mov	ODataL,W
+;	movlw	13
+;	mov	OBit,W			; say 13 bits waiting to go out
+;	bsf	Flags,SendDev		; flag to send next command
+;  movlw 0bbh
+;  mov   IDataH,W
+;	retlw	1
+
+;phone is ready.  send command for handsfree operation 17h.
+;17  ==>  000 dd01 0111.  dd = 10 ??
+;RcvWakeUp
+;	movlw	89h
+;	mov	ODataH,W
+;	movlw	70h
+;	mov	ODataL,W
+;	movlw	13
+;	mov	OBit,W			; say 13 bits waiting to go out
+;  movlw 0bch
+;  mov   IDataH,W
+;	retlw	1
+
+StartI	snb	OkiDin			; start bit?
+	 retlw	0
+	movlw	16
+	mov	IBit,W			; set to read 16 bits
+	retlw	0
+
+;got all data bits
+;invert inverted data, convert to output format, save in rs-232 output buffers
+DataCmd
+	comf	IDataH,1		; invert data we received
+	comf	IDataL,1
+
+;get hi 6 data bits into Ors2321, setting 2 hi bits
+	setb	C
+	rrf	IDataH,W
+	mov	Ors2321,W
+	setb	C
+	rrf	Ors2321,1
+
+;get next 6 bits data bits into Ors2322, setting 2 hi bits also
+	swapf	IDataH,W		
+	andlw	30h			; get hi 2 data bits
+	iorlw	0c0h			; set 2 hi bits
+	mov	Ors2322,W		; save hi 4 bits
+	swapf	IDataL,W		; get low 4 bits
+	andlw	0fh			; just low 4
+	iorwf	Ors2322,1		; or them into result
+
+;get last 4 data bits
+	mov	W,IDataL
+	andlw	0fh			; get last 4 data bits
+	iorlw	0b0h			; set command bits
+	mov	Ors2323,W		; save last byte
+
+	bsf	Flags,rs232Ostart	; need a start bit to start
+	bcf	Flags,rs232Ostop	; no stop bit yet
+	movlw	24			; number of bits to send
+	mov	Ors232B,W		; say data is waiting
+	movlw	BaudCnt
+	mov	Ors232T,W		; set timer
+	bcf	Flags,rs232obit
+	ret
+
+
+; ** RS-232 output **
+RsOut	test	Ors232B			; anything going out?
+	snz
+	 ret				; no, done
+ 	btfss	Flags,rs232Obit		; has 1 bit time gone by?
+	 ret				; nope
+	bcf	Flags,rs232Obit
+	btfsc	Flags,rs232Ostart	; need a start bit?
+	 goto	RsOutStart		; yep, do it
+	btfsc	Flags,rs232Ostop	; need a stop bit
+	 goto	RsOutStop		; yep, do it
+;else send data.  shift everything over a bit.
+	rrf	Ors2323,1
+	rrf	Ors2322,1
+	rrf	Ors2321,1
+;send the bit.
+	jc	RsOutS
+	clrb	RsTxd			; clear output
+	skip
+RsOutS	 setb	RsTxd			; set ouput
+	decf	Ors232B,1		; count off bits sent
+	movlw	07h
+	andwf	Ors232B,W		; get last 3 bits
+	jnz	RsOutNext		; if not done with a byte
+	bsf	Flags,rs232Ostop	; else need a stop bit next time
+	incf	Ors232B,1		; inc count for last stop bit
+	goto	RsOutNext
+RsOutStart
+	bcf	Flags,rs232Ostart
+	clrb	RsTxd			; clear output
+	goto	RsOutNext
+RsOutStop
+	bcf	Flags,rs232Ostop
+	setb	RsTxd			; set output back to idle state
+	movlw	0f8h
+	andwf	Ors232B,1		; clear last 3 bits
+	bsf	Flags,rs232Ostart	; need start bit for next byte
+RsOutNext
+	movlw	BaudCnt
+	addwf	Ors232T,1		; set timer for next bit
+	ret
+
+; ** RS-232 input **
+RsIn	test	Irs232B			; input in progress?
+	 jz	RsInStart		; no, see if start bit
+ 	btfss	Flags,rs232Ibit		; has 1 bit time gone by?
+	 ret				; nope
+	bcf	Flags,rs232Ibit
+	btfsc	Flags,rs232Istop	; reading stop bits?
+	 goto	RsInStop		; yes, get'm
+	clc				; clear carry
+	snb	RsRxd			; see if data bit is set
+	 stc				; if so, set carry
+	rrf	Irs2323,1		; shift bits over right adding new one
+	rrf	Irs2322,1
+	rrf	Irs2321,1
+	decfsz	Irs232B,1		; count down bits to go
+	 goto	RsInNextBit		; done if didn't get data bits yet
+
+;shift bits once more since only 7 data bits
+	stc				; hi bit always set
+	rrf	Irs2323,1
+	rrf	Irs2322,1
+	rrf	Irs2321,1
+	bsf	Flags,rs232Istop	; need to get a stop bit
+	incf	Irs232B,1		; need one more bit
+	movlw	BaudCnt
+	addwf	Irs232T,1		; set timer for stop bit
+
+;debug: echo chars typed
+;	mov	W,Irs2323
+;	call	outchar
+
+	mov	W,Irs2323
+	andlw	0f0h
+	xorlw	0b0h			; see if command is for oki
+	 jnz	RsInCmd1		; no, try next command
+;got command to send data to phone. 
+; unpack it into:  1ddddddd dddd0000 (start, 11 data, stop)
+	mov	W,Irs2322		; get low 6 bits
+	mov	ODataH,W		; save start+6 lower bits
+	btfss	Irs2321,0		; test hi bit
+	 bcf	ODataH,6		; clear hi bit if needed
+
+	swapf	Irs2323,W		; get low 4 data bits
+	andlw	0f0h			; set last 4 as stop bits
+	mov	ODataL,W
+
+	movlw	13
+	mov	OBit,W			; say 13 bits waiting to go out
+	ret
+
+RsInCmd1
+	mov	W,Irs2323
+	andlw	0f0h
+	xorlw	0a0h			; see if command is for pic
+	sz
+	 ret				; no, done
+;command pic to do something 
+; 0 = power off,    1 power on
+; 2 = portable off, 3 portable on
+; 4 = relay off,    5 relay on
+; 6 = spare off,    7 spare on
+	movlw	0fh
+	andwf	Irs2323,1		; save data bits
+	movlw	0
+	xorwf	Irs2323,W
+	jz	PowerOff
+	movlw	1
+	xorwf	Irs2323,W
+	jz	PowerOn
+	movlw	2
+	xorwf	Irs2323,W
+	jz	PortableOff
+	movlw	3
+	xorwf	Irs2323,W
+	jz	PortableOn
+	movlw	4
+	xorwf	Irs2323,W
+	jz	RelayOff
+	movlw	5
+	xorwf	Irs2323,W
+	jz	RelayOn
+	movlw	6
+	xorwf	Irs2323,W
+	jz	SpareOff
+	movlw	7
+	xorwf	Irs2323,W
+	jz	SpareOn
+	ret
+
+PowerOn
+;first read power line, then flip it to turn phone on
+; (oki-900 gets grounded, oki-1150 gets set high)
+	movlw	PAmsk			; set power bit as input
+	tris	RA
+	nop
+	nop
+	nop
+	btfsc	Power
+	 bcf	Flags,PowerBit		; 900
+	btfss	Power
+	 bsf	Flags,PowerBit		; 1150
+
+	btfsc	Flags,PowerBit
+	 bsf	Power
+	btfss	Flags,PowerBit
+	 bcf	Power
+	
+	movlw	PAmskP			; set power bit for output
+	tris	RA
+	movlw	PBmskP
+	tris	RB
+;	bsf	Flags,ExtPowerOn
+	ret
+
+PowerOff
+	movlw	PAmsk			; set power bit as input
+	tris	RA
+	movlw	PBmsk
+	tris	RB
+;	bcf	Flags,ExtPowerOn
+	ret
+
+PortableOn
+	setb	Portable
+	ret
+
+PortableOff
+	clrb	Portable
+	ret
+
+RelayOn
+	movlw	0ch			; (Relay1|Relay2)
+	iorwf	RB,1
+	ret
+
+RelayOff
+	movlw	0f3h			; NOT (Relay1|Relay2)
+	andwf	RB,1
+	ret
+
+SpareOn
+	setb	Spare
+	ret
+
+SpareOff
+	clrb	Spare
+	ret
+
+RsInNextBit
+	movlw	BaudCnt
+	addwf	Irs232T,1		; set timer for next bit
+	ret
+
+RsInStart
+	snb	RsRxd			; get bit
+	 ret				; ret if no start bit
+	movlw	7			; data bits
+	mov	Irs232B,W		; set bit counter to read data bits
+	movlw	BaudCnt+StartCt
+	mov	Irs232T,W		; set timer for next bit
+	bcf	Flags,rs232Ibit
+	ret
+
+RsInStop
+	bcf	Flags,rs232Istop
+	clrf	Irs232B
+	ret
+
+	end
